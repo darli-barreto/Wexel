@@ -3,8 +3,14 @@ import React from "react";
 
 function AlingRight() {
   return (
-    <button>
-      <Image src="/icons/c10.svg" alt="aling right" width={14} height={12} />
+    <button className="cursor-pointer">
+      <Image
+        src="/icons/c10.svg"
+        alt="aling right button"
+        width={14}
+        height={12}
+        title="AlingRight"
+      />
     </button>
   );
 }

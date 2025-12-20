@@ -4,21 +4,23 @@ import React from "react";
 function Paste() {
   return (
     <div className="items-center">
-      <div className="flex text-center space-x-1 mb-1">
-        <button className="mt-[3.75px]">
+      <div className="flex  text-center space-x-1 mb-1">
+        <button className="mt-[3.75px] cursor-pointer">
           <Image
             src="/icons/clipboard.svg"
-            alt="Comments"
+            alt="paste button"
             width={28}
             height={32}
+            title="Paste"
           />
         </button>
         <button className="">
           <Image
             src="/icons/dropdown.svg"
-            alt="Comments"
+            alt="paste dropdown"
             width={6.5}
             height={4.5}
+            title="Paste Options"
           />
         </button>
       </div>

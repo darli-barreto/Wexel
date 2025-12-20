@@ -5,7 +5,7 @@ function FindSelect() {
   return (
     <div className="items-center">
       <div className="flex text-center space-x-1 mb-1">
-        <button className="mt-[3.75px]">
+        <button className="mt-[3.75px] cursor-pointer">
           <Image
             src="/icons/ec5.svg"
             alt="find select"
@@ -13,7 +13,7 @@ function FindSelect() {
             height={27}
           />
         </button>
-        <button className="">
+        <button className="cursor-pointer">
           <Image
             src="/icons/dropdown.svg"
             alt="find select dropdown"

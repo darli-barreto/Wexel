@@ -3,8 +3,14 @@ import React from "react";
 
 function Sort() {
   return (
-    <button>
-      <Image src="/icons/c6.svg" alt="sort" width={15} height={16.28} />
+    <button className="cursor-pointer">
+      <Image
+        src="/icons/c6.svg"
+        alt="sort button"
+        width={15}
+        height={16.28}
+        title="Sort"
+      />
     </button>
   );
 }

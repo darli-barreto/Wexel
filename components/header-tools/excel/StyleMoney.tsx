@@ -3,8 +3,14 @@ import React from "react";
 
 function StyleMoney() {
   return (
-    <button>
-      <Image src="/icons/eb1.svg" alt="style money" width={15} height={15} />
+    <button className="cursor-pointer">
+      <Image
+        src="/icons/eb1.svg"
+        alt="style money button"
+        width={15}
+        height={15}
+        title="StyleMoney"
+      />
     </button>
   );
 }

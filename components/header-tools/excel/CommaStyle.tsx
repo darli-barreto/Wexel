@@ -3,8 +3,14 @@ import React from "react";
 
 function CommaStyle() {
   return (
-    <button>
-      <Image src="/icons/eb3.svg" alt="comma style" width={7} height={15} />
+    <button className="cursor-pointer">
+      <Image
+        src="/icons/eb3.svg"
+        alt="comma style button"
+        width={7}
+        height={15}
+        title="CommaStyle"
+      />
     </button>
   );
 }

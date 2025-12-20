@@ -3,12 +3,13 @@ import React from "react";
 
 function DecreaseDecimal() {
   return (
-    <button>
+    <button className="cursor-pointer">
       <Image
         src="/icons/eb5.svg"
-        alt="decrease decimal"
+        alt="decrease decimal button"
         width={15}
         height={15}
+        title="DecreaseDecimal"
       />
     </button>
   );

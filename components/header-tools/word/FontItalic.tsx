@@ -3,8 +3,14 @@ import React from "react";
 
 function FontItalic() {
   return (
-    <button>
-      <Image src="/icons/b6.svg" alt="fontitalic" width={8} height={10} />
+    <button className="cursor-pointer">
+      <Image
+        src="/icons/b6.svg"
+        alt="font italic button"
+        width={8}
+        height={10}
+        title="FontItalic"
+      />
     </button>
   );
 }

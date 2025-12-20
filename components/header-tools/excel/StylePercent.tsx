@@ -3,8 +3,14 @@ import React from "react";
 
 function StylePercent() {
   return (
-    <button>
-      <Image src="/icons/eb2.svg" alt="style percent" width={15} height={15} />
+    <button className="cursor-pointer">
+      <Image
+        src="/icons/eb2.svg"
+        alt="style percent button"
+        width={15}
+        height={15}
+        title="StylePercent"
+      />
     </button>
   );
 }

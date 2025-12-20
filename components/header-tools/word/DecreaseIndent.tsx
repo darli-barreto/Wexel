@@ -3,12 +3,13 @@ import React from "react";
 
 function DecreaseIndent() {
   return (
-    <button>
+    <button className="cursor-pointer">
       <Image
         src="/icons/c4.svg"
-        alt="decrease indent"
+        alt="decrease indent button"
         width={14.11}
         height={12}
+        title="DecreaseIndent"
       />
     </button>
   );

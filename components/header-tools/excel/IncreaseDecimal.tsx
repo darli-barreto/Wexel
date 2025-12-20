@@ -3,12 +3,13 @@ import React from "react";
 
 function IncreaseDecimal() {
   return (
-    <button>
+    <button className="cursor-pointer">
       <Image
         src="/icons/eb4.svg"
-        alt="increase decimal"
+        alt="increase decimal button"
         width={15}
         height={15}
+        title="IncreaseDecimal"
       />
     </button>
   );

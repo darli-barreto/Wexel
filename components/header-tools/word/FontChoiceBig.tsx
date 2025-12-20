@@ -3,8 +3,14 @@ import React from "react";
 
 function FontChoiceBig() {
   return (
-    <button>
-      <Image src="/icons/b1.svg" alt="Comments" width={16.11} height={13} />
+    <button className="cursor-pointer">
+      <Image
+        src="/icons/b1.svg"
+        alt="font choice big button"
+        width={16.11}
+        height={13}
+        title="FontChoiceBig"
+      />
     </button>
   );
 }

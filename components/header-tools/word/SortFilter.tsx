@@ -5,7 +5,7 @@ function SortFilter() {
   return (
     <div className="items-center">
       <div className="flex text-center space-x-1 mb-1">
-        <button className="mt-[3.75px]">
+        <button className="mt-[3.75px] cursor-pointer">
           <Image
             src="/icons/ec4.svg"
             alt="sort filter"
@@ -13,12 +13,13 @@ function SortFilter() {
             height={28}
           />
         </button>
-        <button className="">
+        <button className="cursor-pointer">
           <Image
             src="/icons/dropdown.svg"
             alt="sort filter"
             width={6.5}
             height={4.5}
+            title="Sort & Filter Options"
           />
         </button>
       </div>

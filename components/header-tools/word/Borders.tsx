@@ -4,10 +4,16 @@ import React from "react";
 function Borders() {
   return (
     <div className="flex space-x-2">
-      <button>
-        <Image src="/icons/c14.svg" alt="borders" width={15} height={15} />
+      <button className="cursor-pointer">
+        <Image
+          src="/icons/c14.svg"
+          alt="borders button"
+          width={15}
+          height={15}
+          title="Borders"
+        />
       </button>
-      <button>
+      <button className="cursor-pointer">
         <Image
           src="/icons/dropdown.svg"
           alt="borders dropdown"
