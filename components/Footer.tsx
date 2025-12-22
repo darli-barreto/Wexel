@@ -7,6 +7,8 @@ interface FooterProps {
   onExcelFullscreen: () => void;
   onSplitView: () => void;
   currentView: "split" | "word" | "excel";
+  onDownloadWord: () => void;
+  showDownloadButton: boolean;
 }
 
 function Footer({
@@ -14,6 +16,8 @@ function Footer({
   onExcelFullscreen,
   onSplitView,
   currentView,
+  onDownloadWord,
+  showDownloadButton,
 }: FooterProps) {
   return (
     <div className="flex justify-between h-10 bg-[#dddddd] px-6 items-center">
@@ -32,6 +36,15 @@ function Footer({
       {/* Botones de control de vista en el centro */}
       <div className="flex space-x-4 items-center">
         <div className="flex ">
+          {showDownloadButton && (
+            <button
+              onClick={onDownloadWord}
+              className="flex items-center space-x-2 justify-center cursor-pointer px-1 bg-blue-500 text-white hover:bg-blue-600"
+              title="Descargar"
+            >
+              <p className="text-xs ">Download .docx</p>
+            </button>
+          )}
           <button
             onClick={onSplitView}
             className={`flex items-center justify-center cursor-pointer p-1 ${
@@ -79,6 +92,7 @@ function Footer({
               title="StyleMoney"
             />
           </button>
+          
         </div>
 
         <Zoom />
