@@ -5,10 +5,14 @@ import HeaderExcel from "./HeaderExcel";
 import TableExcel from "./TableExcel";
 import FooterExcel from "./FooterExcel";
 
-function CanvaExcel() {
-  const columns = Array.from({ length: 26 }, (_, i) =>
-    String.fromCharCode(65 + i)
-  );
+interface CanvaExcelProps {
+  isSplit?: boolean;
+}
+
+function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
+  const columns = isSplit
+    ? Array.from({ length: 10 }, (_, i) => String.fromCharCode(65 + i)) // A-J
+    : Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)); // A-Z
   const [rows, setRows] = useState(Array.from({ length: 50 }, (_, i) => i + 1));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentCell, setCurrentCell] = useState("A1");
@@ -24,6 +28,10 @@ function CanvaExcel() {
     const match = currentCell.match(/^([A-Z]+)(\d+)$/);
     if (match) {
       const col = match[1];
+      if (isSplit && (col.charCodeAt(0) < 65 || col.charCodeAt(0) > 74)) {
+        // Solo permitir A-J (65-74) en modo split
+        return;
+      }
       const row = parseInt(match[2]) + 1;
       setCurrentCell(`${col}${row}`);
     }
@@ -59,7 +67,7 @@ function CanvaExcel() {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col h-full">
       <div
         ref={scrollRef}
         className="flex-1 border-y border-tertiary overflow-auto hide-scrollbar" // Cambia scrollbar-hide por hide-scrollbar
@@ -78,7 +86,7 @@ function CanvaExcel() {
         setActiveSheet={setActiveSheet}
         addSheet={addSheet}
       />
-    </>
+    </div>
   );
 }
 
