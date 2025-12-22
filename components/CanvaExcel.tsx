@@ -12,7 +12,7 @@ function CanvaExcel() {
   const [rows, setRows] = useState(Array.from({ length: 50 }, (_, i) => i + 1));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentCell, setCurrentCell] = useState("A1");
-  const [sheets, setSheets] = useState(["Hoja 1"]);
+  const [sheets, setSheets] = useState(["Sheet 1"]);
   const [activeSheet, setActiveSheet] = useState(0);
 
   const addSheet = () => {
