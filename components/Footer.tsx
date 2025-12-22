@@ -21,7 +21,7 @@ function Footer({
       <div className="flex text-xs text-secondary items-center space-x-4">
         <span className="font-bold">
         <span className="text-blue-600">W</span>
-        <span className="text-green-600">exel</span>
+        <span className="text-[#217346]">exel</span>
       </span>
         <p>Page 1 of 1</p>
         <p>0 words</p>

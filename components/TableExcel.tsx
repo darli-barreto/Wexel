@@ -1,49 +1,92 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  processFormula,
+} from "./utils/excel";
+import TableHeaderExcel from "./TableHeaderExcel";
+import TableRowExcel from "./TableRowExcel";
 
 interface TableExcelProps {
   columns: string[];
-  rows: (string | number)[];
+  rows: string[];
+  selectedCell: { row: number; col: number } | null;
+  setSelectedCell: (cell: { row: number; col: number } | null) => void;
+  formulaInput: string;
+  setFormulaInput: (value: string) => void;
 }
 
-const TableExcel: React.FC<TableExcelProps> = ({ columns, rows }) => (
-  <div className="border-x border-gray-300">
-    <table className="w-full">
-      <thead>
-        <tr
-          className="bg-[#fafafa] sticky top-8 z-20"
-          style={{ position: 'sticky', top: 32, zIndex: 20 }}
-        >
-          <th className="border border-[#d6d6d6] text-[#7f7f7d] bg-[#fafafa] sticky top-8 left-0 z-20 after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-px after:bg-[#d6d6d6]">
-          </th>
-          {columns.map((col) => (
-            <th
-              key={col}
-              className="border border-[#d6d6d6] text-[#7f7f7d] bg-[#fafafa] px-2 py-1 text-center text-sm font-bold w-25 sticky top-8 z-10 after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-px after:bg-[#d6d6d6]"
-            >
-              {col}
-            </th>
+export interface CellData {
+  rawValue: string;
+  displayValue: string;
+  formula?: string;
+  dependencies: {row: number, col: number}[];
+}
+
+const TableExcel: React.FC<TableExcelProps> = ({
+  columns,
+  rows,
+  selectedCell,
+  setSelectedCell,
+  setFormulaInput,
+}) => {
+  // Inicializar datos de celdas con fórmula y valor
+  // (Eliminado: declaración duplicada de cellData)
+  const [cellData, setCellData] = useState<CellData[][]>([]);
+
+  // Sincronizar cellData con cambios en rows/columns
+  useEffect(() => {
+    const newCellData = rows.map(() =>
+      columns.map(() => ({
+        rawValue: "",
+        displayValue: "",
+        formula: undefined,
+        dependencies: [],
+      }))
+    );
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCellData(newCellData);
+  }, [rows, columns]);
+
+  // Usar funciones utilitarias importadas
+  const processFormulaMemo = useCallback(
+    (formula: string) => processFormula(formula, cellData, rows, columns),
+    [cellData, rows, columns]
+  );
+
+  const recalculateAllFormulas = useCallback((data: CellData[][]) => {
+    return data.map(row => row.map(cell => {
+      if (cell.formula) {
+        const result = processFormula(cell.formula, data, rows, columns);
+        return { ...cell, displayValue: result.displayValue, dependencies: result.dependencies };
+      }
+      return cell;
+    }));
+  }, [rows, columns]);
+
+  return (
+    <div className="border-x border-gray-300">
+      <table className="w-full">
+        <TableHeaderExcel columns={columns} />
+        <tbody>
+          {rows.map((row, rowIdx) => (
+            <TableRowExcel
+              key={row}
+              row={row}
+              rowIdx={rowIdx}
+              columns={columns}
+              cellData={cellData}
+              selectedCell={selectedCell}
+              setSelectedCell={setSelectedCell}
+              setFormulaInput={setFormulaInput}
+              setCellData={setCellData}
+              processFormula={processFormulaMemo}
+              rows={rows}
+              recalculateAllFormulas={recalculateAllFormulas}
+            />
           ))}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((row) => (
-          <tr key={row}>
-            <td className="border border-[#d6d6d6] bg-[#fafafa] px-1.5 text-center text-[#7f7f7d] text-sm font-bold sticky left-0 z-10">
-              {row}
-            </td>
-            {/* Celdas de datos */}
-            {columns.map((col) => (
-              <td
-                key={`${col}${row}`}
-                className="border border-[#d6d6d6] bg-white px-2 text-sm h-4"
-              >
-              </td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default TableExcel;

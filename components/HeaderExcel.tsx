@@ -6,9 +6,13 @@ type HeaderExcelProps = {
   setCurrentCell: (cell: string) => void;
   incrementRow: () => void;
   decrementRow: () => void;
+  selectedCell: { row: number; col: number } | null;
+  setSelectedCell: (cell: { row: number; col: number } | null) => void;
+  formulaInput: string;
+  setFormulaInput: (value: string) => void;
 };
 
-const HeaderExcel: React.FC<HeaderExcelProps> = ({ currentCell, setCurrentCell, incrementRow, decrementRow }) => (
+const HeaderExcel: React.FC<HeaderExcelProps> = ({ currentCell, setCurrentCell, incrementRow, decrementRow, formulaInput, setFormulaInput }) => (
   <div className="flex items-center border-b border-x border-tertiary space-x-4 bg-white sticky top-0 z-30 h-8">
     {/* Cell Selector */}
     <div className="flex border-r border-tertiary px-2 py-1 items-center space-x-2">
@@ -43,6 +47,8 @@ const HeaderExcel: React.FC<HeaderExcelProps> = ({ currentCell, setCurrentCell, 
       </div>
       <input
         type="text"
+        value={formulaInput}
+        onChange={e => setFormulaInput(e.target.value)}
         placeholder="Enter formula or value"
         className="flex-1 px-2 py-1 border-none focus:outline-none focus:ring-0 text-sm"
       />

@@ -13,9 +13,12 @@ function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
   const columns = isSplit
     ? Array.from({ length: 10 }, (_, i) => String.fromCharCode(65 + i)) // A-J
     : Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)); // A-Z
-  const [rows, setRows] = useState(Array.from({ length: 50 }, (_, i) => i + 1));
+  const [rows, setRows] = useState<string[]>(Array.from({ length: 50 }, (_, i) => String(i + 1)));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentCell, setCurrentCell] = useState("A1");
+  // Estados para la celda seleccionada y la fórmula
+  const [selectedCell, setSelectedCell] = useState<{ row: number; col: number } | null>(null);
+  const [formulaInput, setFormulaInput] = useState("");
   const [sheets, setSheets] = useState(["Sheet 1"]);
   const [activeSheet, setActiveSheet] = useState(0);
 
@@ -53,7 +56,7 @@ function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
         if (scrollTop + clientHeight >= scrollHeight - 10) {
           setRows((prev) => {
             const newLength = Math.min(prev.length + 20, 99);
-            return Array.from({ length: newLength }, (_, i) => i + 1);
+            return Array.from({ length: newLength }, (_, i) => String(i + 1));
           });
         }
       }
@@ -66,19 +69,62 @@ function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
     }
   }, []);
 
+
+  // Elimina el setState en cascada. Actualiza currentCell solo cuando el usuario selecciona una celda.
+  const handleSelectCell = (cell: { row: number; col: number } | null) => {
+    setSelectedCell(cell);
+    if (cell) {
+      setCurrentCell(`${columns[cell.col]}${rows[cell.row]}`);
+    }
+  };
+
+  // Elimina el setState en cascada. Actualiza la celda seleccionada solo en el evento de cambio de currentCell.
+  const handleCurrentCellChange = (cellStr: string) => {
+    setCurrentCell(cellStr);
+    const match = cellStr.match(/^([A-Z]+)(\d+)$/);
+    if (match) {
+      const colLetters = match[1];
+      const rowNum = parseInt(match[2]);
+      let colIdx = 0;
+      for (let i = 0; i < colLetters.length; i++) {
+        colIdx = colIdx * 26 + (colLetters.charCodeAt(i) - 65 + 1);
+      }
+      colIdx -= 1;
+      const rowIdx = rowNum - 1;
+      if (
+        rowIdx >= 0 && rowIdx < rows.length &&
+        colIdx >= 0 && colIdx < columns.length &&
+        (!selectedCell || selectedCell.row !== rowIdx || selectedCell.col !== colIdx)
+      ) {
+        handleSelectCell({ row: rowIdx, col: colIdx });
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col h-full">
       <div
         ref={scrollRef}
-        className="flex-1 border-y border-tertiary overflow-auto hide-scrollbar" // Cambia scrollbar-hide por hide-scrollbar
+        className="flex-1 border-y border-tertiary overflow-auto hide-scrollbar"
       >
         <HeaderExcel
           currentCell={currentCell}
-          setCurrentCell={setCurrentCell}
+          setCurrentCell={handleCurrentCellChange}
           incrementRow={incrementRow}
           decrementRow={decrementRow}
+          selectedCell={selectedCell}
+          setSelectedCell={handleSelectCell}
+          formulaInput={formulaInput}
+          setFormulaInput={setFormulaInput}
         />
-        <TableExcel columns={columns} rows={rows} />
+        <TableExcel
+          columns={columns}
+          rows={rows}
+          selectedCell={selectedCell}
+          setSelectedCell={handleSelectCell}
+          formulaInput={formulaInput}
+          setFormulaInput={setFormulaInput}
+        />
       </div>
       <FooterExcel
         sheets={sheets}
