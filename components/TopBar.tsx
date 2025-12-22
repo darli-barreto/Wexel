@@ -28,7 +28,20 @@ function TopBar() {
         </div>
       </div>
       <TitleDocument />
-      <Search />
+      <div className="flex  items-center space-x-4">
+        <a
+          href="https://www.linkedin.com/in/darli-barreto/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex space-x-2 items-center"
+        >
+          <p className="text-xs text-[#7f7f7d]">Darli Barreto Rodriguez</p>
+          <div className="p-0.75 font-semibold text-white text-xs rounded-full bg-primary">
+            DB
+          </div>
+        </a>
+        <Search />
+      </div>
     </div>
   );
 }
