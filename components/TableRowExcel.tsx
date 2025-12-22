@@ -80,6 +80,26 @@ const TableRowExcel: React.FC<TableRowProps> = ({
                     setSelectedCell({ row: rowIdx + 1, col: colIdx });
                     setFormulaInput(cellData[rowIdx + 1][colIdx].rawValue);
                   }
+                } else if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                  // Guardar el valor actual
+                  setCellData(prev => {
+                    const updated = prev.map(rowArr => [...rowArr]);
+                    const result = processFormula(cell.rawValue);
+                    updated[rowIdx][colIdx] = { ...updated[rowIdx][colIdx], rawValue: cell.rawValue, displayValue: result.displayValue, formula: cell.rawValue.startsWith('=') ? cell.rawValue : undefined, dependencies: result.dependencies };
+                    return recalculateAllFormulas(updated);
+                  });
+                  // Calcular nueva posición
+                  let newRow = rowIdx;
+                  let newCol = colIdx;
+                  if (e.key === 'ArrowUp' && rowIdx > 0) newRow = rowIdx - 1;
+                  else if (e.key === 'ArrowDown' && rowIdx < rows.length - 1) newRow = rowIdx + 1;
+                  else if (e.key === 'ArrowLeft' && colIdx > 0) newCol = colIdx - 1;
+                  else if (e.key === 'ArrowRight' && colIdx < columns.length - 1) newCol = colIdx + 1;
+                  // Mover selección
+                  setSelectedCell({ row: newRow, col: newCol });
+                  setFormulaInput(cellData[newRow][newCol].rawValue);
+                  // Prevenir comportamiento default
+                  e.preventDefault();
                 }
               }}
               className="w-full h-full bg-transparent border-none outline-none font-mono whitespace-nowrap overflow-visible"
