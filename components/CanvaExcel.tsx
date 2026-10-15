@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import HeaderExcel from "./HeaderExcel";
 import TableExcel from "./TableExcel";
 import FooterExcel from "./FooterExcel";
@@ -10,9 +10,11 @@ interface CanvaExcelProps {
 }
 
 function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
-  const columns = isSplit
+  const columns = useMemo(() => {
+  return isSplit
     ? Array.from({ length: 10 }, (_, i) => String.fromCharCode(65 + i)) // A-J
     : Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)); // A-Z
+}, [isSplit]);
   const [rows, setRows] = useState<string[]>(Array.from({ length: 50 }, (_, i) => String(i + 1)));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentCell, setCurrentCell] = useState("A1");

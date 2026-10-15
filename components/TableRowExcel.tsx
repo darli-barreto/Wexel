@@ -10,7 +10,10 @@ interface TableRowProps {
   setSelectedCell: (cell: { row: number; col: number } | null) => void;
   setFormulaInput: (value: string) => void;
   setCellData: React.Dispatch<React.SetStateAction<CellData[][]>>;
-  processFormula: (formula: string) => { displayValue: string, dependencies: {row: number, col: number}[] };
+  processFormula: (formula: string) => {
+    displayValue: string;
+    dependencies: { row: number; col: number }[];
+  };
   rows: string[];
   recalculateAllFormulas: (data: CellData[][]) => CellData[][];
 }
@@ -33,7 +36,8 @@ const TableRowExcel: React.FC<TableRowProps> = ({
       {row}
     </td>
     {columns.map((col, colIdx) => {
-      const isSelected = selectedCell?.row === rowIdx && selectedCell?.col === colIdx;
+      const isSelected =
+        selectedCell?.row === rowIdx && selectedCell?.col === colIdx;
       const cell =
         cellData[rowIdx] && cellData[rowIdx][colIdx]
           ? cellData[rowIdx][colIdx]
@@ -41,7 +45,7 @@ const TableRowExcel: React.FC<TableRowProps> = ({
       return (
         <td
           key={`${col}${row}`}
-          className={`border border-[#d6d6d6] bg-white px-2 text-xs h-4 relative overflow-visible ${isSelected ? 'ring-2 ring-[#217346] ring-inset' : ''}`}
+          className={`border border-[#d6d6d6] bg-white px-2 text-xs h-4 relative overflow-visible ${isSelected ? "ring-2 ring-[#217346] ring-inset" : ""}`}
           onClick={() => {
             setSelectedCell({ row: rowIdx, col: colIdx });
             setFormulaInput(cell.rawValue);
@@ -51,54 +55,97 @@ const TableRowExcel: React.FC<TableRowProps> = ({
             <input
               type="text"
               value={cell.rawValue}
-              onChange={e => {
+              onChange={(e) => {
                 const value = e.target.value;
                 setFormulaInput(value);
-                setCellData(prev => {
-                  const updated = prev.map(rowArr => [...rowArr]);
-                  updated[rowIdx][colIdx] = { ...updated[rowIdx][colIdx], rawValue: value };
+                setCellData((prev) => {
+                  const updated = prev.map((rowArr) => [...rowArr]);
+                  if (!updated[rowIdx]) updated[rowIdx] = [];
+                  updated[rowIdx][colIdx] = {
+                    ...updated[rowIdx][colIdx],
+                    rawValue: value,
+                    // Si no es fórmula, muestra el valor directamente en pantalla
+                    displayValue: value.startsWith("=")
+                      ? updated[rowIdx][colIdx]?.displayValue || ""
+                      : value,
+                  };
                   return updated;
                 });
               }}
-              onBlur={() => {
-                setCellData(prev => {
-                  const updated = prev.map(rowArr => [...rowArr]);
-                  const result = processFormula(cell.rawValue);
-                  updated[rowIdx][colIdx] = { ...updated[rowIdx][colIdx], rawValue: cell.rawValue, displayValue: result.displayValue, formula: cell.rawValue.startsWith('=') ? cell.rawValue : undefined, dependencies: result.dependencies };
+              onBlur={(e) => {
+                const currentValue = e.target.value;
+                setCellData((prev) => {
+                  const updated = prev.map((rowArr) => [...rowArr]);
+                  const result = processFormula(currentValue);
+                  updated[rowIdx][colIdx] = {
+                    ...updated[rowIdx][colIdx],
+                    rawValue: currentValue,
+                    displayValue: result.displayValue,
+                    formula: currentValue.startsWith("=")
+                      ? currentValue
+                      : undefined,
+                    dependencies: result.dependencies,
+                  };
                   return recalculateAllFormulas(updated);
                 });
               }}
-              onKeyDown={e => {
-                if (e.key === 'Enter') {
-                  setCellData(prev => {
-                    const updated = prev.map(rowArr => [...rowArr]);
-                    const result = processFormula(cell.rawValue);
-                    updated[rowIdx][colIdx] = { ...updated[rowIdx][colIdx], rawValue: cell.rawValue, displayValue: result.displayValue, formula: cell.rawValue.startsWith('=') ? cell.rawValue : undefined, dependencies: result.dependencies };
+              onKeyDown={(e) => {
+                const currentValue = (e.target as HTMLInputElement).value;
+                if (e.key === "Enter") {
+                  setCellData((prev) => {
+                    const updated = prev.map((rowArr) => [...rowArr]);
+                    const result = processFormula(currentValue);
+                    updated[rowIdx][colIdx] = {
+                      ...updated[rowIdx][colIdx],
+                      rawValue: currentValue,
+                      displayValue: result.displayValue,
+                      formula: currentValue.startsWith("=")
+                        ? currentValue
+                        : undefined,
+                      dependencies: result.dependencies,
+                    };
                     return recalculateAllFormulas(updated);
                   });
                   if (rowIdx < rows.length - 1) {
                     setSelectedCell({ row: rowIdx + 1, col: colIdx });
-                    setFormulaInput(cellData[rowIdx + 1][colIdx].rawValue);
+                    setFormulaInput(
+                      cellData[rowIdx + 1]?.[colIdx]?.rawValue || "",
+                    );
                   }
-                } else if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-                  // Guardar el valor actual
-                  setCellData(prev => {
-                    const updated = prev.map(rowArr => [...rowArr]);
-                    const result = processFormula(cell.rawValue);
-                    updated[rowIdx][colIdx] = { ...updated[rowIdx][colIdx], rawValue: cell.rawValue, displayValue: result.displayValue, formula: cell.rawValue.startsWith('=') ? cell.rawValue : undefined, dependencies: result.dependencies };
+                } else if (
+                  e.key === "ArrowUp" ||
+                  e.key === "ArrowDown" ||
+                  e.key === "ArrowLeft" ||
+                  e.key === "ArrowRight"
+                ) {
+                  setCellData((prev) => {
+                    const updated = prev.map((rowArr) => [...rowArr]);
+                    const result = processFormula(currentValue);
+                    updated[rowIdx][colIdx] = {
+                      ...updated[rowIdx][colIdx],
+                      rawValue: currentValue,
+                      displayValue: result.displayValue,
+                      formula: currentValue.startsWith("=")
+                        ? currentValue
+                        : undefined,
+                      dependencies: result.dependencies,
+                    };
                     return recalculateAllFormulas(updated);
                   });
-                  // Calcular nueva posición
                   let newRow = rowIdx;
                   let newCol = colIdx;
-                  if (e.key === 'ArrowUp' && rowIdx > 0) newRow = rowIdx - 1;
-                  else if (e.key === 'ArrowDown' && rowIdx < rows.length - 1) newRow = rowIdx + 1;
-                  else if (e.key === 'ArrowLeft' && colIdx > 0) newCol = colIdx - 1;
-                  else if (e.key === 'ArrowRight' && colIdx < columns.length - 1) newCol = colIdx + 1;
-                  // Mover selección
+                  if (e.key === "ArrowUp" && rowIdx > 0) newRow = rowIdx - 1;
+                  else if (e.key === "ArrowDown" && rowIdx < rows.length - 1)
+                    newRow = rowIdx + 1;
+                  else if (e.key === "ArrowLeft" && colIdx > 0)
+                    newCol = colIdx - 1;
+                  else if (
+                    e.key === "ArrowRight" &&
+                    colIdx < columns.length - 1
+                  )
+                    newCol = colIdx + 1;
                   setSelectedCell({ row: newRow, col: newCol });
-                  setFormulaInput(cellData[newRow][newCol].rawValue);
-                  // Prevenir comportamiento default
+                  setFormulaInput(cellData[newRow]?.[newCol]?.rawValue || "");
                   e.preventDefault();
                 }
               }}
