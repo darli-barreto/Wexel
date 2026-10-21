@@ -1,44 +1,33 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useWexelStore, type SheetData } from "@/store/useWexelStore";
 import HeaderExcel from "./HeaderExcel";
 import TableExcel from "./TableExcel";
 import FooterExcel from "./FooterExcel";
 
-interface CanvaExcelProps {
-  isSplit?: boolean;
-}
-
-function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
-  const columns = useMemo(() => {
-  return isSplit
-    ? Array.from({ length: 10 }, (_, i) => String.fromCharCode(65 + i)) // A-J
-    : Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)); // A-Z
-}, [isSplit]);
-  const [rows, setRows] = useState<string[]>(Array.from({ length: 50 }, (_, i) => String(i + 1)));
+function CanvaExcel() {
+  // Keep the same columns mounted in every view, including the split view.
+  const columns = useMemo(() => Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)), []);
+  const [rows, setRows] = useState<string[]>(Array.from({ length: 99 }, (_, i) => String(i + 1)));
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [currentCell, setCurrentCell] = useState("A1");
-  // Estados para la celda seleccionada y la fórmula
-  const [selectedCell, setSelectedCell] = useState<{ row: number; col: number } | null>(null);
-  const [formulaInput, setFormulaInput] = useState("");
-  const [sheets, setSheets] = useState(["Sheet 1"]);
-  const [activeSheet, setActiveSheet] = useState(0);
-
-  const addSheet = () => {
-    setSheets((prev) => [...prev, `Hoja ${prev.length + 1}`]);
-    setActiveSheet(sheets.length); 
-  };
+  const sheets = useWexelStore((state) => state.sheets);
+  const activeSheetId = useWexelStore((state) => state.activeSheetId);
+  const updateSheet = useWexelStore((state) => state.updateSheet);
+  const addSheet = useWexelStore((state) => state.addSheet);
+  const selectSheet = useWexelStore((state) => state.setActiveSheet);
+  const activeSheet = sheets.findIndex((sheet) => sheet.id === activeSheetId);
+  const { currentCell, selectedCell, formulaInput } = sheets[activeSheet];
+  const patchSheet = (patch: Partial<SheetData>) => updateSheet(activeSheetId, (sheet) => ({ ...sheet, ...patch }));
+  const setCurrentCell = (currentCell: string) => patchSheet({ currentCell });
+  const setFormulaInput = (formulaInput: string) => patchSheet({ formulaInput });
 
   const incrementRow = () => {
     const match = currentCell.match(/^([A-Z]+)(\d+)$/);
     if (match) {
       const col = match[1];
-      if (isSplit && (col.charCodeAt(0) < 65 || col.charCodeAt(0) > 74)) {
-        // Solo permitir A-J (65-74) en modo split
-        return;
-      }
       const row = parseInt(match[2]) + 1;
-      setCurrentCell(`${col}${row}`);
+      handleCurrentCellChange(`${col}${Math.min(rows.length, row)}`);
     }
   };
 
@@ -47,7 +36,7 @@ function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
     if (match) {
       const col = match[1];
       const row = Math.max(1, parseInt(match[2]) - 1);
-      setCurrentCell(`${col}${row}`);
+      handleCurrentCellChange(`${col}${row}`);
     }
   };
 
@@ -74,10 +63,9 @@ function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
 
   // Elimina el setState en cascada. Actualiza currentCell solo cuando el usuario selecciona una celda.
   const handleSelectCell = (cell: { row: number; col: number } | null) => {
-    setSelectedCell(cell);
-    if (cell) {
-      setCurrentCell(`${columns[cell.col]}${rows[cell.row]}`);
-    }
+    if (!cell) { patchSheet({ selectedCell: null }); return; }
+    const address = columns[cell.col] + rows[cell.row];
+    patchSheet({ selectedCell: cell, selectionEnd: undefined, currentCell: address, formulaInput: sheets[activeSheet].cells[address]?.rawValue ?? "" });
   };
 
   // Elimina el setState en cascada. Actualiza la celda seleccionada solo en el evento de cambio de currentCell.
@@ -104,7 +92,7 @@ function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
   };
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full w-full">
       <div
         ref={scrollRef}
         className="flex-1 border-y border-tertiary overflow-auto hide-scrollbar"
@@ -130,8 +118,8 @@ function CanvaExcel({ isSplit = false }: CanvaExcelProps) {
       </div>
       <FooterExcel
         sheets={sheets}
-        activeSheet={activeSheet}
-        setActiveSheet={setActiveSheet}
+        activeSheet={activeSheetId}
+        setActiveSheet={selectSheet}
         addSheet={addSheet}
       />
     </div>

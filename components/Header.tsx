@@ -6,17 +6,18 @@ import NavHome from "./header-tools/NavHome";
 import NavInsert from "./header-tools/NavInsert";
 import NavDraw from "./header-tools/NavDraw";
 import NavLayout from "./header-tools/NavLayout";
-import NavReferences from "./header-tools/NavReferences";
+import NavReferences from "./header-tools/NavPresupuesto";
 import NavMailings from "./header-tools/NavMailings";
 import NavReview from "./header-tools/NavReview";
 import NavView from "./header-tools/NavView";
+import NavPresupuesto from "./header-tools/NavPresupuesto";
 
 const TAB_COMPONENTS: Record<NavSection, React.ComponentType> = {
   Home: NavHome,
   Insert: NavInsert,
   Draw: NavDraw,
   Layout: NavLayout,
-  References: NavReferences,
+  Presupuesto: NavPresupuesto,
   Mailings: NavMailings,
   Review: NavReview,
   View: NavView,

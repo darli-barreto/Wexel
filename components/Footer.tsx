@@ -1,4 +1,5 @@
 import React from "react";
+import { useWexelStore } from "@/store/useWexelStore";
 import Zoom from "./Zoom";
 import Image from "next/image";
 
@@ -19,6 +20,7 @@ function Footer({
   onDownloadWord,
   showDownloadButton,
 }: FooterProps) {
+  const word = useWexelStore((state) => state.word);
   return (
     <div className="flex justify-between h-10 bg-[#dddddd] px-6 items-center">
       {/* Información a la izquierda */}
@@ -27,8 +29,8 @@ function Footer({
         <span className="text-blue-600">W</span>
         <span className="text-[#217346]">exel</span>
       </span>
-        <p>Page 1 of 1</p>
-        <p>0 words</p>
+        <p>Page 1 of {word.totalPages}</p>
+        <p>{word.wordCount} words</p>
         <p>English (United States)</p>
         <p>Accesibility: Good to go</p>
       </div>

@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function StylePercent() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="percent" className="cursor-pointer">
       <Image
         src="/icons/eb2.svg"
         alt="style percent button"
@@ -11,7 +12,7 @@ function StylePercent() {
         height={15}
         title="StylePercent"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

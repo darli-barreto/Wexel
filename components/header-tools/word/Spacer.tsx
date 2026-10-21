@@ -1,9 +1,10 @@
+import AdvancedButton from "../AdvancedButton";
 import Image from "next/image";
 import React from "react";
 
 function Spacer() {
   return (
-    <button className="cursor-pointer">
+    <AdvancedButton tool="cut" label="Cortar" className="cursor-pointer">
       <Image
         src="/icons/spacer.svg"
         alt="spacer button"
@@ -11,7 +12,7 @@ function Spacer() {
         height={17}
         title="Spacer"
       />
-    </button>
+    </AdvancedButton>
   );
 }
 

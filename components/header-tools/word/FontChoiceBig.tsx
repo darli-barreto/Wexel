@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function FontChoiceBig() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="grow" className="cursor-pointer">
       <Image
         src="/icons/b1.svg"
         alt="font choice big button"
@@ -11,7 +12,7 @@ function FontChoiceBig() {
         height={13}
         title="FontChoiceBig"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

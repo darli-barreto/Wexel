@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function AlingCenter() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="center" className="cursor-pointer">
       <Image
         src="/icons/c9.svg"
         alt="aling center button"
@@ -11,7 +12,7 @@ function AlingCenter() {
         height={12}
         title="AlingCenter"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

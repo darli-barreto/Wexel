@@ -1,9 +1,10 @@
+import AdvancedButton from "../AdvancedButton";
 import Image from "next/image";
 import React from "react";
 
 function AlingParagraphSpacing() {
   return (
-    <button className="cursor-pointer">
+    <AdvancedButton tool="spacing" label="Interlineado" className="cursor-pointer">
       <Image
         src="/icons/c12.svg"
         alt="aling paragraph spacing button"
@@ -11,7 +12,7 @@ function AlingParagraphSpacing() {
         height={12}
         title="AlingParagraphSpacing"
       />
-    </button>
+    </AdvancedButton>
   );
 }
 

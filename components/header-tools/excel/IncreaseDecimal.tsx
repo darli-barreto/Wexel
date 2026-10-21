@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function IncreaseDecimal() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="increaseDecimal" className="cursor-pointer">
       <Image
         src="/icons/eb4.svg"
         alt="increase decimal button"
@@ -11,7 +12,7 @@ function IncreaseDecimal() {
         height={15}
         title="IncreaseDecimal"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

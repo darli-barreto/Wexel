@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function FontBold() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="bold" className="cursor-pointer">
       <Image
         src="/icons/b5.svg"
         alt="font bold button"
@@ -11,7 +12,7 @@ function FontBold() {
         height={10}
         title="FontBold"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

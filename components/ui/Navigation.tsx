@@ -9,7 +9,7 @@ export const SECTIONS = [
   "Insert",
   "Draw",
   "Layout",
-  "References",
+  "Presupuesto",
   "Mailings",
   "Review",
   "View",

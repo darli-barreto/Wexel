@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function FontChoiceLitle() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="shrink" className="cursor-pointer">
       <Image
         src="/icons/b2.svg"
         alt="font choice little button"
@@ -11,7 +12,7 @@ function FontChoiceLitle() {
         height={13}
         title="FontChoiceLitle"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

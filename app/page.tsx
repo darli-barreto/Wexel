@@ -1,18 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import Canvaword from "@/components/Canvaword";
 import Footer from "@/components/Footer";
 import CanvaExcel from "@/components/CanvaExcel";
+import { pageBandsDocx } from "@/components/utils/pageBandsDocx";
 import { Document, Packer, Paragraph, TextRun } from "docx";
 import { saveAs } from "file-saver";
 
+import { useWexelStore } from "@/store/useWexelStore";
+
 export default function Home() {
-  const [viewMode, setViewMode] = useState<"split" | "word" | "excel">("excel");
+  const viewMode = useWexelStore((state) => state.viewMode);
+  const setViewMode = useWexelStore((state) => state.setViewMode);
+  const setActiveFocus = useWexelStore((state) => state.setActiveFocus);
+  useEffect(() => { void useWexelStore.persist.rehydrate(); }, []);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [wordContent, setWordContent] = useState("");
+  const wordContent = useWexelStore((state) => state.word.content);
 
   const handleWordFullscreen = () => {
     setViewMode("word");
@@ -31,8 +37,11 @@ export default function Home() {
 
   const handleDownloadWord = async () => {
     const plainText = wordContent.replace(/<[^>]*>/g, ''); // Quitar etiquetas HTML
+    const word = useWexelStore.getState().word;
+    const bands = await pageBandsDocx(word.header, word.footer);
     const doc = new Document({
       sections: [{
+        ...bands,
         children: [
           new Paragraph({
             children: [new TextRun(plainText)],
@@ -54,24 +63,21 @@ export default function Home() {
       <TopBar />
       <Header />
 
-      <div className="flex  overflow-hidden">
-        {/* Vista dividida (default) */}
-        {viewMode === "split" && (
-          <div className="flex w-full">
-            <div className="w-1/2">
-              <Canvaword isSplit={true} onContentChange={setWordContent} />
-            </div>
-            <div className="w-1/2">
-              <CanvaExcel isSplit={true} />
-            </div>
-          </div>
-        )}
-
-        {/* Solo Word */}
-        {viewMode === "word" && <Canvaword isSplit={false} onContentChange={setWordContent} />}
-
-        {/* Solo Excel */}
-        {viewMode === "excel" && <CanvaExcel isSplit={false} />}
+      <div className="flex flex-1 min-h-0 overflow-hidden">
+        <div
+          className={viewMode === "excel" ? "hidden" : viewMode === "split" ? "flex w-1/2 min-w-0" : "flex w-full min-w-0"}
+          onFocusCapture={() => setActiveFocus("word")}
+          onMouseDownCapture={() => setActiveFocus("word")}
+        >
+          <Canvaword isSplit={viewMode === "split"} />
+        </div>
+        <div
+          className={viewMode === "word" ? "hidden" : viewMode === "split" ? "flex w-1/2 min-w-0" : "flex w-full min-w-0"}
+          onFocusCapture={() => setActiveFocus("excel")}
+          onMouseDownCapture={() => setActiveFocus("excel")}
+        >
+          <CanvaExcel />
+        </div>
       </div>
 
       <Footer

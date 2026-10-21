@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function FontCrossedOut() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="strike" className="cursor-pointer">
       <Image
         src="/icons/b8.svg"
         alt="font crossed out button"
@@ -11,7 +12,7 @@ function FontCrossedOut() {
         height={10.18}
         title="FontCrossedOut"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

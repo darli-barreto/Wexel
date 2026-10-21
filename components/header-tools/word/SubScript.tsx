@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function SubScript() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="subscript" className="cursor-pointer">
       <Image
         src="/icons/b9.svg"
         alt="subscript button"
@@ -11,7 +12,7 @@ function SubScript() {
         height={11}
         title="SubScript"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

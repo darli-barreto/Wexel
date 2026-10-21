@@ -1,0 +1,29 @@
+.document { position: relative; flex-shrink: 0; color: #171717; }
+.pages { position: absolute; inset: 0; pointer-events: none; }
+.pageNumber { position: absolute; bottom: 24px; right: 80px; color: #7f7f7d; font: 12px Arial, sans-serif; }
+.editor {
+  outline: none;
+  min-height: 963px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.editor p { margin: 0 0 8px; }
+.editor h1 { font-size: 28px; font-weight: bold; margin: 12px 0 8px; }
+.editor h2 { font-size: 24px; font-weight: bold; margin: 12px 0 8px; }
+.editor h3 { font-size: 20px; font-weight: bold; margin: 12px 0 8px; }
+.editor h4, .editor h5, .editor h6 { font-size: 16px; font-weight: bold; margin: 8px 0; }
+.editor ul, .editor ol { padding-left: 24px; margin: 8px 0; }
+.editor ul { list-style: disc; }
+.editor ol { list-style: decimal; }
+.editor blockquote { border-left: 3px solid #d0d0d0; padding-left: 16px; margin: 8px 0; }
+.editor pre { white-space: pre-wrap; overflow-wrap: anywhere; font-family: monospace; margin: 8px 0; }
+.editor code { font-family: monospace; }
+.editor hr { border: 0; border-top: 1px solid #d0d0d0; margin: 12px 0; }
+.editor a { color: #2b579a; text-decoration: underline; }
+
+.editor:global(.wexel-show-marks) p::after, .editor:global(.wexel-show-marks) h1::after, .editor:global(.wexel-show-marks) h2::after { content: "¶"; color: #5f9dce; font-weight: normal; }
+.editor ol ol { list-style-type: lower-alpha; }
+.editor ol ol ol { list-style-type: lower-roman; }

@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function SuperScript() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="superscript" className="cursor-pointer">
       <Image
         src="/icons/b10.svg"
         alt="superscript button"
@@ -11,7 +12,7 @@ function SuperScript() {
         height={12}
         title="SuperScript"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

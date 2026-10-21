@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function FontEraser() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="clear" className="cursor-pointer">
       <Image
         src="/icons/b4.svg"
         alt="font eraser button"
@@ -11,7 +12,7 @@ function FontEraser() {
         height={14.85}
         title="FontEraser"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

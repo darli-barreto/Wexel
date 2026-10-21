@@ -63,7 +63,7 @@ import {
 
 function NavHome() {
   return (
-    <div className="flex h-14.5 mt-2.5  items-center">
+    <div className="flex h-14.5 mt-2.5 items-center min-w-max">
       {/* Section 0 */}
       <div className="flex ml-2 space-x-3 ">
         <Paste />

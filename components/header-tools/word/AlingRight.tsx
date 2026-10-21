@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function AlingRight() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="right" className="cursor-pointer">
       <Image
         src="/icons/c10.svg"
         alt="aling right button"
@@ -11,7 +12,7 @@ function AlingRight() {
         height={12}
         title="AlingRight"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

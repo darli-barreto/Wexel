@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function TopAling() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="top" className="cursor-pointer">
       <Image
         src="/icons/ex1.svg"
         alt="top aling button"
@@ -11,7 +12,7 @@ function TopAling() {
         height={14}
         title="TopAling"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

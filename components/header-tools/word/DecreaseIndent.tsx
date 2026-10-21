@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function DecreaseIndent() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="outdent" className="cursor-pointer">
       <Image
         src="/icons/c4.svg"
         alt="decrease indent button"
@@ -11,7 +12,7 @@ function DecreaseIndent() {
         height={12}
         title="DecreaseIndent"
       />
-    </button>
+    </RibbonButton>
   );
 }
 

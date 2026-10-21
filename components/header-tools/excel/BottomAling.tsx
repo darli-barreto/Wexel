@@ -1,9 +1,10 @@
+import RibbonButton from "../RibbonButton";
 import Image from "next/image";
 import React from "react";
 
 function BottomAling() {
   return (
-    <button className="cursor-pointer">
+    <RibbonButton action="bottom" className="cursor-pointer">
       <Image
         src="/icons/ex3.svg"
         alt="bottom aling button"
@@ -11,7 +12,7 @@ function BottomAling() {
         height={14}
         title="BottomAling"
       />
-    </button>
+    </RibbonButton>
   );
 }
 
