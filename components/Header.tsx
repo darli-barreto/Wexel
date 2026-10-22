@@ -3,24 +3,24 @@
 import { useState } from "react";
 import Navigation, { NavSection } from "./ui/Navigation";
 import NavHome from "./header-tools/NavHome";
-import NavInsert from "./header-tools/NavInsert";
-import NavDraw from "./header-tools/NavDraw";
-import NavLayout from "./header-tools/NavLayout";
-import NavReferences from "./header-tools/NavPresupuesto";
-import NavMailings from "./header-tools/NavMailings";
-import NavReview from "./header-tools/NavReview";
-import NavView from "./header-tools/NavView";
 import NavPresupuesto from "./header-tools/NavPresupuesto";
+import NavDocumentos from "./header-tools/NavDocumentos";
+import NavMetrado from "./header-tools/NavMetrado";
+import NavDiagnóstico from "./header-tools/NavDiagnóstico";
+import NavDiseño from "./header-tools/NavDiseño";
+import NavCostos from "./header-tools/NavCostos";
+import NavProgramacion from "./header-tools/NavProgramacion";
+
 
 const TAB_COMPONENTS: Record<NavSection, React.ComponentType> = {
   Home: NavHome,
-  Insert: NavInsert,
-  Draw: NavDraw,
-  Layout: NavLayout,
+  Diagnóstico: NavDiagnóstico,
+  Diseño: NavDiseño,
+  Costos: NavCostos,
+  Programación: NavProgramacion,
+  Documentos: NavDocumentos,
+  Metrados: NavMetrado,
   Presupuesto: NavPresupuesto,
-  Mailings: NavMailings,
-  Review: NavReview,
-  View: NavView,
 };
 
 function Header() {
@@ -29,7 +29,7 @@ function Header() {
   const ActiveComponent = TAB_COMPONENTS[activeSection] || NavHome;
 
   return (
-    <header className="h-[116px] min-h-[116px] max-h-[116px] w-full p-3 bg-background-primary select-none overflow-hidden flex flex-col justify-between">
+    <header className="h-29 min-h-29 max-h-29 w-full p-3 bg-background-primary select-none overflow-hidden flex flex-col justify-between">
       {/* Pestañas superiores */}
       <Navigation
         activeSection={activeSection}

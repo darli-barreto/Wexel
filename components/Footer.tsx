@@ -22,7 +22,7 @@ function Footer({
 }: FooterProps) {
   const word = useWexelStore((state) => state.word);
   return (
-    <div className="flex justify-between h-10 bg-[#dddddd] px-6 items-center">
+    <div className="flex justify-between h-6 bg-[#dddddd] px-6 items-center">
       {/* Información a la izquierda */}
       <div className="flex text-xs text-secondary items-center space-x-4">
         <span className="font-bold">

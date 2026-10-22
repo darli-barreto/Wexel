@@ -6,13 +6,13 @@ import Share from "../navigation-tools/Share";
 
 export const SECTIONS = [
   "Home",
-  "Insert",
-  "Draw",
-  "Layout",
+  "Diagnóstico",
+  "Diseño",
+  "Metrados",
+  "Costos",
+  "Programación",
+  "Documentos",
   "Presupuesto",
-  "Mailings",
-  "Review",
-  "View",
 ] as const;
 
 export type NavSection = (typeof SECTIONS)[number];
