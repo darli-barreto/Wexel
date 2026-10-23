@@ -1,0 +1,4503 @@
+{
+  "source": {
+    "file": "Plantilla_Metrados_Limpia.xlsm",
+    "sha256": "3ddb033172855f233a6741971e9bc446f7222d68977571917f030ddec7023f03",
+    "sheets": [
+      "Metrado",
+      "Acero",
+      "RESUMEN"
+    ],
+    "notes": [
+      {
+        "sourceCell": "M54",
+        "reason": "Resultado original conservado: cálculo especial o valor manual",
+        "value": 29.649828000000003
+      },
+      {
+        "sourceCell": "M56",
+        "reason": "Resultado original conservado: cálculo especial o valor manual",
+        "value": 24.16225199999999
+      },
+      {
+        "sourceCell": "L330",
+        "reason": "Cubicado auxiliar de madera separado del total de tijerales en und",
+        "value": 17.388451443569537
+      },
+      {
+        "sourceCell": "L330",
+        "reason": "Resultado original conservado: cálculo especial o valor manual",
+        "value": 17.388451443569537
+      },
+      {
+        "sourceCell": "L331",
+        "reason": "Cubicado auxiliar de madera separado del total de tijerales en und",
+        "value": 0.0
+      },
+      {
+        "sourceCell": "L331",
+        "reason": "Resultado original conservado: cálculo especial o valor manual",
+        "value": 0.0
+      },
+      {
+        "sourceCell": "L332",
+        "reason": "Cubicado auxiliar de madera separado del total de tijerales en und",
+        "value": 31.49606299212595
+      },
+      {
+        "sourceCell": "L332",
+        "reason": "Resultado original conservado: cálculo especial o valor manual",
+        "value": 31.49606299212595
+      },
+      {
+        "sourceCell": "L333",
+        "reason": "Cubicado auxiliar de madera separado del total de tijerales en und",
+        "value": 9.514435695538047
+      },
+      {
+        "sourceCell": "L333",
+        "reason": "Resultado original conservado: cálculo especial o valor manual",
+        "value": 9.514435695538047
+      },
+      {
+        "sourceCell": "L334",
+        "reason": "Cubicado auxiliar de madera separado del total de tijerales en und",
+        "value": 13.779527559055104
+      },
+      {
+        "sourceCell": "L334",
+        "reason": "Resultado original conservado: cálculo especial o valor manual",
+        "value": 13.779527559055104
+      }
+    ]
+  },
+  "header": {
+    "title": "METRADOS  DE ESTRUCTURAS MODULO I",
+    "project": "\"CONSTRUCCION DE LA INSTITUCION EDUCATIVA INICIAL N° 431 DE FRAYLE RUMI, DISTRITO DE SAN BUENAVENTURA, PROVINCIA DE MARAÑON\"",
+    "owner": "GOBIERNO REGIONAL DE HUANUCO",
+    "date": "JULIO 2013",
+    "specialty": "ESTRUCTURAS",
+    "module": "02 AULAS, 01 DIRECCIÓN, 01 COCINA, 02 DEPOSITOS, 01 ALMACEN, 01 CTO DE LIMPIEZA, SS.HH  DOCENTES",
+    "preparedBy": "",
+    "reviewedBy": ""
+  },
+  "items": [
+    {
+      "id": "q7-02",
+      "parentId": null,
+      "kind": "chapter",
+      "code": "02",
+      "description": "MODULO I (02 aulas, 01 dirección, 01 cocina, 02 depositos, 01 alamace, 01 cuarto de limpieza, 01 SS.HH docentes)",
+      "unit": "",
+      "order": 0,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.01",
+      "parentId": "q7-02",
+      "kind": "chapter",
+      "code": "02.01",
+      "description": "TRABAJOS PRELIMINARES",
+      "unit": "",
+      "order": 1,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.01.01",
+      "parentId": "q7-02.01",
+      "kind": "item",
+      "code": "02.01.01",
+      "description": "LIMPIEZA DE TERRENO MANUAL",
+      "unit": "m2",
+      "order": 2,
+      "measurements": [
+        {
+          "id": "q7-measure-20",
+          "description": "Modulo y veredas",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 28.7,
+          "width": 9.9,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.01.02",
+      "parentId": "q7-02.01",
+      "kind": "item",
+      "code": "02.01.02",
+      "description": "TRAZO,  NIVELES  Y  REPLANTEO PRELIMINAR",
+      "unit": "m2",
+      "order": 3,
+      "measurements": [
+        {
+          "id": "q7-measure-22",
+          "description": "Modulo y veredas",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 28.7,
+          "width": 9.9,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.01.03",
+      "parentId": "q7-02.01",
+      "kind": "item",
+      "code": "02.01.03",
+      "description": "TRAZO, NIVELES  Y REPLANTEO DURANTE EL PROCESO",
+      "unit": "m2",
+      "order": 4,
+      "measurements": [
+        {
+          "id": "q7-measure-24",
+          "description": "Modulo y veredas",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 28.7,
+          "width": 9.9,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.02",
+      "parentId": "q7-02",
+      "kind": "chapter",
+      "code": "02.02",
+      "description": "MOVIMIENTO DE TIERRAS",
+      "unit": "",
+      "order": 5,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.02.01",
+      "parentId": "q7-02.02",
+      "kind": "item",
+      "code": "02.02.01",
+      "description": "EXCAVACIONES DE ZANJAS PARA CIMIENTOS  EN TERRENO  NORMAL",
+      "unit": "m3",
+      "order": 6,
+      "measurements": [
+        {
+          "id": "q7-measure-28",
+          "description": "Eje A-A, B-B, D-D, F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 5.0,
+          "length": 6.6,
+          "width": 0.5,
+          "height": 1.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-29",
+          "description": "Eje entre A-A y B-B",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-30",
+          "description": "Eje entre F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-31",
+          "description": "Eje 1-1 y 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 26.95,
+          "width": 0.5,
+          "height": 1.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-32",
+          "description": "Eje 2-2",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.925,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-33",
+          "description": "Eje entre 2-2 y 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 2.265,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.02.02",
+      "parentId": "q7-02.02",
+      "kind": "item",
+      "code": "02.02.02",
+      "description": "RELLENO Y COMPACTADO DE ZANJAS  CON  EQUIPO LIVIANO (CON  MATERIAL PROPIO)",
+      "unit": "m3",
+      "order": 7,
+      "measurements": [
+        {
+          "id": "q7-measure-36",
+          "description": "Eje A-A, B-B, D-D, F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 5.0,
+          "length": 6.6,
+          "width": 0.5,
+          "height": 1.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-37",
+          "description": "Descuento de viga cimentacion",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 5.0,
+          "length": 6.75,
+          "width": 0.23,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": -1
+        },
+        {
+          "id": "q7-measure-38",
+          "description": "Descuento de sobrecimiento",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 5.0,
+          "length": 6.75,
+          "width": 0.23,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": -1
+        },
+        {
+          "id": "q7-measure-39",
+          "description": "Eje entre A-A y B-B",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-40",
+          "description": "Descuento de sobrecimiento",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.13,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": -1
+        },
+        {
+          "id": "q7-measure-41",
+          "description": "Eje entre F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-42",
+          "description": "Descuento de sobrecimiento",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.13,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": -1
+        },
+        {
+          "id": "q7-measure-43",
+          "description": "Eje 1-1 y 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 26.95,
+          "width": 0.5,
+          "height": 1.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-44",
+          "description": "Descuento de viga cimentacion",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 6.0,
+          "length": 4.075,
+          "width": 0.23,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": -1
+        },
+        {
+          "id": "q7-measure-45",
+          "description": "Descuento de sobrecimiento",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 6.0,
+          "length": 4.075,
+          "width": 0.13,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": -1
+        },
+        {
+          "id": "q7-measure-46",
+          "description": "Eje 2-2",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.925,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-47",
+          "description": "Descuento de sobrecimiento",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 4.225,
+          "width": 0.13,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": -1
+        },
+        {
+          "id": "q7-measure-48",
+          "description": "Eje entre 2-2 y 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 2.265,
+          "width": 0.4,
+          "height": 0.9,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-49",
+          "description": "Descuento de sobrecimiento",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 2.265,
+          "width": 0.13,
+          "height": 0.3,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.02.03",
+      "parentId": "q7-02.02",
+      "kind": "item",
+      "code": "02.02.03",
+      "description": "ACARREO MATERIAL EXCEDENTE HASTA 30.00 MT (A MANO USANDO CARRETILLA)",
+      "unit": "m3",
+      "order": 8,
+      "measurements": [
+        {
+          "id": "q7-measure-53",
+          "description": "EXCAVACIONES DE ZANJAS PARA CIMIENTOS  EN TERRENO  NORMAL",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 1.2,
+          "width": 44.843399999999995,
+          "height": 1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-54",
+          "description": "RELLENO Y COMPACTADO DE ZANJAS  CON  EQUIPO LIVIANO (CON  MATERIAL PROPIO)",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 0.8,
+          "width": 37.062285,
+          "height": 1,
+          "repetitions": 1.0,
+          "sign": -1,
+          "resultRaw": "29.649828000000003",
+          "quantityOverride": 29.649828000000003
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.02.04",
+      "parentId": "q7-02.02",
+      "kind": "item",
+      "code": "02.02.04",
+      "description": "ELIMINACION MATERIAL EXCEDENTE DE FORMA MANUAL (USO DE  CARRETILLA)",
+      "unit": "m3",
+      "order": 9,
+      "measurements": [
+        {
+          "id": "q7-measure-56",
+          "description": "ELIMINACION MATERIAL EXCEDENTE DE FORMA MANUAL (USO DE  CARRETILLA)",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 1.0,
+          "width": 1.0,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1,
+          "resultRaw": "24.16225199999999",
+          "quantityOverride": 24.16225199999999
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.02.05",
+      "parentId": "q7-02.02",
+      "kind": "item",
+      "code": "02.02.05",
+      "description": "NIVELACION INT.Y APISONADO FINAL DEL TERRENO PREVIO AL PISO C/EQUIPO LIVIANO",
+      "unit": "m2",
+      "order": 10,
+      "measurements": [
+        {
+          "id": "q7-measure-59",
+          "description": "Aula 1 y Aula 2",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 8.57,
+          "width": 6.97,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-60",
+          "description": "cocina y direccion",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 4.255,
+          "width": 3.59,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-61",
+          "description": "almacen",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 3.25,
+          "width": 2.595,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-62",
+          "description": "deposito",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.25,
+          "width": 1.53,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-63",
+          "description": "cto. de limpieza",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 1.89,
+          "width": 2.595,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-64",
+          "description": "ss. hh.",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 2.695,
+          "width": 1.23,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.02.06",
+      "parentId": "q7-02.02",
+      "kind": "item",
+      "code": "02.02.06",
+      "description": "NIVELACION Y APISONADO EN VEREDAS E=4\" C/EQUIPO LIVIANO",
+      "unit": "m2",
+      "order": 11,
+      "measurements": [
+        {
+          "id": "q7-measure-67",
+          "description": "Veredas",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 28.63,
+          "width": 1.8,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-68",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 28.63,
+          "width": 0.82,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-69",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 7.6,
+          "width": 1.2,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-70",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 7.6,
+          "width": 0.6,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03",
+      "parentId": "q7-02",
+      "kind": "chapter",
+      "code": "02.03",
+      "description": "OBRAS DE CONCRETO SIMPLE",
+      "unit": "",
+      "order": 12,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03.01",
+      "parentId": "q7-02.03",
+      "kind": "chapter",
+      "code": "02.03.01",
+      "description": "CIMIENTOS",
+      "unit": "",
+      "order": 13,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03.01.01",
+      "parentId": "q7-02.03.01",
+      "kind": "item",
+      "code": "02.03.01.01",
+      "description": "CIMIENTOS CORRIDOS MEZCLA 1:10 CEMENTO:HORMIGON + 30%  DE PIEDRA GRANDE",
+      "unit": "m3",
+      "order": 14,
+      "measurements": [
+        {
+          "id": "q7-measure-76",
+          "description": "Eje A-A, B-B, D-D, F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 5.0,
+          "length": 6.6,
+          "width": 0.5,
+          "height": 0.6,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-77",
+          "description": "Eje entre A-A y B-B",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.4,
+          "height": 0.6,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-78",
+          "description": "Eje entre F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.1,
+          "width": 0.4,
+          "height": 0.6,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-79",
+          "description": "Eje 1-1 y 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 26.95,
+          "width": 0.5,
+          "height": 0.6,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-80",
+          "description": "Eje 2-2",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.925,
+          "width": 0.4,
+          "height": 0.6,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-81",
+          "description": "Eje entre 2-2 y 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 2.265,
+          "width": 0.4,
+          "height": 0.6,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03.02",
+      "parentId": "q7-02.03",
+      "kind": "chapter",
+      "code": "02.03.02",
+      "description": "SOBRECIMIENTOS",
+      "unit": "",
+      "order": 15,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03.02.01",
+      "parentId": "q7-02.03.02",
+      "kind": "item",
+      "code": "02.03.02.01",
+      "description": "CONCRETO EN SOBRECIMIENTO 1:8  CEMENTO:HORMIGON + 25% DE PIEDRA MEDIANA",
+      "unit": "m3",
+      "order": 16,
+      "measurements": [
+        {
+          "id": "q7-measure-85",
+          "description": "Eje A-A y D-D",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 6.5,
+          "width": 0.23,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-86",
+          "description": "Eje B-B y F-F",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.25,
+          "width": 0.23,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-87",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 1.87,
+          "width": 0.23,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-88",
+          "description": "Eje G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.25,
+          "width": 0.23,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-89",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 0.53,
+          "width": 0.23,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-90",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 1.06,
+          "width": 0.23,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-91",
+          "description": "Eje interior entre A-A y B-B, entre F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.25,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-92",
+          "description": "Eje 1-1",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.05,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-93",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 2.92,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-94",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 4.05,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-95",
+          "description": "Eje 2-2",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.23,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-96",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 4.26,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-97",
+          "description": "Eje 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 4.08,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-98",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 4.0,
+          "length": 4.05,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-99",
+          "description": "Eje interior entre 2-2 y 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 2.6,
+          "width": 0.13,
+          "height": 0.5,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03.02.02",
+      "parentId": "q7-02.03.02",
+      "kind": "item",
+      "code": "02.03.02.02",
+      "description": "ENCOFRADO Y DESENCOFRADO NORMAL PARA SOBRECIMIENTO",
+      "unit": "m2",
+      "order": 17,
+      "measurements": [
+        {
+          "id": "q7-measure-102",
+          "description": "Eje A-A y D-D",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 6.6,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-103",
+          "description": "Eje B-B y F-F",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.25,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-104",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 1.87,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-105",
+          "description": "Eje G-G",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 3.25,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-106",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 0.53,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-107",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 1.06,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-108",
+          "description": "Eje interior entre A-A y B-B, entre F-F y G-G",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.25,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-109",
+          "description": "Eje 1-1",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.05,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-110",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 2.92,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-111",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 4.05,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-112",
+          "description": "Eje 2-2",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 3.23,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-113",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 4.26,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-114",
+          "description": "Eje 3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 4.08,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-115",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 4.05,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-116",
+          "description": "Eje interior entre 2-2 y 3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 2.6,
+          "width": 0.5,
+          "height": 0.5,
+          "repetitions": 2.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03.03",
+      "parentId": "q7-02.03",
+      "kind": "chapter",
+      "code": "02.03.03",
+      "description": "FALSO PISO",
+      "unit": "",
+      "order": 18,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.03.03.01",
+      "parentId": "q7-02.03.03",
+      "kind": "item",
+      "code": "02.03.03.01",
+      "description": "CONCRETO EN FALSO PISO MEZCAL 1:8 CEMENTO:HORMIGON  DE 4\"",
+      "unit": "m2",
+      "order": 19,
+      "measurements": [
+        {
+          "id": "q7-measure-119",
+          "description": "Aula 1 y Aula 2",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 8.57,
+          "width": 6.97,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-120",
+          "description": "cocina y direccion",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 4.255,
+          "width": 3.59,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-121",
+          "description": "almacen",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 3.25,
+          "width": 2.595,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-122",
+          "description": "deposito",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.25,
+          "width": 1.53,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-123",
+          "description": "cto. de limpieza",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 1.89,
+          "width": 2.595,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-124",
+          "description": "ss. hh.",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 2.695,
+          "width": 1.23,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04",
+      "parentId": "q7-02",
+      "kind": "chapter",
+      "code": "02.04",
+      "description": "OBRAS DE CONCRETO ARMADO",
+      "unit": "",
+      "order": 20,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.01",
+      "parentId": "q7-02.04",
+      "kind": "chapter",
+      "code": "02.04.01",
+      "description": "VIGAS DE CIMENTACION",
+      "unit": "",
+      "order": 21,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.01.01",
+      "parentId": "q7-02.04.01",
+      "kind": "item",
+      "code": "02.04.01.01",
+      "description": "CONCRETO EN VIGAS DE CIMENTACION  F'c = 210 KG/CM2",
+      "unit": "m3",
+      "order": 22,
+      "measurements": [
+        {
+          "id": "q7-measure-129",
+          "description": "Eje A-A, B-B, D-D, F-F y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 5.0,
+          "length": 3.25,
+          "width": 0.25,
+          "height": 0.3,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-130",
+          "description": "Eje 1-1, y  3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 4.0,
+          "length": 4.05,
+          "width": 0.25,
+          "height": 0.3,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-131",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 4.08,
+          "width": 0.25,
+          "height": 0.3,
+          "repetitions": 2.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.01.02",
+      "parentId": "q7-02.04.01",
+      "kind": "item",
+      "code": "02.04.01.02",
+      "description": "ENCOFRADO Y DESENCOFRADO NORMAL EN VIGAS DE CIMENTACION",
+      "unit": "m2",
+      "order": 23,
+      "measurements": [
+        {
+          "id": "q7-measure-133",
+          "description": "Eje A-A, B-B, D-D, F-F y G-G",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 10.0,
+          "length": 3.25,
+          "width": 0.3,
+          "height": 0.3,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-134",
+          "description": "Eje 1-1, y  3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 8.0,
+          "length": 4.05,
+          "width": 0.3,
+          "height": 0.3,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-135",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 4.08,
+          "width": 0.3,
+          "height": 0.3,
+          "repetitions": 2.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.01.03",
+      "parentId": "q7-02.04.01",
+      "kind": "item",
+      "code": "02.04.01.03",
+      "description": "ACERO  EN  VIGAS DE CIMENTACION  F'y=4,200  kg/cm²  GRADO 60",
+      "unit": "kg",
+      "order": 24,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-steel-139",
+          "description": "Eje A-A, B-B, D-D, F-F y G-G · long. 4 Ø5/8''   |_____|",
+          "bar": "Ø 5/8″",
+          "diameterMm": 15.875,
+          "kgPerMeter": 1.55,
+          "similarElements": 5.0,
+          "length": 7.45,
+          "quantity": 4.0,
+          "hookStart": 0.7,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 252.65
+        },
+        {
+          "id": "q7-steel-140",
+          "description": "Eje A-A, B-B, D-D, F-F y G-G · Estribo : 38 Und de Ø3/8'' en 5 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 5.0,
+          "length": 1.1,
+          "quantity": 38.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 117.04
+        },
+        {
+          "id": "q7-steel-142",
+          "description": "Eje 1-1, y  3-3 · long. 4 Ø5/8''   |_____|",
+          "bar": "Ø 5/8″",
+          "diameterMm": 15.875,
+          "kgPerMeter": 1.55,
+          "similarElements": 2.0,
+          "length": 26.8,
+          "quantity": 4.0,
+          "hookStart": 0.7,
+          "hookEnd": 0,
+          "spliceLength": 1.8,
+          "splices": 1,
+          "weightKg": 363.32
+        },
+        {
+          "id": "q7-steel-143",
+          "description": "Eje 1-1, y  3-3 · Estribo : 26 Und de Ø3/8'' en 12 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 12.0,
+          "length": 1.1,
+          "quantity": 26.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 192.19200000000004
+        }
+      ]
+    },
+    {
+      "id": "q7-02.04.02",
+      "parentId": "q7-02.04",
+      "kind": "chapter",
+      "code": "02.04.02",
+      "description": "COLUMNAS",
+      "unit": "",
+      "order": 25,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.02.01",
+      "parentId": "q7-02.04.02",
+      "kind": "item",
+      "code": "02.04.02.01",
+      "description": "CONCRETO EN COLUMNAS  F'c = 210 KG/CM2",
+      "unit": "m3",
+      "order": 26,
+      "measurements": [
+        {
+          "id": "q7-measure-148",
+          "description": "C-1",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 10.0,
+          "length": 0.35,
+          "width": 0.35,
+          "height": 3.7,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-149",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 0.35,
+          "width": 0.35,
+          "height": 4.38,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-150",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 0.35,
+          "width": 0.35,
+          "height": 4.05,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-151",
+          "description": "C-2",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 0.25,
+          "width": 0.23,
+          "height": 5.61,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-152",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 6.0,
+          "length": 0.25,
+          "width": 0.23,
+          "height": 3.7,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.02.02",
+      "parentId": "q7-02.04.02",
+      "kind": "item",
+      "code": "02.04.02.02",
+      "description": "ENCOFRADO Y DESENCOFRADO NORMAL EN COLUMNAS",
+      "unit": "m2",
+      "order": 27,
+      "measurements": [
+        {
+          "id": "q7-measure-156",
+          "description": "C-1",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 6.0,
+          "length": 1.4,
+          "width": 3.7,
+          "height": 3.7,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-157",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 1.17,
+          "width": 3.7,
+          "height": 3.7,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-158",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 1.17,
+          "width": 4.38,
+          "height": 4.38,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-159",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 1.17,
+          "width": 4.05,
+          "height": 4.05,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-160",
+          "description": "C-2",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 0.5,
+          "width": 5.61,
+          "height": 5.61,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-161",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 3.0,
+          "length": 0.5,
+          "width": 3.7,
+          "height": 3.7,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-162",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 3.0,
+          "length": 0.73,
+          "width": 3.7,
+          "height": 3.7,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.02.03",
+      "parentId": "q7-02.04.02",
+      "kind": "item",
+      "code": "02.04.02.03",
+      "description": "ACERO  EN  COLUMNAS  F'y=4,200  kg/cm²  GRADO 60",
+      "unit": "kg",
+      "order": 28,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-steel-166",
+          "description": "C 1 · long. 4 Ø5/8''   |_____|",
+          "bar": "Ø 5/8″",
+          "diameterMm": 15.875,
+          "kgPerMeter": 1.55,
+          "similarElements": 2.0,
+          "length": 4.65,
+          "quantity": 4.0,
+          "hookStart": 0.7,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 66.34
+        },
+        {
+          "id": "q7-steel-167",
+          "description": "C 1 · Estribo : 24 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.4,
+          "quantity": 24.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 37.632
+        },
+        {
+          "id": "q7-steel-168",
+          "description": "C 1 · long. 4 Ø5/8''   |_____|",
+          "bar": "Ø 5/8″",
+          "diameterMm": 15.875,
+          "kgPerMeter": 1.55,
+          "similarElements": 2.0,
+          "length": 4.98,
+          "quantity": 4.0,
+          "hookStart": 0.7,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 70.43200000000002
+        },
+        {
+          "id": "q7-steel-169",
+          "description": "C 1 · Estribo : 24 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.4,
+          "quantity": 24.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 37.632
+        },
+        {
+          "id": "q7-steel-170",
+          "description": "C 1 · long. 4 Ø5/8''   |_____|",
+          "bar": "Ø 5/8″",
+          "diameterMm": 15.875,
+          "kgPerMeter": 1.55,
+          "similarElements": 10.0,
+          "length": 4.3,
+          "quantity": 4.0,
+          "hookStart": 0.7,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 310.0
+        },
+        {
+          "id": "q7-steel-171",
+          "description": "C 1 · Estribo : 24 Und de Ø3/8'' en 10 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 10.0,
+          "length": 1.4,
+          "quantity": 24.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 188.16000000000003
+        },
+        {
+          "id": "q7-steel-173",
+          "description": "C 2 · long. 4 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 6.2,
+          "quantity": 4.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 53.064
+        },
+        {
+          "id": "q7-steel-174",
+          "description": "C 2 · Estribo : 24 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.0,
+          "quantity": 24.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 26.880000000000003
+        },
+        {
+          "id": "q7-steel-175",
+          "description": "C 2 · Estribo : 16 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.0,
+          "quantity": 16.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 17.92
+        },
+        {
+          "id": "q7-steel-176",
+          "description": "C 2 · long. 4 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 6.0,
+          "length": 4.3,
+          "quantity": 4.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 114.04799999999999
+        },
+        {
+          "id": "q7-steel-177",
+          "description": "C 2 · Estribo : 24 Und de Ø3/8'' en 10 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 6.0,
+          "length": 1.0,
+          "quantity": 24.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 80.64000000000001
+        }
+      ]
+    },
+    {
+      "id": "q7-02.04.03",
+      "parentId": "q7-02.04",
+      "kind": "chapter",
+      "code": "02.04.03",
+      "description": "VIGAS",
+      "unit": "",
+      "order": 29,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.03.01",
+      "parentId": "q7-02.04.03",
+      "kind": "item",
+      "code": "02.04.03.01",
+      "description": "CONCRETO EN  VIGAS  F'c=210  kg/cm²",
+      "unit": "m3",
+      "order": 30,
+      "measurements": [
+        {
+          "id": "q7-measure-182",
+          "description": "Eje A-A y G-G",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 4.0,
+          "length": 3.25,
+          "width": 0.23,
+          "height": 0.25,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-183",
+          "description": "VT",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.56,
+          "width": 0.23,
+          "height": 0.25,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-184",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.44,
+          "width": 0.23,
+          "height": 0.25,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-185",
+          "description": "volado",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 0.23,
+          "width": 0.11,
+          "height": 1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-186",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 0.23,
+          "width": 0.63,
+          "height": 1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-187",
+          "description": "Eje B-B, D-D y F-F",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 3.0,
+          "length": 3.25,
+          "width": 0.23,
+          "height": 0.25,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-188",
+          "description": "Eje 1-1, 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 4.0,
+          "length": 4.08,
+          "width": 0.35,
+          "height": 0.25,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-189",
+          "description": "",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 8.0,
+          "length": 4.05,
+          "width": 0.35,
+          "height": 0.25,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.03.02",
+      "parentId": "q7-02.04.03",
+      "kind": "item",
+      "code": "02.04.03.02",
+      "description": "ENCOFRADO Y DESENCOFRADO NORMAL EN VIGAS",
+      "unit": "m2",
+      "order": 31,
+      "measurements": [
+        {
+          "id": "q7-measure-192",
+          "description": "Eje A-A y G-G",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 3.25,
+          "width": 0.23,
+          "height": 1.0,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-193",
+          "description": "VT",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.56,
+          "width": 0.23,
+          "height": 1.0,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-194",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.44,
+          "width": 0.23,
+          "height": 1.0,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-196",
+          "description": "volado",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 0.11,
+          "width": 1.0,
+          "height": 1.0,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-197",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 0.63,
+          "width": 1.0,
+          "height": 1.0,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-198",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 2.08,
+          "width": 0.23,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-200",
+          "description": "Eje B-B, D-D y F-F",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 6.0,
+          "length": 3.25,
+          "width": 0.23,
+          "height": 1.0,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-201",
+          "description": "Eje 1-1, 3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 4.08,
+          "width": 0.85,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-202",
+          "description": "",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 8.0,
+          "length": 4.05,
+          "width": 0.85,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.03.03",
+      "parentId": "q7-02.04.03",
+      "kind": "item",
+      "code": "02.04.03.03",
+      "description": "ACERO  EN  VIGAS  F'y=4,200  kg/cm²  GRADO 60",
+      "unit": "kg",
+      "order": 32,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-steel-206",
+          "description": "Eje A-A y G-G · long. 4 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 7.45,
+          "quantity": 4.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 62.964
+        },
+        {
+          "id": "q7-steel-207",
+          "description": "Eje A-A y G-G · Estribo : 22 Und de Ø3/8'' en 4 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 4.0,
+          "length": 1.0,
+          "quantity": 22.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 49.28
+        },
+        {
+          "id": "q7-steel-209",
+          "description": "VT · long.sup 2 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 4.6,
+          "quantity": 2.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 20.195999999999998
+        },
+        {
+          "id": "q7-steel-210",
+          "description": "VT · long.inf. 2 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 4.5,
+          "quantity": 2.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 19.8
+        },
+        {
+          "id": "q7-steel-211",
+          "description": "VT · long. inf. Vol. 2 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 0.88,
+          "quantity": 2.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 5.464799999999999
+        },
+        {
+          "id": "q7-steel-212",
+          "description": "VT · Estribo : 22 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.0,
+          "quantity": 24.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 26.880000000000003
+        },
+        {
+          "id": "q7-steel-213",
+          "description": "VT · Estribo Vol. : 3 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 0.9,
+          "quantity": 3.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 3.0240000000000005
+        },
+        {
+          "id": "q7-steel-214",
+          "description": "VT · long. sup. 2 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 5.62,
+          "quantity": 2.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 24.2352
+        },
+        {
+          "id": "q7-steel-215",
+          "description": "VT · long. inf. 2 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 5.4,
+          "quantity": 2.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 23.364
+        },
+        {
+          "id": "q7-steel-216",
+          "description": "VT · long. inf. Vol. 2 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 2.0,
+          "length": 1.88,
+          "quantity": 2.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 9.4248
+        },
+        {
+          "id": "q7-steel-217",
+          "description": "VT · Estribo : 22 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.0,
+          "quantity": 24.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 26.880000000000003
+        },
+        {
+          "id": "q7-steel-218",
+          "description": "VT · Estribo Vol. : 10 Und de Ø3/8'' en 2 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.3,
+          "quantity": 10.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 14.560000000000002
+        },
+        {
+          "id": "q7-steel-220",
+          "description": "Eje B-B, D-D y F-F · long. 4 Ø1/2''   |_____|",
+          "bar": "Ø 1/2″",
+          "diameterMm": 12.7,
+          "kgPerMeter": 0.99,
+          "similarElements": 3.0,
+          "length": 7.45,
+          "quantity": 4.0,
+          "hookStart": 0.5,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 94.446
+        },
+        {
+          "id": "q7-steel-221",
+          "description": "Eje B-B, D-D y F-F · Estribo : 22 Und de Ø3/8'' en 6 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 6.0,
+          "length": 1.0,
+          "quantity": 22.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 73.92
+        },
+        {
+          "id": "q7-steel-223",
+          "description": "Eje 1-1, 3-3 · long. 4 Ø5/8''   |_____|",
+          "bar": "Ø 5/8″",
+          "diameterMm": 15.875,
+          "kgPerMeter": 1.55,
+          "similarElements": 2.0,
+          "length": 26.8,
+          "quantity": 4.0,
+          "hookStart": 0.7,
+          "hookEnd": 0,
+          "spliceLength": 1.8,
+          "splices": 1,
+          "weightKg": 363.32
+        },
+        {
+          "id": "q7-steel-224",
+          "description": "Eje 1-1, 3-3 · Estribo : 26 Und de Ø3/8'' en 12 Elem. Simil.",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 12.0,
+          "length": 1.2,
+          "quantity": 26.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 209.66400000000002
+        }
+      ]
+    },
+    {
+      "id": "q7-02.04.04",
+      "parentId": "q7-02.04",
+      "kind": "chapter",
+      "code": "02.04.04",
+      "description": "COLUMNAS DE ARRIOSTRE",
+      "unit": "",
+      "order": 33,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.04.01",
+      "parentId": "q7-02.04.04",
+      "kind": "item",
+      "code": "02.04.04.01",
+      "description": "CONCRETO EN COLUMNETAS  F'c=175 KG/CM2",
+      "unit": "m3",
+      "order": 34,
+      "measurements": [
+        {
+          "id": "q7-measure-230",
+          "description": "C A",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 4.0,
+          "length": 2.42,
+          "width": 0.13,
+          "height": 0.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-231",
+          "description": "Eje 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 8.0,
+          "length": 1.52,
+          "width": 0.13,
+          "height": 0.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-232",
+          "description": "Eje 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.15,
+          "width": 0.13,
+          "height": 0.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-234",
+          "description": "C A",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 5.0,
+          "length": 3.15,
+          "width": 0.13,
+          "height": 0.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-236",
+          "description": "C A",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 8.0,
+          "length": 2.42,
+          "width": 0.13,
+          "height": 0.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-237",
+          "description": "Eje 1-1",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 4.0,
+          "length": 1.52,
+          "width": 0.13,
+          "height": 0.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-239",
+          "description": "C A",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.15,
+          "width": 0.13,
+          "height": 0.2,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-240",
+          "description": "C A1",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.15,
+          "width": 0.13,
+          "height": 0.53,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.04.02",
+      "parentId": "q7-02.04.04",
+      "kind": "item",
+      "code": "02.04.04.02",
+      "description": "ENCOFRADO Y DESENCOFRADO NORMAL EN COLUMNETAS",
+      "unit": "m2",
+      "order": 35,
+      "measurements": [
+        {
+          "id": "q7-measure-244",
+          "description": "C A",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 2.42,
+          "width": 0.2,
+          "height": 0.2,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-245",
+          "description": "Eje 3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 8.0,
+          "length": 1.52,
+          "width": 0.2,
+          "height": 0.2,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-246",
+          "description": "Eje 3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.15,
+          "width": 0.27,
+          "height": 0.27,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-248",
+          "description": "C A",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 5.0,
+          "length": 3.15,
+          "width": 0.2,
+          "height": 0.2,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-250",
+          "description": "C A",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 8.0,
+          "length": 2.42,
+          "width": 0.53,
+          "height": 0.53,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-251",
+          "description": "Eje 1-1",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 1.52,
+          "width": 0.53,
+          "height": 0.53,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-253",
+          "description": "C A",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 3.15,
+          "width": 0.27,
+          "height": 0.27,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-254",
+          "description": "C A1",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 3.15,
+          "width": 1.19,
+          "height": 1.19,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.04.03",
+      "parentId": "q7-02.04.04",
+      "kind": "item",
+      "code": "02.04.04.03",
+      "description": "ACERO  EN  COLUMNETAS  F'y=4,200  KG/CM2  GRADO 60",
+      "unit": "kg",
+      "order": 36,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-steel-258",
+          "description": "C A · long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 12.0,
+          "length": 2.72,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 83.8656
+        },
+        {
+          "id": "q7-steel-259",
+          "description": "C A · Estribo : 12 Und de Ø1/4'' en 12 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 12.0,
+          "length": 0.7,
+          "quantity": 12.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 25.199999999999996
+        },
+        {
+          "id": "q7-steel-260",
+          "description": "C A · long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 12.0,
+          "length": 1.82,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 59.67360000000001
+        },
+        {
+          "id": "q7-steel-261",
+          "description": "C A · Estribo : 8 Und de Ø1/4'' en 12 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 12.0,
+          "length": 0.7,
+          "quantity": 8.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 16.799999999999997
+        },
+        {
+          "id": "q7-steel-262",
+          "description": "C A · long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 8.0,
+          "length": 3.7,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 73.47200000000002
+        },
+        {
+          "id": "q7-steel-263",
+          "description": "C A · Estribo : 16 Und de Ø1/4'' en 8 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 8.0,
+          "length": 0.7,
+          "quantity": 16.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 22.4
+        },
+        {
+          "id": "q7-steel-265",
+          "description": "C A1 · long. 3 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 1.0,
+          "length": 3.7,
+          "quantity": 3.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 6.888000000000001
+        },
+        {
+          "id": "q7-steel-266",
+          "description": "C A1 · Estribo : 16 Und de Ø1/4'' en 1 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 1.0,
+          "length": 0.7,
+          "quantity": 16.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 2.8
+        }
+      ]
+    },
+    {
+      "id": "q7-02.04.05",
+      "parentId": "q7-02.04",
+      "kind": "chapter",
+      "code": "02.04.05",
+      "description": "VIGAS DE ARRIOSTRE",
+      "unit": "",
+      "order": 37,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.05.01",
+      "parentId": "q7-02.04.05",
+      "kind": "item",
+      "code": "02.04.05.01",
+      "description": "CONCRETO EN VIGUETAS F'C=175 KG/CM2",
+      "unit": "m3",
+      "order": 38,
+      "measurements": [
+        {
+          "id": "q7-measure-271",
+          "description": "VA",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 2.25,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-272",
+          "description": "Eje 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 1.25,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-273",
+          "description": "Eje 3-3",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 4.0,
+          "length": 3.6,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-275",
+          "description": "VA",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 2.67,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-276",
+          "description": "Eje 2-2",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 3.67,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-278",
+          "description": "VA",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 2.635,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-279",
+          "description": "Eje 1-1",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 2.51,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-280",
+          "description": "Eje 1-1",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.6,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-282",
+          "description": "VA",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 1.0,
+          "length": 2.625,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-284",
+          "description": "VA",
+          "unit": "m3",
+          "kind": "volume",
+          "similarElements": 2.0,
+          "length": 3.11,
+          "width": 0.13,
+          "height": 0.1,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.05.02",
+      "parentId": "q7-02.04.05",
+      "kind": "item",
+      "code": "02.04.05.02",
+      "description": "ENCOFRADO Y DESENCOFRADO NORMAL EN VIGUETAS",
+      "unit": "m2",
+      "order": 39,
+      "measurements": [
+        {
+          "id": "q7-measure-288",
+          "description": "VA",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 2.25,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-289",
+          "description": "Eje 3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 1.25,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-290",
+          "description": "Eje 3-3",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 4.0,
+          "length": 3.6,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-292",
+          "description": "VA",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 2.67,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-293",
+          "description": "Eje 2-2",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 3.67,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-295",
+          "description": "VA",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 2.635,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-296",
+          "description": "Eje 1-1",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 2.51,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-297",
+          "description": "Eje 1-1",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.6,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-299",
+          "description": "VA",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 2.625,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        },
+        {
+          "id": "q7-measure-301",
+          "description": "VA",
+          "unit": "m2",
+          "kind": "area",
+          "similarElements": 2.0,
+          "length": 3.11,
+          "width": 0.1,
+          "height": 0.1,
+          "repetitions": 2.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.05.03",
+      "parentId": "q7-02.04.05",
+      "kind": "item",
+      "code": "02.04.05.03",
+      "description": "ACERO  EN  VIGUETAS  F'y=4,200  KG/CM2  GRADO 60",
+      "unit": "kg",
+      "order": 40,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-steel-305",
+          "description": "Eje 3-3 · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 6.0,
+          "length": 4.0,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 29.568000000000005
+        },
+        {
+          "id": "q7-steel-306",
+          "description": "Eje 3-3 · Estribo : 18 Und de Ø1/4'' en 6 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 6.0,
+          "length": 0.25,
+          "quantity": 18.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 6.75
+        },
+        {
+          "id": "q7-steel-308",
+          "description": "Eje 2-2 · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 1.0,
+          "length": 3.2,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 4.032000000000001
+        },
+        {
+          "id": "q7-steel-309",
+          "description": "Eje 2-2 · Estribo : 14 Und de Ø1/4'' en 1 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 1.0,
+          "length": 0.25,
+          "quantity": 14.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 0.875
+        },
+        {
+          "id": "q7-steel-310",
+          "description": "Eje 2-2 · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 1.0,
+          "length": 4.0,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 4.928000000000001
+        },
+        {
+          "id": "q7-steel-311",
+          "description": "Eje 2-2 · Estribo : 18 Und de Ø1/4'' en 1 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 1.0,
+          "length": 0.25,
+          "quantity": 18.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 1.125
+        },
+        {
+          "id": "q7-steel-313",
+          "description": "Eje 1-1 · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 3.035,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 7.694400000000001
+        },
+        {
+          "id": "q7-steel-314",
+          "description": "Eje 1-1 · Estribo : 14 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.25,
+          "quantity": 14.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 1.75
+        },
+        {
+          "id": "q7-steel-315",
+          "description": "Eje 1-1 · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 2.9,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 7.392
+        },
+        {
+          "id": "q7-steel-316",
+          "description": "Eje 1-1 · Estribo : 12 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.25,
+          "quantity": 12.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 1.5
+        },
+        {
+          "id": "q7-steel-317",
+          "description": "Eje 1-1 · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 4.0,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 9.856000000000002
+        },
+        {
+          "id": "q7-steel-318",
+          "description": "Eje 1-1 · Estribo : 18 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.25,
+          "quantity": 18.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 2.25
+        },
+        {
+          "id": "q7-steel-320",
+          "description": "interiores · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 3.51,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 8.7584
+        },
+        {
+          "id": "q7-steel-321",
+          "description": "interiores · Estribo : 16 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.25,
+          "quantity": 16.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 2.0
+        },
+        {
+          "id": "q7-steel-322",
+          "description": "interiores · long. 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 1.0,
+          "length": 2.95,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 3.7520000000000007
+        },
+        {
+          "id": "q7-steel-323",
+          "description": "interiores · Estribo : 14 Und de Ø1/4'' en 1 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 1.0,
+          "length": 0.25,
+          "quantity": 14.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 0.875
+        }
+      ]
+    },
+    {
+      "id": "q7-02.04.06",
+      "parentId": "q7-02.04",
+      "kind": "chapter",
+      "code": "02.04.06",
+      "description": "VARIOS",
+      "unit": "",
+      "order": 41,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.04.06.01",
+      "parentId": "q7-02.04.06",
+      "kind": "item",
+      "code": "02.04.06.01",
+      "description": "ROTURA DE PROBETAS DE CONCRETO",
+      "unit": "und",
+      "order": 42,
+      "measurements": [
+        {
+          "id": "q7-measure-326",
+          "description": "ROTURA DE PROBETAS DE CONCRETO",
+          "unit": "und",
+          "kind": "units",
+          "similarElements": 1.0,
+          "length": 1.0,
+          "width": 1.0,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1,
+          "manualQuantity": 12.0
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.05",
+      "parentId": "q7-02",
+      "kind": "chapter",
+      "code": "02.05",
+      "description": "ESTRUCTURA DE MADERA",
+      "unit": "",
+      "order": 43,
+      "measurements": [],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.05.01",
+      "parentId": "q7-02.05",
+      "kind": "item",
+      "code": "02.05.01",
+      "description": "TIJERALES DE MADERA TORNILLO DE 2\"x6\"  SEGUN DISEÑO",
+      "unit": "und",
+      "order": 44,
+      "measurements": [
+        {
+          "id": "q7-measure-329",
+          "description": "TIJERALES DE MADERA TORNILLO DE 2\"x6\"  SEGUN DISEÑO",
+          "unit": "und",
+          "kind": "units",
+          "similarElements": 1.0,
+          "length": 1,
+          "width": 1,
+          "height": 1,
+          "repetitions": 11.0,
+          "sign": 1,
+          "manualQuantity": 1.0
+        },
+        {
+          "id": "q7-measure-330",
+          "description": "brida superior",
+          "unit": "pie tablar",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 5.3,
+          "width": 2.0,
+          "height": 6.0,
+          "repetitions": 1.0,
+          "sign": 1,
+          "resultRaw": "17.388451443569537",
+          "quantityOverride": 17.388451443569537
+        },
+        {
+          "id": "q7-measure-331",
+          "description": "",
+          "unit": "pie tablar",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 4.2,
+          "width": 2.0,
+          "height": 6.0,
+          "repetitions": 1.0,
+          "sign": 1,
+          "resultRaw": "0.0",
+          "quantityOverride": 0.0
+        },
+        {
+          "id": "q7-measure-332",
+          "description": "brida inferior",
+          "unit": "pie tablar",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 9.6,
+          "width": 2.0,
+          "height": 6.0,
+          "repetitions": 1.0,
+          "sign": 1,
+          "resultRaw": "31.49606299212595",
+          "quantityOverride": 31.49606299212595
+        },
+        {
+          "id": "q7-measure-333",
+          "description": "montantes",
+          "unit": "pie tablar",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 4.35,
+          "width": 2.0,
+          "height": 4.0,
+          "repetitions": 1.0,
+          "sign": 1,
+          "resultRaw": "9.514435695538047",
+          "quantityOverride": 9.514435695538047
+        },
+        {
+          "id": "q7-measure-334",
+          "description": "diagonales",
+          "unit": "pie tablar",
+          "kind": "area",
+          "similarElements": 1.0,
+          "length": 6.3,
+          "width": 2.0,
+          "height": 4.0,
+          "repetitions": 1.0,
+          "sign": 1,
+          "resultRaw": "13.779527559055104",
+          "quantityOverride": 13.779527559055104
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.05.02",
+      "parentId": "q7-02.05",
+      "kind": "item",
+      "code": "02.05.02",
+      "description": "TIJERAL DURMIENTE DE MADERA TORNILLO DE 2\"x6\"",
+      "unit": "m",
+      "order": 45,
+      "measurements": [
+        {
+          "id": "q7-measure-339",
+          "description": "TIJERAL DURMIENTE DE MADERA TORNILLO DE 2\"x6\"",
+          "unit": "m",
+          "kind": "length",
+          "similarElements": 2.0,
+          "length": 10.4,
+          "width": 1.0,
+          "height": 1.0,
+          "repetitions": 1.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    },
+    {
+      "id": "q7-02.05.03",
+      "parentId": "q7-02.05",
+      "kind": "item",
+      "code": "02.05.03",
+      "description": "CORREAS DE MADERA TORNILLO DE 2\"x3\"",
+      "unit": "m",
+      "order": 46,
+      "measurements": [
+        {
+          "id": "q7-measure-340",
+          "description": "CORREAS DE MADERA TORNILLO DE 2\"x3\"",
+          "unit": "m",
+          "kind": "length",
+          "similarElements": 1.0,
+          "length": 28.75,
+          "width": 1.0,
+          "height": 1.0,
+          "repetitions": 15.0,
+          "sign": 1
+        }
+      ],
+      "steelLines": []
+    }
+  ],
+  "controls": [
+    {
+      "code": "02.01.01",
+      "sourceCell": "P19",
+      "total": 284.13
+    },
+    {
+      "code": "02.01.02",
+      "sourceCell": "P21",
+      "total": 284.13
+    },
+    {
+      "code": "02.01.03",
+      "sourceCell": "P23",
+      "total": 284.13
+    },
+    {
+      "code": "02.02.01",
+      "sourceCell": "P27",
+      "total": 41.843399999999995
+    },
+    {
+      "code": "02.02.02",
+      "sourceCell": "P35",
+      "total": 34.062285
+    },
+    {
+      "code": "02.02.03",
+      "sourceCell": "P52",
+      "total": 83.461908
+    },
+    {
+      "code": "02.02.04",
+      "sourceCell": "P56",
+      "total": 24.16225199999999
+    },
+    {
+      "code": "02.02.05",
+      "sourceCell": "P58",
+      "total": 176.61485000000002
+    },
+    {
+      "code": "02.02.06",
+      "sourceCell": "P66",
+      "total": 88.6906
+    },
+    {
+      "code": "02.03.01.01",
+      "sourceCell": "P75",
+      "total": 21.9006
+    },
+    {
+      "code": "02.03.02.01",
+      "sourceCell": "P84",
+      "total": 7.19355
+    },
+    {
+      "code": "02.03.02.02",
+      "sourceCell": "P101",
+      "total": 89.27
+    },
+    {
+      "code": "02.03.03.01",
+      "sourceCell": "P118",
+      "total": 176.61485000000002
+    },
+    {
+      "code": "02.04.01.01",
+      "sourceCell": "P128",
+      "total": 6.0915
+    },
+    {
+      "code": "02.04.01.02",
+      "sourceCell": "P132",
+      "total": 48.732
+    },
+    {
+      "code": "02.04.01.03",
+      "sourceCell": "P137",
+      "total": 925.202
+    },
+    {
+      "code": "02.04.02.01",
+      "sourceCell": "P146",
+      "total": 8.519499999999999
+    },
+    {
+      "code": "02.04.02.02",
+      "sourceCell": "P154",
+      "total": 87.38519999999998
+    },
+    {
+      "code": "02.04.02.03",
+      "sourceCell": "P164",
+      "total": 1002.748
+    },
+    {
+      "code": "02.04.03.01",
+      "sourceCell": "P181",
+      "total": 7.277149999999999
+    },
+    {
+      "code": "02.04.03.02",
+      "sourceCell": "P191",
+      "total": 66.7188
+    },
+    {
+      "code": "02.04.03.03",
+      "sourceCell": "P204",
+      "total": 1027.4228
+    },
+    {
+      "code": "02.04.04.01",
+      "sourceCell": "P228",
+      "total": 2.101515
+    },
+    {
+      "code": "02.04.04.02",
+      "sourceCell": "P242",
+      "total": 34.8192
+    },
+    {
+      "code": "02.04.04.03",
+      "sourceCell": "P256",
+      "total": 291.0992
+    },
+    {
+      "code": "02.04.05.01",
+      "sourceCell": "P269",
+      "total": 0.702975
+    },
+    {
+      "code": "02.04.05.02",
+      "sourceCell": "P286",
+      "total": 10.815
+    },
+    {
+      "code": "02.04.05.03",
+      "sourceCell": "P303",
+      "total": 93.1058
+    },
+    {
+      "code": "02.04.06.01",
+      "sourceCell": "P326",
+      "total": 12.0
+    },
+    {
+      "code": "02.05.01",
+      "sourceCell": "P329",
+      "total": 11.0
+    },
+    {
+      "code": "02.05.02",
+      "sourceCell": "P339",
+      "total": 20.8
+    },
+    {
+      "code": "02.05.03",
+      "sourceCell": "P340",
+      "total": 431.25
+    }
+  ],
+  "specialFormulas": {
+    "q7-measure-53": "=G{row}*H{row}",
+    "q7-measure-54": "=G{row}*H{row}",
+    "q7-measure-330": "=F{row}*G{row}*H{row}*I{row}*J{row}/12/0.3048",
+    "q7-measure-332": "=F{row}*G{row}*H{row}*I{row}*J{row}/12/0.3048",
+    "q7-measure-333": "=F{row}*G{row}*H{row}*I{row}*J{row}/12/0.3048",
+    "q7-measure-334": "=F{row}*G{row}*H{row}*I{row}*J{row}/12/0.3048"
+  },
+  "steelReference": {
+    "C3": "DESAGREGADO DE VARILLAS DE ACERO",
+    "C6": "Proyecto     :",
+    "D6": "\"CONSTRUCCION DE LA INSTITUCION EDUCATIVA INICIAL N° 431 DE FRAYLE RUMI, DISTRITO DE SAN BUENAVENTURA, PROVINCIA DE MARAÑON\"",
+    "C8": "Propietario   :",
+    "D8": "GOBIERNO REGIONAL DE HUANUCO",
+    "I8": "Hecho por      :",
+    "L8": "Diam.",
+    "M8": "Ø1/4''",
+    "N8": "Ø3/8''",
+    "O8": "Ø1/2\"",
+    "P8": "Ø5/8''",
+    "Q8": "Ø3/4''",
+    "R8": "Ø1''",
+    "S8": "Ø1 3/8''",
+    "T8": "Ø6mm",
+    "U8": "Ø8mm",
+    "V8": "Ø12mm",
+    "C9": "Fecha        :",
+    "D9": "JULIO 2013",
+    "I9": "Revisado  por :",
+    "L9": "Ø(en cm)",
+    "M9": "0.64",
+    "N9": "0.95",
+    "O9": "1.27",
+    "P9": "1.59",
+    "Q9": "1.91",
+    "R9": "2.54",
+    "S9": "3.49",
+    "T9": "0.6",
+    "U9": "0.8",
+    "V9": "1.2",
+    "C10": "Especialidad:",
+    "D10": "ESTRUCTURAS",
+    "L10": "Area",
+    "M10": "0.32",
+    "N10": "0.71",
+    "O10": "1.27",
+    "P10": "1.98",
+    "Q10": "2.85",
+    "R10": "5.07",
+    "S10": "9.58",
+    "T10": "0.28000000000000003",
+    "U10": "0.5",
+    "V10": "1.1299999999999999",
+    "C11": "Modulo       :",
+    "D11": "02 AULAS, 01 DIRECCIÓN, 01 COCINA, 02 DEPOSITOS, 01 ALMACEN, 01 CTO DE LIMPIEZA, SS.HH  DOCENTES",
+    "L11": "Kg/m",
+    "M11": "0.25",
+    "N11": "0.56000000000000005",
+    "O11": "0.99",
+    "P11": "1.55",
+    "Q11": "2.2400000000000002",
+    "R11": "3.98",
+    "S11": "7.52",
+    "T11": "0.22",
+    "U11": "0.39",
+    "V11": "0.89",
+    "C14": "ITEM",
+    "D14": "DESCRIPCIÓN",
+    "E14": "Und",
+    "F14": "Elem. Simil.",
+    "G14": "Longitud Parcial",
+    "J14": "Nº de Veces",
+    "K14": "Longuitud de Acero Por Tipo",
+    "U14": "Factor",
+    "V14": "Parcial",
+    "W14": "Total",
+    "G15": "Largo",
+    "H15": "Gancho",
+    "I15": "Empal",
+    "K15": "Ø1/4''",
+    "L15": "Ø3/8''",
+    "M15": "Ø1/2\"",
+    "N15": "Ø5/8''",
+    "O15": "Ø3/4''",
+    "P15": "Ø1''",
+    "Q15": "Ø1 3/8''",
+    "R15": "Ø6mm",
+    "S15": "Ø8mm",
+    "T15": "Ø12mm",
+    "U15": "kg/m",
+    "C17": "02.04.01.03",
+    "D17": "ACERO EN COLUMNAS Fy=4200 KG/CM2   GRADO 60",
+    "E17": "Kg",
+    "W17": "=SUM(V18:V28)",
+    "D18": "CA",
+    "D19": "long. 4 Ø3/8''   |_____|",
+    "E19": "Kg",
+    "F19": "2",
+    "G19": "4.4000000000000004",
+    "H19": "0.4",
+    "J19": "4",
+    "L19": "=PRODUCT(F19,SUM(G19:I19),J19)",
+    "U19": "0.56000000000000005",
+    "V19": "=L19*U19",
+    "D20": "Estribo : 20 Und de Ø1/4'' en 2 Elem. Simil.",
+    "E20": "Kg",
+    "F20": "2",
+    "G20": "0.7",
+    "J20": "20",
+    "K20": "=PRODUCT(F20,SUM(G20:I20),J20)",
+    "U20": "0.25",
+    "V20": "=K20*U20",
+    "D21": "long. 4 Ø3/8''   |_____|",
+    "E21": "Kg",
+    "F21": "2",
+    "G21": "4.7",
+    "H21": "0.4",
+    "J21": "4",
+    "L21": "=PRODUCT(F21,SUM(G21:I21),J21)",
+    "U21": "0.56000000000000005",
+    "V21": "=L21*U21",
+    "D22": "Estribo : 22 Und de Ø1/4'' en 2 Elem. Simil.",
+    "E22": "Kg",
+    "F22": "2",
+    "G22": "0.7",
+    "J22": "22",
+    "K22": "=PRODUCT(F22,SUM(G22:I22),J22)",
+    "U22": "0.25",
+    "V22": "=K22*U22",
+    "D23": "long. 4 Ø3/8''   |_____|",
+    "E23": "Kg",
+    "F23": "7",
+    "G23": "3.85",
+    "H23": "0.4",
+    "J23": "4",
+    "L23": "=PRODUCT(F23,SUM(G23:I23),J23)",
+    "U23": "0.56000000000000005",
+    "V23": "=L23*U23",
+    "D24": "Estribo : 16 Und de Ø1/4'' en 2 Elem. Simil.",
+    "E24": "Kg",
+    "F24": "2",
+    "G24": "0.7",
+    "J24": "16",
+    "K24": "=PRODUCT(F24,SUM(G24:I24),J24)",
+    "U24": "0.25",
+    "V24": "=K24*U24",
+    "D25": "C3",
+    "D26": "long. 4 Ø3/8''   |_____|",
+    "E26": "Kg",
+    "F26": "2",
+    "G26": "4.95",
+    "H26": "0.4",
+    "J26": "4",
+    "L26": "=PRODUCT(F26,SUM(G26:I26),J26)",
+    "U26": "0.56000000000000005",
+    "V26": "=L26*U26",
+    "D27": "Estribo : 22 Und de Ø1/4'' en 2 Elem. Simil.",
+    "E27": "Kg",
+    "F27": "2",
+    "G27": "0.7",
+    "J27": "22",
+    "K27": "=PRODUCT(F27,SUM(G27:I27),J27)",
+    "U27": "0.25",
+    "V27": "=K27*U27",
+    "C29": "02.04.02.03",
+    "D29": "ACERO  EN  VIGAS  F'y=4,200  kg/cm²  GRADO 60",
+    "E29": "Kg",
+    "W29": "=SUM(V30:V41)",
+    "D31": "long. 4 Ø3/8''   |_____|",
+    "E31": "Kg",
+    "F31": "3",
+    "G31": "3",
+    "H31": "0.4",
+    "J31": "4",
+    "L31": "=PRODUCT(F31,SUM(G31:I31),J31)",
+    "U31": "0.56000000000000005",
+    "V31": "=L31*U31",
+    "D32": "Estribo : 14 Und de Ø1/4'' en 3 Elem. Simil.",
+    "E32": "Kg",
+    "F32": "3",
+    "G32": "0.8",
+    "J32": "14",
+    "K32": "=PRODUCT(F32,SUM(G32:I32),J32)",
+    "U32": "0.25",
+    "V32": "=K32*U32",
+    "D33": "long. 4 Ø3/8''   |_____|",
+    "E33": "Kg",
+    "F33": "2",
+    "G33": "6.35",
+    "H33": "0.4",
+    "J33": "4",
+    "L33": "=PRODUCT(F33,SUM(G33:I33),J33)",
+    "U33": "0.56000000000000005",
+    "V33": "=L33*U33",
+    "D34": "Estribo : 16 Und de Ø1/4'' en 2 Elem. Simil.",
+    "E34": "Kg",
+    "F34": "2",
+    "G34": "0.8",
+    "J34": "16",
+    "K34": "=PRODUCT(F34,SUM(G34:I34),J34)",
+    "U34": "0.25",
+    "V34": "=K34*U34",
+    "D35": "long. 4 Ø3/8''   |_____|",
+    "E35": "Kg",
+    "F35": "4",
+    "G35": "2.85",
+    "H35": "0.4",
+    "J35": "4",
+    "L35": "=PRODUCT(F35,SUM(G35:I35),J35)",
+    "U35": "0.56000000000000005",
+    "V35": "=L35*U35",
+    "D36": "Estribo : 12 Und de Ø1/4'' en 4 Elem. Simil.",
+    "E36": "Kg",
+    "F36": "4",
+    "G36": "0.8",
+    "J36": "12",
+    "K36": "=PRODUCT(F36,SUM(G36:I36),J36)",
+    "U36": "0.25",
+    "V36": "=K36*U36",
+    "D37": "long. Inf. Volado 2 Ø3/8''   |_____|",
+    "E37": "Kg",
+    "F37": "2",
+    "G37": "0.8",
+    "H37": "0.4",
+    "J37": "2",
+    "L37": "=PRODUCT(F37,SUM(G37:I37),J37)",
+    "U37": "0.56000000000000005",
+    "V37": "=L37*U37",
+    "D38": "long. Inf. Volado 2 Ø3/8''   |_____|",
+    "E38": "Kg",
+    "F38": "2",
+    "G38": "1.55",
+    "H38": "0.4",
+    "J38": "2",
+    "L38": "=PRODUCT(F38,SUM(G38:I38),J38)",
+    "U38": "0.56000000000000005",
+    "V38": "=L38*U38",
+    "D39": "Estribo : 12 Und de Ø1/4'' en 4 Elem. Simil.",
+    "E39": "Kg",
+    "F39": "2",
+    "G39": "1",
+    "J39": "9",
+    "K39": "=PRODUCT(F39,SUM(G39:I39),J39)",
+    "U39": "0.25",
+    "V39": "=K39*U39",
+    "D40": "Estribo : 12 Und de Ø1/4'' en 4 Elem. Simil.",
+    "E40": "Kg",
+    "F40": "2",
+    "G40": "0.8",
+    "J40": "6",
+    "K40": "=PRODUCT(F40,SUM(G40:I40),J40)",
+    "U40": "0.25",
+    "V40": "=K40*U40",
+    "C42": "02.04.03.03",
+    "D42": "ACERO EN LOSAS MACIZAS  Fy=4,200 KG/CM2  GRADO 60",
+    "E42": "Kg",
+    "W42": "=SUM(V43:V44)",
+    "D43": "ACERO LONGITUDINAL 9 Ø3/8''   |_____|",
+    "E43": "Kg",
+    "F43": "1",
+    "G43": "1.75",
+    "J43": "9",
+    "L43": "=PRODUCT(F43,SUM(G43:I43),J43)",
+    "U43": "0.56000000000000005",
+    "V43": "=L43*U43",
+    "D44": "ACERO TRANSVERSAL 13 Ø3/8''   |_____|",
+    "E44": "Kg",
+    "F44": "1",
+    "G44": "1.1499999999999999",
+    "J44": "13",
+    "L44": "=PRODUCT(F44,SUM(G44:I44),J44)",
+    "U44": "0.56000000000000005",
+    "V44": "=L44*U44",
+    "D45": "TOTAL",
+    "K45": "=SUM(K17:K44)",
+    "L45": "431.1",
+    "M45": "0",
+    "N45": "0",
+    "O45": "0",
+    "P45": "0",
+    "Q45": "0",
+    "R45": "0",
+    "S45": "0",
+    "T45": "0",
+    "V45": "=SUM(V17:V44)"
+  },
+  "steelItems": [
+    {
+      "id": "q7-sheet-steel-17",
+      "parentId": null,
+      "kind": "item",
+      "code": "02.04.01.03",
+      "description": "ACERO EN COLUMNAS Fy=4200 KG/CM2   GRADO 60",
+      "unit": "kg",
+      "order": 0,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-sheet-line-19",
+          "sourceRow": 19,
+          "description": "long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 4.4,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 21.504000000000005
+        },
+        {
+          "id": "q7-sheet-line-20",
+          "sourceRow": 20,
+          "description": "Estribo : 20 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.7,
+          "quantity": 20.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 7.0
+        },
+        {
+          "id": "q7-sheet-line-21",
+          "sourceRow": 21,
+          "description": "long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 4.7,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 22.848000000000006
+        },
+        {
+          "id": "q7-sheet-line-22",
+          "sourceRow": 22,
+          "description": "Estribo : 22 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.7,
+          "quantity": 22.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 7.699999999999999
+        },
+        {
+          "id": "q7-sheet-line-23",
+          "sourceRow": 23,
+          "description": "long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 7.0,
+          "length": 3.85,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 66.64
+        },
+        {
+          "id": "q7-sheet-line-24",
+          "sourceRow": 24,
+          "description": "Estribo : 16 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.7,
+          "quantity": 16.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 5.6
+        },
+        {
+          "id": "q7-sheet-line-26",
+          "sourceRow": 26,
+          "description": "long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 4.95,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 23.968000000000004
+        },
+        {
+          "id": "q7-sheet-line-27",
+          "sourceRow": 27,
+          "description": "Estribo : 22 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.7,
+          "quantity": 22.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 7.699999999999999
+        }
+      ],
+      "sourceRow": 17,
+      "annotations": [
+        {
+          "row": 18,
+          "description": "CA"
+        },
+        {
+          "row": 25,
+          "description": "C3"
+        }
+      ]
+    },
+    {
+      "id": "q7-sheet-steel-29",
+      "parentId": null,
+      "kind": "item",
+      "code": "02.04.02.03",
+      "description": "ACERO  EN  VIGAS  F'y=4,200  kg/cm²  GRADO 60",
+      "unit": "kg",
+      "order": 1,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-sheet-line-31",
+          "sourceRow": 31,
+          "description": "long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 3.0,
+          "length": 3.0,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 22.848
+        },
+        {
+          "id": "q7-sheet-line-32",
+          "sourceRow": 32,
+          "description": "Estribo : 14 Und de Ø1/4'' en 3 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 3.0,
+          "length": 0.8,
+          "quantity": 14.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 8.400000000000002
+        },
+        {
+          "id": "q7-sheet-line-33",
+          "sourceRow": 33,
+          "description": "long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 6.35,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 30.240000000000002
+        },
+        {
+          "id": "q7-sheet-line-34",
+          "sourceRow": 34,
+          "description": "Estribo : 16 Und de Ø1/4'' en 2 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.8,
+          "quantity": 16.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 6.4
+        },
+        {
+          "id": "q7-sheet-line-35",
+          "sourceRow": 35,
+          "description": "long. 4 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 4.0,
+          "length": 2.85,
+          "quantity": 4.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 29.120000000000005
+        },
+        {
+          "id": "q7-sheet-line-36",
+          "sourceRow": 36,
+          "description": "Estribo : 12 Und de Ø1/4'' en 4 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 4.0,
+          "length": 0.8,
+          "quantity": 12.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 9.600000000000001
+        },
+        {
+          "id": "q7-sheet-line-37",
+          "sourceRow": 37,
+          "description": "long. Inf. Volado 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 0.8,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 2.6880000000000006
+        },
+        {
+          "id": "q7-sheet-line-38",
+          "sourceRow": 38,
+          "description": "long. Inf. Volado 2 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 2.0,
+          "length": 1.55,
+          "quantity": 2.0,
+          "hookStart": 0.4,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 4.368000000000001
+        },
+        {
+          "id": "q7-sheet-line-39",
+          "sourceRow": 39,
+          "description": "Estribo : 12 Und de Ø1/4'' en 4 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 1.0,
+          "quantity": 9.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 4.5
+        },
+        {
+          "id": "q7-sheet-line-40",
+          "sourceRow": 40,
+          "description": "Estribo : 12 Und de Ø1/4'' en 4 Elem. Simil.",
+          "bar": "Ø 1/4″",
+          "diameterMm": 6.35,
+          "kgPerMeter": 0.25,
+          "similarElements": 2.0,
+          "length": 0.8,
+          "quantity": 6.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 2.4000000000000004
+        }
+      ],
+      "sourceRow": 29,
+      "annotations": []
+    },
+    {
+      "id": "q7-sheet-steel-42",
+      "parentId": null,
+      "kind": "item",
+      "code": "02.04.03.03",
+      "description": "ACERO EN LOSAS MACIZAS  Fy=4,200 KG/CM2  GRADO 60",
+      "unit": "kg",
+      "order": 2,
+      "measurements": [],
+      "steelLines": [
+        {
+          "id": "q7-sheet-line-43",
+          "sourceRow": 43,
+          "description": "ACERO LONGITUDINAL 9 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 1.0,
+          "length": 1.75,
+          "quantity": 9.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 8.82
+        },
+        {
+          "id": "q7-sheet-line-44",
+          "sourceRow": 44,
+          "description": "ACERO TRANSVERSAL 13 Ø3/8''   |_____|",
+          "bar": "Ø 3/8″",
+          "diameterMm": 9.525,
+          "kgPerMeter": 0.56,
+          "similarElements": 1.0,
+          "length": 1.15,
+          "quantity": 13.0,
+          "hookStart": 0.0,
+          "hookEnd": 0,
+          "spliceLength": 0.0,
+          "splices": 0,
+          "weightKg": 8.372
+        }
+      ],
+      "sourceRow": 42,
+      "annotations": []
+    }
+  ],
+  "steelControls": [
+    {
+      "cell": "W17",
+      "value": 162.95999999999998
+    },
+    {
+      "cell": "L19",
+      "value": 38.400000000000006
+    },
+    {
+      "cell": "U19",
+      "value": 0.56
+    },
+    {
+      "cell": "V19",
+      "value": 21.504000000000005
+    },
+    {
+      "cell": "K20",
+      "value": 28.0
+    },
+    {
+      "cell": "U20",
+      "value": 0.25
+    },
+    {
+      "cell": "V20",
+      "value": 7.0
+    },
+    {
+      "cell": "L21",
+      "value": 40.800000000000004
+    },
+    {
+      "cell": "U21",
+      "value": 0.56
+    },
+    {
+      "cell": "V21",
+      "value": 22.848000000000006
+    },
+    {
+      "cell": "K22",
+      "value": 30.799999999999997
+    },
+    {
+      "cell": "U22",
+      "value": 0.25
+    },
+    {
+      "cell": "V22",
+      "value": 7.699999999999999
+    },
+    {
+      "cell": "L23",
+      "value": 119.0
+    },
+    {
+      "cell": "U23",
+      "value": 0.56
+    },
+    {
+      "cell": "V23",
+      "value": 66.64
+    },
+    {
+      "cell": "K24",
+      "value": 22.4
+    },
+    {
+      "cell": "U24",
+      "value": 0.25
+    },
+    {
+      "cell": "V24",
+      "value": 5.6
+    },
+    {
+      "cell": "L26",
+      "value": 42.800000000000004
+    },
+    {
+      "cell": "U26",
+      "value": 0.56
+    },
+    {
+      "cell": "V26",
+      "value": 23.968000000000004
+    },
+    {
+      "cell": "K27",
+      "value": 30.799999999999997
+    },
+    {
+      "cell": "U27",
+      "value": 0.25
+    },
+    {
+      "cell": "V27",
+      "value": 7.699999999999999
+    },
+    {
+      "cell": "W29",
+      "value": 120.56400000000001
+    },
+    {
+      "cell": "L31",
+      "value": 40.8
+    },
+    {
+      "cell": "U31",
+      "value": 0.56
+    },
+    {
+      "cell": "V31",
+      "value": 22.848
+    },
+    {
+      "cell": "K32",
+      "value": 33.60000000000001
+    },
+    {
+      "cell": "U32",
+      "value": 0.25
+    },
+    {
+      "cell": "V32",
+      "value": 8.400000000000002
+    },
+    {
+      "cell": "L33",
+      "value": 54.0
+    },
+    {
+      "cell": "U33",
+      "value": 0.56
+    },
+    {
+      "cell": "V33",
+      "value": 30.240000000000002
+    },
+    {
+      "cell": "K34",
+      "value": 25.6
+    },
+    {
+      "cell": "U34",
+      "value": 0.25
+    },
+    {
+      "cell": "V34",
+      "value": 6.4
+    },
+    {
+      "cell": "L35",
+      "value": 52.0
+    },
+    {
+      "cell": "U35",
+      "value": 0.56
+    },
+    {
+      "cell": "V35",
+      "value": 29.120000000000005
+    },
+    {
+      "cell": "K36",
+      "value": 38.400000000000006
+    },
+    {
+      "cell": "U36",
+      "value": 0.25
+    },
+    {
+      "cell": "V36",
+      "value": 9.600000000000001
+    },
+    {
+      "cell": "L37",
+      "value": 4.800000000000001
+    },
+    {
+      "cell": "U37",
+      "value": 0.56
+    },
+    {
+      "cell": "V37",
+      "value": 2.6880000000000006
+    },
+    {
+      "cell": "L38",
+      "value": 7.800000000000001
+    },
+    {
+      "cell": "U38",
+      "value": 0.56
+    },
+    {
+      "cell": "V38",
+      "value": 4.368000000000001
+    },
+    {
+      "cell": "K39",
+      "value": 18.0
+    },
+    {
+      "cell": "U39",
+      "value": 0.25
+    },
+    {
+      "cell": "V39",
+      "value": 4.5
+    },
+    {
+      "cell": "K40",
+      "value": 9.600000000000001
+    },
+    {
+      "cell": "U40",
+      "value": 0.25
+    },
+    {
+      "cell": "V40",
+      "value": 2.4000000000000004
+    },
+    {
+      "cell": "W42",
+      "value": 17.192
+    },
+    {
+      "cell": "L43",
+      "value": 15.75
+    },
+    {
+      "cell": "U43",
+      "value": 0.56
+    },
+    {
+      "cell": "V43",
+      "value": 8.82
+    },
+    {
+      "cell": "L44",
+      "value": 14.95
+    },
+    {
+      "cell": "U44",
+      "value": 0.56
+    },
+    {
+      "cell": "V44",
+      "value": 8.372
+    },
+    {
+      "cell": "K45",
+      "value": 237.2
+    },
+    {
+      "cell": "L45",
+      "value": 431.1
+    },
+    {
+      "cell": "M45",
+      "value": 0.0
+    },
+    {
+      "cell": "N45",
+      "value": 0.0
+    },
+    {
+      "cell": "O45",
+      "value": 0.0
+    },
+    {
+      "cell": "P45",
+      "value": 0.0
+    },
+    {
+      "cell": "Q45",
+      "value": 0.0
+    },
+    {
+      "cell": "R45",
+      "value": 0.0
+    },
+    {
+      "cell": "S45",
+      "value": 0.0
+    },
+    {
+      "cell": "T45",
+      "value": 0.0
+    },
+    {
+      "cell": "V45",
+      "value": 300.716
+    }
+  ],
+  "steelMerges": [
+    "K14:T14",
+    "V14:V15",
+    "C3:W3",
+    "D6:W7",
+    "C14:C15",
+    "D14:D15",
+    "E14:E15",
+    "F14:F15",
+    "G14:I14",
+    "J14:J15",
+    "W14:W15"
+  ]
+}

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, type MouseEvent } from "react";
-import { MIN_CELL_SIZE, useWexelStore } from "@/store/useWexelStore";
+import { useCallback, useEffect, useRef, type MouseEvent } from "react";
+import { MIN_CELL_SIZE, MIN_ROW_HEIGHT, useWexelStore } from "@/store/useWexelStore";
 
 export type ResizeAxis = "column" | "row";
 export type StartResize = (event: MouseEvent<HTMLElement>, axis: ResizeAxis, key: string) => void;
@@ -13,7 +13,7 @@ export function useExcelResize(sheetId: string): StartResize {
 
   useEffect(() => () => cleanupRef.current?.(), [sheetId, viewMode]);
 
-  return (event, axis, key) => {
+  return useCallback((event, axis, key) => {
     if (event.button !== 0) return;
     const cell = event.currentTarget.closest("th, td");
     if (!cell) return;
@@ -29,7 +29,19 @@ export function useExcelResize(sheetId: string): StartResize {
     document.body.style.cursor = axis === "column" ? "col-resize" : "row-resize";
     document.body.style.userSelect = "none";
 
+    let frame = 0;
+    let pending: number | undefined;
+    const apply = () => {
+      frame = 0;
+      if (pending === undefined) return;
+      const size = pending; pending = undefined;
+      const store = useWexelStore.getState();
+      if (axis === "column") store.setColumnWidth(sheetId, key, size);
+      else store.setRowHeight(sheetId, key, size);
+    };
+
     const cleanup = () => {
+      cancelAnimationFrame(frame); apply();
       window.removeEventListener("mousemove", move);
       window.removeEventListener("mouseup", cleanup);
       window.removeEventListener("blur", cleanup);
@@ -40,14 +52,12 @@ export function useExcelResize(sheetId: string): StartResize {
     const move = (moveEvent: globalThis.MouseEvent) => {
       if (moveEvent.buttons === 0) { cleanup(); return; }
       const position = axis === "column" ? moveEvent.clientX : moveEvent.clientY;
-      const size = Math.max(MIN_CELL_SIZE, initial + position - start);
-      const store = useWexelStore.getState();
-      if (axis === "column") store.setColumnWidth(sheetId, key, size);
-      else store.setRowHeight(sheetId, key, size);
+      pending = Math.max(axis === "column" ? MIN_CELL_SIZE : MIN_ROW_HEIGHT, initial + position - start);
+      if (!frame) frame = requestAnimationFrame(apply);
     };
     cleanupRef.current = cleanup;
     window.addEventListener("mousemove", move);
     window.addEventListener("mouseup", cleanup);
     window.addEventListener("blur", cleanup);
-  };
+  }, [sheetId]);
 }

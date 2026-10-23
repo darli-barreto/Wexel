@@ -18,9 +18,6 @@ function NavDiagnóstico() {
       <Mecanica />
       <SeparatorOne />
       <Complementario />
-
-
-
     </div>
   );
 }

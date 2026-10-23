@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Navigation, { NavSection } from "./ui/Navigation";
 import NavHome from "./header-tools/NavHome";
 import NavPresupuesto from "./header-tools/NavPresupuesto";
@@ -10,6 +9,8 @@ import NavDiagnóstico from "./header-tools/NavDiagnóstico";
 import NavDiseño from "./header-tools/NavDiseño";
 import NavCostos from "./header-tools/NavCostos";
 import NavProgramacion from "./header-tools/NavProgramacion";
+import { useWexelStore } from "@/store/useWexelStore";
+import { commitEdit } from "./utils/excelEditing";
 
 
 const TAB_COMPONENTS: Record<NavSection, React.ComponentType> = {
@@ -24,7 +25,8 @@ const TAB_COMPONENTS: Record<NavSection, React.ComponentType> = {
 };
 
 function Header() {
-  const [activeSection, setActiveSection] = useState<NavSection>("Home");
+  const activeSection = useWexelStore((state) => state.activeSection) as NavSection;
+  const setActiveSection = useWexelStore((state) => state.setActiveSection);
 
   const ActiveComponent = TAB_COMPONENTS[activeSection] || NavHome;
 
@@ -33,7 +35,7 @@ function Header() {
       {/* Pestañas superiores */}
       <Navigation
         activeSection={activeSection}
-        onSelectSection={setActiveSection}
+        onSelectSection={(section) => { commitEdit(); setActiveSection(section); }}
       />
 
       {/* Contenedor del Ribbon: altura fija, ancho completo y sin barras de scroll visibles */}

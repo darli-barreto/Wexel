@@ -6,17 +6,38 @@ import TopBar from "@/components/TopBar";
 import Canvaword from "@/components/Canvaword";
 import Footer from "@/components/Footer";
 import CanvaExcel from "@/components/CanvaExcel";
+import MetradoWorkspace from "@/components/metrados/MetradoWorkspace";
+import { refreshMetradoAppearance, startMetradoWorkbookSync } from "@/components/metrados/syncWorkbook";
+import { PALETTE_SIGNATURE } from "@/config/colors";
+import { upgradeQuispeExample } from "@/components/metrados/exampleTemplate";
 import { pageBandsDocx } from "@/components/utils/pageBandsDocx";
 import { Document, Packer, Paragraph, TextRun } from "docx";
 import { saveAs } from "file-saver";
 
 import { useWexelStore } from "@/store/useWexelStore";
+import { useMetradoStore } from "@/store/useMetradoStore";
 
 export default function Home() {
+  const paletteSignature = PALETTE_SIGNATURE;
   const viewMode = useWexelStore((state) => state.viewMode);
+  const activeSection = useWexelStore((state) => state.activeSection);
   const setViewMode = useWexelStore((state) => state.setViewMode);
   const setActiveFocus = useWexelStore((state) => state.setActiveFocus);
-  useEffect(() => { void useWexelStore.persist.rehydrate(); }, []);
+  const [documentReady, setDocumentReady] = useState(false);
+  useEffect(() => {
+    let cancelled = false;
+    let stop: (() => void) | undefined;
+    void Promise.all([useWexelStore.persist.rehydrate(), useMetradoStore.persist.rehydrate()]).then(() => {
+      if (cancelled) return;
+      upgradeQuispeExample();
+      stop = startMetradoWorkbookSync();
+      setDocumentReady(true);
+    });
+    return () => { cancelled = true; stop?.(); };
+  }, []);
+  useEffect(() => {
+    if (documentReady) refreshMetradoAppearance();
+  }, [documentReady, paletteSignature]);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const wordContent = useWexelStore((state) => state.word.content);
 
@@ -60,6 +81,7 @@ export default function Home() {
         isFullscreen ? "fixed inset-0 z-50" : ""
       }`}
     >
+      {!documentReady && <div role="status" className="fixed inset-0 z-[200] flex items-center justify-center bg-white text-sm text-[#555]">Cargando documento…</div>}
       <TopBar />
       <Header />
 
@@ -80,6 +102,7 @@ export default function Home() {
         </div>
       </div>
 
+      {activeSection === "Metrados" && <MetradoWorkspace />}
       <Footer
         onWordFullscreen={handleWordFullscreen}
         onExcelFullscreen={handleExcelFullscreen}

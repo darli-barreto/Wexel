@@ -3,6 +3,7 @@
 import { useEditorState, type Editor } from "@tiptap/react";
 import { useWexelStore, type CellData, type SheetData } from "@/store/useWexelStore";
 import { useWordEditorStore } from "@/store/useWordEditorStore";
+import { useShallow } from "zustand/react/shallow";
 import { clearCellFormatting } from "./cellFormatting";
 
 export type RibbonAction = "bold" | "italic" | "underline" | "strike" | "subscript" | "superscript"
@@ -114,10 +115,13 @@ export function setRibbonValue(name: RibbonValue, value: string) {
 
 export function useRibbon() {
   const focus = useWexelStore((state) => state.activeFocus);
-  const cell = useWexelStore((state) => {
+  const cell = useWexelStore(useShallow((state) => {
     const sheet = state.sheets.find((sheet) => sheet.id === state.activeSheetId);
-    return sheet?.cells[activeAddress(sheet)] ?? emptyCell;
-  });
+    const cell = sheet?.cells[activeAddress(sheet)] ?? emptyCell;
+    // Ribbon controls depend on formatting, never on the selected address or value.
+    const { fontFamily, fontSize, color, backgroundColor, bold, italic, underline, strikethrough, align, verticalAlign, wrapText, numberFormat } = cell;
+    return { fontFamily, fontSize, color, backgroundColor, bold, italic, underline, strikethrough, align, verticalAlign, wrapText, numberFormat };
+  }));
   const editor = useWordEditorStore((state) => state.editor);
   const word = useEditorState({ editor, selector: ({ editor }) => wordFormat(editor) });
   const format = focus === "word" ? word ?? wordFormat(null) : {

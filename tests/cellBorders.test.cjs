@@ -14,7 +14,7 @@ function load(file) {
   vm.runInNewContext(code, {
     exports,
     require: name => name === './wordTypography'
-      ? load('components/utils/wordTypography.ts') : require(name),
+      ? load('components/utils/wordTypography.ts') : name === '../../config/colors' ? load('config/colors.ts') : require(name),
   });
   return exports;
 }
@@ -26,8 +26,8 @@ test('border transitions use only independent longhand properties', () => {
     for (const key of Object.keys(style)) {
       assert.match(key, /^border(Top|Right|Bottom|Left)(Width|Style|Color)$/);
     }
-    assert.equal(style.borderTopColor, mode === 'all' ? '#333' : undefined);
-    assert.equal(style.borderBottomColor, mode === 'all' || mode === 'bottom' ? '#333' : undefined);
+    assert.equal(style.borderTopColor, mode === 'all' ? '#d6d6d6' : undefined);
+    assert.equal(style.borderBottomColor, mode === 'all' || mode === 'bottom' ? '#d6d6d6' : undefined);
   }
 });
 test('text and editor styles never receive cell borders', () => {

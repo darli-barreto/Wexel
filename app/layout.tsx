@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { COLOR_VARIABLES } from "../config/colors";
+import type { CSSProperties } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        style={COLOR_VARIABLES as CSSProperties}
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}

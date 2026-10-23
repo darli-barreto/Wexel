@@ -51,6 +51,7 @@ function calculate(expression: string, read: (reference: string) => number | nul
       take(')');
       switch(token){
         case 'SUM':case 'SUMA':return values.reduce((a,b)=>a+b,0);
+        case 'PRODUCT':case 'PRODUCTO':return values.length?values.reduce((a,b)=>a*b,1):0;
         case 'AVERAGE':case 'PROMEDIO':if(!values.length)throw new FormulaError('#DIV/0!');return values.reduce((a,b)=>a+b,0)/values.length;
         case 'MIN':return values.length?Math.min(...values):0;
         case 'MAX':return values.length?Math.max(...values):0;

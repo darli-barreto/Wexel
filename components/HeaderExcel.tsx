@@ -4,6 +4,7 @@ import { beginEdit, changeDraft, commitEdit, cancelEdit, blurEdit } from "./util
 import React from "react";
 import Image from "next/image";
 type HeaderExcelProps = {
+    rowCount?: number;
     currentCell: string;
     setCurrentCell: (cell: string) => void;
     incrementRow: () => void;
@@ -19,11 +20,11 @@ type HeaderExcelProps = {
     formulaInput: string;
     setFormulaInput: (value: string) => void;
 };
-const HeaderExcel: React.FC<HeaderExcelProps> = ({ currentCell, setCurrentCell, incrementRow, decrementRow, formulaInput, selectedCell, setSelectedCell }) => {
+const HeaderExcel: React.FC<HeaderExcelProps> = ({ currentCell, setCurrentCell, incrementRow, decrementRow, formulaInput, selectedCell, setSelectedCell, rowCount = 99 }) => {
     const draft = useExcelEditingStore(s => s.draft);
-    const address = currentCell.match(/^[A-Z][1-9][0-9]?$/) ? currentCell : "A1";
+    const address = currentCell.match(/^[A-Z][1-9][0-9]*$/) ? currentCell : "A1";
     const focusCell = () => requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[aria-label="Celda ' + address + '" ]')?.focus());
-    return (<div className="flex items-center border-b border-x border-tertiary space-x-4 bg-white sticky top-0 z-30 h-8">
+    return (<div className="flex items-center border-b border-x border-tertiary space-x-4 bg-white sticky top-0 left-0 z-30 h-8">
     {/* Cell Selector */}
     <div className="flex border-r border-tertiary px-2 py-1 items-center space-x-2">
       <input type="text" aria-label="Dirección de celda" value={currentCell} onChange={(e) => setCurrentCell(e.target.value)} className="text-[13px] w-15 text-center"/>
@@ -65,7 +66,7 @@ const HeaderExcel: React.FC<HeaderExcelProps> = ({ currentCell, setCurrentCell, 
                 commitEdit();
                 const p = selectedCell ?? { row: 0, col: 0 };
                 const offset = e.shiftKey ? -1 : 1;
-                const next = e.key === 'Enter' ? { row: Math.max(0, Math.min(98, p.row + offset)), col: p.col } : { row: Math.floor(Math.max(0, Math.min(2573, p.row * 26 + p.col + offset)) / 26), col: Math.max(0, Math.min(2573, p.row * 26 + p.col + offset)) % 26 };
+                const next = e.key === 'Enter' ? { row: Math.max(0, Math.min(rowCount - 1, p.row + offset)), col: p.col } : { row: Math.floor(Math.max(0, Math.min(rowCount * 26 - 1, p.row * 26 + p.col + offset)) / 26), col: Math.max(0, Math.min(rowCount * 26 - 1, p.row * 26 + p.col + offset)) % 26 };
                 setSelectedCell(next);
                 requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[aria-label="Celda ' + String.fromCharCode(65 + next.col) + (next.row + 1) + '"]')?.focus());
             }

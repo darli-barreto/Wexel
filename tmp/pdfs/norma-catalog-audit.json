@@ -1,0 +1,634 @@
+{
+  "entries": 799,
+  "byScope": {
+    "OE.1": 46,
+    "OE.2": 192,
+    "OE.3": 193,
+    "OE.4": 40,
+    "OE.5": 41,
+    "OE.6": 9,
+    "OE.7": 14,
+    "HU.1": 1,
+    "HU.2": 47,
+    "HU.3": 163,
+    "HU.4": 19,
+    "HU.5": 20,
+    "HU.6": 14
+  },
+  "duplicates": [
+    {
+      "code": "OE.2.1.2.1",
+      "titles": [
+        "EXCAVACIONES MASIVAS",
+        "EXCAVACIONES SIMPLES"
+      ]
+    },
+    {
+      "code": "OE.2.1.7.1",
+      "titles": [
+        "TABLAESTACADO PARA EXCAVACIONES, ESTRUCTURAS, POZOS, CÁMARAS SUBTERRÁNEAS, ETC",
+        "TABLAESTACADO PARA EXCAVACIONES DE ZANJAS"
+      ]
+    },
+    {
+      "code": "OE.2.3.6.3",
+      "titles": [
+        "PANTALLAS, BARANDAS Y SIMILARES",
+        "PARA EL CONCRETO",
+        "PARA EL ENCOFRADO Y DESENCOFRADO",
+        "PARA LA ARMADURA DE ACERO"
+      ]
+    },
+    {
+      "code": "OE.3.2.22",
+      "titles": [
+        "PREPARACIÓN DE DESCANSOS",
+        "GRADAS"
+      ]
+    },
+    {
+      "code": "HU.3.2.4.1",
+      "titles": [
+        "TRAZOS, NIVELES Y REPLANTEO PRELIMINAR Y DURANTE LA OBRA",
+        "PARA INSTALACIÓN DE LÍNEAS, REDES DEPENDIENDO DE LA ENVERGADURA DE LA OBRA",
+        "PARA CONEXIONES DOMICILIARIAS",
+        "PARA ESTRUCTURAS HIDRÁULICAS O SIMILARES",
+        "REPLANTEO AL FINALIZAR LA OBRA"
+      ]
+    },
+    {
+      "code": "HU.3.4.3.2.1",
+      "titles": [
+        "RELLENO CON MATERIAL PROPIO",
+        "RELLENOS CON MATERIAL DE PRÉSTAMO"
+      ]
+    },
+    {
+      "code": "HU.3.14.1.1",
+      "titles": [
+        "PARA CADA EQUIPAMIENTO EN PARTICULAR",
+        "EQUIPOS ELÉCTRICOS DE SUB-ESTACIONES DE TRANSFORMACIÓN ELÉCTRICA"
+      ]
+    }
+  ],
+  "leavesWithoutUnit": [
+    {
+      "id": "OE.1.1.1.7",
+      "title": "CERCOS",
+      "bodyPages": [
+        21
+      ],
+      "options": [
+        "m",
+        "m2"
+      ]
+    },
+    {
+      "id": "OE.1.1.5",
+      "title": "REMOCIONES",
+      "bodyPages": [
+        23
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.1.1.9.2",
+      "title": "REPLANTEO DURANTE EL PROCESO",
+      "bodyPages": [
+        25
+      ],
+      "options": [
+        "m2",
+        "glb"
+      ]
+    },
+    {
+      "id": "OE.2.3.14.1",
+      "title": "PARA LOS PILOTES",
+      "bodyPages": [
+        44
+      ],
+      "options": [
+        "m",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.2.3.17",
+      "title": "ESTRUCTURAS PREFABRICADAS",
+      "bodyPages": [
+        46
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.4.6.1",
+      "title": "CON PLANCHAS CORRUGADAS GALVANIZADAS",
+      "bodyPages": [
+        48
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.2.4.6.2",
+      "title": "CON PLANCHAS CORRUGADAS DE FIBRO-CEMENTO",
+      "bodyPages": [
+        48
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.4.6.3",
+      "title": "CON PLANCHAS CORRUGADAS DE ALUMINIO",
+      "bodyPages": [
+        48
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.4.6.4",
+      "title": "CON PLANCHAS CORRUGADAS PLÁSTICAS",
+      "bodyPages": [
+        48
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.4.6.5",
+      "title": "CON TEJAS",
+      "bodyPages": [
+        48
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.4.6.6",
+      "title": "CON LADRILLOS DE VIDRIO",
+      "bodyPages": [
+        48
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.4.6.7",
+      "title": "CON VIDRIO",
+      "bodyPages": [
+        48
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.4.7.1",
+      "title": "PARA CUMBRERAS",
+      "bodyPages": [
+        48
+      ],
+      "options": [
+        "m",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.2.4.7.2",
+      "title": "A CANALETAS",
+      "bodyPages": [
+        48
+      ],
+      "options": [
+        "m",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.2.4.7.3",
+      "title": "PARA BAJANTES",
+      "bodyPages": [
+        48
+      ],
+      "options": [
+        "m",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.2.5.4",
+      "title": "CORREAS",
+      "bodyPages": [
+        49
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.1.15",
+      "title": "BARANDAS Y PARAPETOS",
+      "bodyPages": [
+        52
+      ],
+      "options": [
+        "m2",
+        "m"
+      ]
+    },
+    {
+      "id": "OE.3.7.1",
+      "title": "PUERTAS",
+      "bodyPages": [
+        67
+      ],
+      "options": [
+        "und",
+        "m2"
+      ]
+    },
+    {
+      "id": "OE.3.7.4",
+      "title": "MAMPARAS",
+      "bodyPages": [
+        67
+      ],
+      "options": [
+        "und",
+        "m2"
+      ]
+    },
+    {
+      "id": "OE.3.7.6",
+      "title": "DIVISIONES PARA SERVICIOS HIGIÉNICOS",
+      "bodyPages": [
+        68
+      ],
+      "options": [
+        "m2",
+        "m"
+      ]
+    },
+    {
+      "id": "OE.3.7.7",
+      "title": "DIVISIÓN ORNAMENTAL DE AMBIENTES",
+      "bodyPages": [
+        68
+      ],
+      "options": [
+        "und",
+        "m2"
+      ]
+    },
+    {
+      "id": "OE.3.7.12",
+      "title": "MUEBLES DE COCINA Y SIMILARES",
+      "bodyPages": [
+        69
+      ],
+      "options": [
+        "und",
+        "m"
+      ]
+    },
+    {
+      "id": "OE.3.8.1",
+      "title": "VENTANAS DE FIERRO",
+      "bodyPages": [
+        70
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.8.2",
+      "title": "PUERTAS DE FIERRO",
+      "bodyPages": [
+        70
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.8.3",
+      "title": "MAMPARAS DE FIERRO",
+      "bodyPages": [
+        71
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.8.4",
+      "title": "VENTANAS DE ALUMINIO",
+      "bodyPages": [
+        71
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.8.5",
+      "title": "PUERTAS DE ALUMINIO",
+      "bodyPages": [
+        71
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.3.8.6",
+      "title": "MAMPARAS DE ALUMINIO",
+      "bodyPages": [
+        71
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.8.8",
+      "title": "CORTINAS ENROLLABLES DE FIERRO",
+      "bodyPages": [
+        72
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.8.12",
+      "title": "DIVISIÓN DE PLANCHA DE ACERO GALVANIZADO PARA SERVICIOS HIGIÉNICOS",
+      "bodyPages": [
+        73
+      ],
+      "options": [
+        "m2",
+        "m"
+      ]
+    },
+    {
+      "id": "OE.3.8.13",
+      "title": "DIVISIÓN DE ALUMINIO PARA SERVICIOS HIGIÉNICOS",
+      "bodyPages": [
+        73
+      ],
+      "options": [
+        "m2",
+        "m"
+      ]
+    },
+    {
+      "id": "OE.3.9.3",
+      "title": "SISTEMAS O MECANISMOS",
+      "bodyPages": [
+        75
+      ],
+      "options": [
+        "jgo",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.11.6",
+      "title": "PINTURA DE ESTRUCTURAS METÁLICAS",
+      "bodyPages": [
+        78
+      ],
+      "options": [
+        "m",
+        "m2"
+      ]
+    },
+    {
+      "id": "OE.4.2.7",
+      "title": "EQUIPOS Y OTRAS INSTALACIONES",
+      "bodyPages": [
+        83
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.4.6.6",
+      "title": "INSTALACIONES ESPECIALES",
+      "bodyPages": [
+        89
+      ],
+      "options": [
+        "und",
+        "glb"
+      ]
+    },
+    {
+      "id": "OE.4.7",
+      "title": "VARIOS",
+      "bodyPages": [
+        89
+      ],
+      "options": []
+    },
+    {
+      "id": "OE.2.3.9.7.4",
+      "title": "PARA ELEMENTOS COMPLEMENTARIOS (BLOQUES, DOMOS, ELEMENTOS ESPECIALES",
+      "bodyPages": [
+        42
+      ],
+      "options": [
+        "und",
+        "m2",
+        "glb"
+      ]
+    },
+    {
+      "id": "OE.3.3.6.2.1",
+      "title": "PARA SUSPENSIÓN",
+      "bodyPages": [
+        61
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "OE.3.3.6.2.2",
+      "title": "PARA PANELES",
+      "bodyPages": [
+        61
+      ],
+      "options": [
+        "m2",
+        "und"
+      ]
+    },
+    {
+      "id": "HU.1",
+      "title": "OBRAS PROVISIONALES, TRABAJOS PRELIMINARES, SEGURIDAD Y SALUD",
+      "bodyPages": [
+        107
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.3.1",
+      "title": "OBRAS PROVISIONALES",
+      "bodyPages": [
+        118
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.3.10",
+      "title": "ESTACIONES DE BOMBEO, REBOMBEO PARA AGUA POTABLE Y AGUAS RESIDUALES (*)",
+      "bodyPages": [
+        118
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.3.11",
+      "title": "ESTRUCTURAS DE ALMACENAMIENTO",
+      "bodyPages": [
+        118
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.3.12",
+      "title": "PLANTAS DE TRATAMIENTO DE AGUA POTABLE",
+      "bodyPages": [
+        118
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.3.13",
+      "title": "PLANTAS DE TRATAMIENTO DE AGUAS RESIDUALES",
+      "bodyPages": [
+        118
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.3.16",
+      "title": "REDES ELÉCTRICAS Y DE COMUNICACIÓN",
+      "bodyPages": [
+        118
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.4.1",
+      "title": "OBRAS PRELIMINARES",
+      "bodyPages": [
+        145
+      ],
+      "options": [
+        "und",
+        "glb"
+      ]
+    },
+    {
+      "id": "HU.6.4",
+      "title": "EQUIPAMIENTOS ELECTROMECÁNICOS",
+      "bodyPages": [
+        156
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.6.5",
+      "title": "REDES ELÉCTRICAS Y DE COMUNICACIÓN",
+      "bodyPages": [
+        156
+      ],
+      "options": []
+    },
+    {
+      "id": "HU.2.7.7.1.1",
+      "title": "EN EXCAVACIÓN DE ZANJAS",
+      "bodyPages": [
+        117
+      ],
+      "options": [
+        "m",
+        "m3"
+      ]
+    },
+    {
+      "id": "HU.2.7.7.1.2",
+      "title": "EN RELLENO DE ZANJAS",
+      "bodyPages": [
+        117
+      ],
+      "options": [
+        "m",
+        "m3"
+      ]
+    },
+    {
+      "id": "HU.3.2.4.1~2",
+      "title": "PARA INSTALACIÓN DE LÍNEAS, REDES DEPENDIENDO DE LA ENVERGADURA DE LA OBRA",
+      "bodyPages": [
+        120
+      ],
+      "options": [
+        "m",
+        "km"
+      ]
+    },
+    {
+      "id": "HU.3.2.4.1.1",
+      "title": "PARA INSTALACIÓN DE LÍNEAS, REDES DEPENDIENDO DE LA ENVERGADURA DE LA OBRA",
+      "bodyPages": [
+        120
+      ],
+      "options": [
+        "m",
+        "km"
+      ]
+    },
+    {
+      "id": "HU.3.3.2.3",
+      "title": "BOMBEO DE AGUAS RESIDUALES",
+      "bodyPages": [
+        123
+      ],
+      "options": [
+        "glb",
+        "h"
+      ]
+    },
+    {
+      "id": "HU.3.3.3.1",
+      "title": "SEÑALIZACIONES, ILUMINACIÓN NOCTURNA",
+      "bodyPages": [
+        123
+      ],
+      "options": [
+        "m",
+        "km"
+      ]
+    },
+    {
+      "id": "HU.5.1.1",
+      "title": "CONEXIÓN DOMICILIARIA",
+      "bodyPages": [
+        151
+      ],
+      "options": []
+    }
+  ],
+  "indexOnly": []
+}

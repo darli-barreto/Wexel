@@ -1,5 +1,6 @@
 import type { CellPosition } from '@/store/useWexelStore';
-export const REFERENCE_COLORS = ['#2563eb', '#db2777', '#d97706', '#7c3aed', '#0891b2', '#16a34a'];
+import { COLORS } from '../../config/colors';
+export const REFERENCE_COLORS = COLORS.references;
 export interface FormulaReference {
     start: number;
     end: number;

@@ -1,6 +1,7 @@
 import { textEffects } from "./wordTypography";
 import type { CSSProperties } from "react";
 import type { CellData } from "@/store/useWexelStore";
+import { COLORS } from "../../config/colors";
 
 export function formatCellValue(cell: CellData): string {
   const text = cell.displayValue;
@@ -41,16 +42,16 @@ export function cellBorderStyle(cell: CellData): CSSProperties {
   return {
     borderTopWidth: all ? 1 : undefined,
     borderTopStyle: all ? "solid" : undefined,
-    borderTopColor: all ? "#333" : undefined,
+    borderTopColor: all ? COLORS.excel.grid : undefined,
     borderRightWidth: all ? 1 : undefined,
     borderRightStyle: all ? "solid" : undefined,
-    borderRightColor: all ? "#333" : undefined,
+    borderRightColor: all ? COLORS.excel.grid : undefined,
     borderBottomWidth: bottom ? 1 : undefined,
     borderBottomStyle: bottom ? "solid" : undefined,
-    borderBottomColor: bottom ? "#333" : undefined,
+    borderBottomColor: bottom ? COLORS.excel.grid : undefined,
     borderLeftWidth: all ? 1 : undefined,
     borderLeftStyle: all ? "solid" : undefined,
-    borderLeftColor: all ? "#333" : undefined,
+    borderLeftColor: all ? COLORS.excel.grid : undefined,
   };
 }
 

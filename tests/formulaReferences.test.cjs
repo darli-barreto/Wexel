@@ -1,5 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),test=require('node:test'),ts=require('typescript');
-const box={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync('components/utils/formulaReferences.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2023}}).outputText,box);
+const palette={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync('config/colors.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,palette);
+const box={exports:{},require:()=>palette.exports};vm.runInNewContext(ts.transpileModule(fs.readFileSync('components/utils/formulaReferences.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2023}}).outputText,box);
 const {formulaReferences,referenceAt}=box.exports;
 test('references have distinct colors and accurate text offsets',()=>{const text='=G5+SUMA(H9:K15)';const refs=formulaReferences(text);assert.equal(refs.length,2);assert.notEqual(refs[0].color,refs[1].color);for(const ref of refs)assert.equal(text.slice(ref.start,ref.end),ref.text);});
 test('every cell of a rectangular range is highlighted, including reverse ranges',()=>{const refs=formulaReferences('=K15:H9');let count=0;for(let r=0;r<20;r++)for(let c=0;c<15;c++)if(referenceAt(refs,r,c))count++;assert.equal(count,28);assert.equal(referenceAt(refs,7,7),undefined);});
