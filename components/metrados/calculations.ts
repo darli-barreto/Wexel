@@ -1,4 +1,4 @@
-import { STEEL_CATALOG, calculateStirrupCount, roundVba, type CalculationGroup, type MeasurementLine, type SteelLine } from "../../store/useMetradoStore";
+import { STEEL_CATALOG, calculateMeasurement, calculateStirrupCount, roundVba, type CalculationGroup, type MeasurementLine, type SteelLine } from "../../store/useMetradoStore";
 
 export const formatQuantity = (value: number) => new Intl.NumberFormat("es-PE", { maximumFractionDigits: 2, minimumFractionDigits: 2 }).format(value);
 function positive(values: number[], label: string) {
@@ -103,8 +103,5 @@ export function calculateWood(input: { description: string; elements: number; qu
   return [group(input.description.toUpperCase(), "p2", [{ ...measurement(input.description, "units", input.elements, 0), unit: "p2", repetitions: input.quantity, manualQuantity: volume / (0.3048 ** 2 * 0.0254) }])];
 }
 export function groupTotal(group: CalculationGroup) {
-  return group.measurements.reduce((sum, line) => {
-    const q = line.similarElements * line.repetitions * line.sign;
-    return sum + q * (line.kind === "volume" ? line.length * line.width * line.height : line.kind === "area" ? line.length * line.width : line.kind === "length" ? line.length : line.manualQuantity ?? 1);
-  }, 0) + group.steelLines.reduce((sum, line) => sum + line.weightKg, 0);
+  return group.measurements.reduce((sum, line) => sum + calculateMeasurement(line), 0) + group.steelLines.reduce((sum, line) => sum + line.weightKg, 0);
 }

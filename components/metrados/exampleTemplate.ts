@@ -3,7 +3,7 @@ import { useMetradoStore, type EstimateItem, type MetradoSnapshot } from "../../
 import { useWexelStore } from "../../store/useWexelStore";
 import { METRADO_WORKBOOK, METRADO_SHEETS, projectMetrado, mergeMetradoWorkbook } from "./workbook";
 import { formatMetradoSheet } from "./formatWorkbook";
-import { metradoWorkbookTransaction } from "./syncWorkbook";
+import { metradoWorkbookTransaction, refreshMetradoAppearance } from "./syncWorkbook";
 import { commitEdit } from "../utils/excelEditing";
 
 export const quispeExampleControls = source.controls;
@@ -42,7 +42,16 @@ export function toggleQuispeExample() {
     const repair = !saved || !Object.values(METRADO_SHEETS).every(id => {
       const sheet = saved.sheets.find(s => s.id === id);
       return sheet?.template && sheet.cells.C1?.rawValue.trim() && sheet.cells.D1?.rawValue.trim();
-    }) || !saved.sheets.some(s => s.id === saved.activeSheetId && s.template);
+    }) || !saved.sheets.some(s => s.id === saved.activeSheetId && s.template)
+      || backup.model.items.some(item => {
+        const sheet = saved.sheets.find(s => s.id === METRADO_SHEETS.metrado);
+        const itemRow = sheet?.template?.rows[JSON.stringify(['item', item.id, '', ''])];
+        const summary = saved.sheets.find(s => s.id === METRADO_SHEETS.resumen);
+        const summaryRow = summary?.template?.rows[JSON.stringify(['item', item.id, '', ''])];
+        return item.cleanupAreaTemplateVersion && (sheet?.template?.generated['P' + itemRow]?.key !== JSON.stringify(['item', item.id, '', 'referenceAreaTotal'])
+          || backup.model.summaryVisible && summary?.template?.generated['H' + summaryRow]?.key !== JSON.stringify(['referenceSummary', item.id, '', 'referenceAreaTotal']))
+          || item.measurements.some(line => line.referenceOnly && !sheet?.template?.rows[JSON.stringify(['measurement', item.id, line.id, ''])]);
+      });
     let workbook = saved;
     if (repair) {
       const projected = projectMetrado(backup.model);
@@ -64,6 +73,9 @@ export function toggleQuispeExample() {
       useMetradoStore.setState({ ...backup.model, steelSheetItems: backup.model.steelSheetItems, demoBackup: undefined, dialog: null, targetItemId: null, selectedItemId: null });
       excel.replaceWorkbook(METRADO_WORKBOOK, workbook!);
     });
+    // Backups retain their original format version. Upgrade their appearance on
+    // return as well, rather than waiting for the next application reload.
+    refreshMetradoAppearance();
     return;
   }
   const workbook = excel.activeWorkbookId === METRADO_WORKBOOK ? { sheets: excel.sheets, activeSheetId: excel.activeSheetId } : excel.workbooks[METRADO_WORKBOOK];

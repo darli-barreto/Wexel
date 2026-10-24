@@ -17,12 +17,13 @@ export default function NormaDialogs({ template }: { template: boolean }) {
   const count = NORMA_ENTRIES.filter(e => scopes.includes(e.scope)).length;
   const issues = useMemo(() => reviewNormaItems(store.items), [store.items]);
   const current = store.items.find(i => i.id === selected);
-  const entry = current?.norma ? NORMA_BY_ID.get(current.norma.id) : undefined;
+  const reference = current?.norma ?? current?.detailVariant?.reference;
+  const entry = reference ? NORMA_BY_ID.get(reference.id) : undefined;
   const filtered = issues.filter(i => (issueFilter === "all" || i.kind === issueFilter) && (i.code + " " + i.title + " " + i.message).toLowerCase().includes(filter.toLowerCase()));
   return <>
     <div className={s.body}>
       {template ? <>
-        <p>Inicia con las partidas y niveles de la norma. No se cargan dimensiones, cantidades ni resultados del ejemplo.</p>
+        <p>Inicia con las partidas y niveles de la norma y dos detalles editables por partida. Los textos base sirven de guía; las dimensiones, cantidades y resultados quedan vacíos.</p>
         {store.demoBackup && <p className={s.help}>Se añadirá la plantilla a tu metrado guardado. Los datos del ejemplo Q7 no se trasladan al proyecto.</p>}
         <Group title="Selecciona las especialidades">
           <div className={s.actions}>
@@ -40,8 +41,10 @@ export default function NormaDialogs({ template }: { template: boolean }) {
         <Group title="Criterio de medición de la partida">
           <Select label="Partida" value={selected} onChange={setSelected} options={[{value:"",label:"Selecciona una partida"},...store.items.map(i=>({value:i.id,label:i.code+" · "+i.description}))]} />
           {current && <>
+            <Button onClick={() => store.setDialog('measurementGuide', current.id)}>Cómo medir esta partida y sus factores</Button>
+            {current.detailVariant && <p className={s.help}>Alternativa del proyecto con total independiente en {current.unit}. La referencia de origen se conserva; esta alternativa no es un nuevo código impreso en la norma.</p>}
             {entry ? <>
-              <p className={s.help}>Referencia: {current.norma!.code} · PDF, páginas {[...new Set([...current.norma!.pages, ...entry.bodyPages, ...(entry.measurementPages ?? [])])].sort((a,b)=>a-b).join(", ")} · {NORMA_SOURCE.resolution}</p>
+              <p className={s.help}>Referencia: {reference!.code} · PDF, páginas {[...new Set([...reference!.pages, ...entry.bodyPages, ...(entry.measurementPages ?? [])])].sort((a,b)=>a-b).join(", ")} · {NORMA_SOURCE.resolution}</p>
               {entry.ambiguousCode && <p className={s.error}>El documento repite este código para distintos conceptos. Revisa la descripción antes de emitirlo.</p>}
               {entry.inheritedFrom && <p className={s.help}>Desglose de trabajo de la aplicación. Referencia original: {entry.inheritedFrom}. {entry.derivedKind === "own" ? "La fila BASE permite medir el concepto padre sin sumar ni duplicar los conceptos hijos." : "HU.1 remite a OE.1; estos subcódigos no se presentan como códigos impresos en el PDF."}</p>}
               <Select label="Unidad de la partida" value={current.unit} onChange={unit => store.updateItem(current.id,{unit})} options={[{value:"",label:"Por definir"},...[...new Set([...entry.options, ...store.unitCatalog.map(u=>u.code)])].map(value=>({value,label:value+(entry.options.includes(value)?" · prevista en la referencia":"")}))]} />

@@ -6,12 +6,13 @@ type Props = Omit<InputHTMLAttributes<Input>, 'onChange' | 'onFocus' | 'onBlur' 
     value: string;
     multiline?: boolean;
     highlight?: boolean;
+    focusAtEnd?: boolean;
     onChange?: ChangeEventHandler<Input>;
     onFocus?: FocusEventHandler<Input>;
     onBlur?: FocusEventHandler<Input>;
     onKeyDown?: KeyboardEventHandler<Input>;
 };
-export default function FormulaInput({ value, multiline = false, highlight = true, autoFocus, style, className, onChange, onFocus, onBlur, onKeyDown, ...props }: Props) {
+export default function FormulaInput({ value, multiline = false, highlight = true, focusAtEnd = false, autoFocus, style, className, onChange, onFocus, onBlur, onKeyDown, ...props }: Props) {
     const input = useRef<Input | null>(null), mirror = useRef<HTMLDivElement>(null), text = useRef<HTMLDivElement>(null);
     const references = highlight ? formulaReferences(value) : [];
     const colored = references.length > 0;
@@ -24,7 +25,11 @@ export default function FormulaInput({ value, multiline = false, highlight = tru
         mirror.current.style.color = style?.color ?? '#171717';
         text.current.style.transform = 'translate(' + (-input.current.scrollLeft) + 'px,' + (-input.current.scrollTop) + 'px)';
     }, [style?.color]);
-    useLayoutEffect(() => { if (autoFocus) input.current?.focus({ preventScroll: true }); }, [autoFocus]);
+    useLayoutEffect(() => {
+        if (!autoFocus || !input.current) return;
+        input.current.focus({ preventScroll: true });
+        if (focusAtEnd) input.current.setSelectionRange(input.current.value.length, input.current.value.length);
+    }, [autoFocus, focusAtEnd]);
     // Plain cell navigation needs no computed-style reads or extra animation frame.
     useLayoutEffect(() => { if (colored) sync(); }, [colored, value, sync]);
     const offset = references.at(-1)?.end ?? 0;

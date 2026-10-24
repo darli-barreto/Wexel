@@ -1,0 +1,15 @@
+{
+  "summaryTolerance": 0.0051,
+  "summaryDifferences": [
+    {
+      "code": "O.E.01.01.01.04",
+      "metradoCell": "P33",
+      "metrado": 22,
+      "resumenCell": "G23",
+      "resumen": 1
+    }
+  ],
+  "steelDifferences": [],
+  "measurableItems": 146,
+  "itemsWithSavedTotal": 54
+}

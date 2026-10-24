@@ -55,7 +55,7 @@ function CanvaExcel() {
     const sheet=excel.sheets.find(s=>s.id===id)!;
     const merge=mergedCells(sheet.merges)?.get(address);
     if(merge?.hidden){cell={row:merge.row,col:merge.col};address=columns[cell.col]+rows[cell.row];}
-    excel.updateSheet(id, (s) => s.currentCell === address && !s.selectionEnd && s.selectedCell ? s : { ...s, selectedCell: cell, selectionEnd: undefined, currentCell: address, formulaInput: s.cells[address]?.rawValue ?? "" });
+    excel.updateSheet(id, (s) => s.currentCell === address && !s.selectionEnd && s.selectedCell && (!s.selectionMode || s.selectionMode === 'cells') ? s : { ...s, selectedCell: cell, selectionEnd: undefined, selectionMode: 'cells', currentCell: address, formulaInput: s.cells[address]?.rawValue ?? "" });
   }, [columns, rows]);
 
   // Elimina el setState en cascada. Actualiza la celda seleccionada solo en el evento de cambio de currentCell.

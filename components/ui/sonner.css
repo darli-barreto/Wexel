@@ -1,0 +1,6 @@
+[data-sonner-toast][data-type="success"] [data-icon]{color:var(--wexel-selection)}
+[data-sonner-toast][data-type="error"] [data-icon]{color:#b42318}
+[data-sonner-toast] [data-description]{font-size:11px;line-height:1.4;color:#737373}
+/* Feedback must be visible before synchronous worksheet work, not mid-entry-animation. */
+[data-sonner-toast].metrado-delete-feedback[data-type="loading"][data-front="true"]{opacity:1;transform:translateY(0);transition:none}
+@media print{[data-sonner-toaster]{display:none!important}}

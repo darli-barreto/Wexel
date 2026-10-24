@@ -12,6 +12,8 @@ export const MIN_ROW_HEIGHT = 18;
 export const DEFAULT_COLUMN_WIDTH = 100;
 export interface CellPosition { row: number; col: number }
 export interface CellData {
+  input?: boolean;
+  hint?: string;
   rawValue: string;
   displayValue: string;
   formula?: string;
@@ -45,6 +47,7 @@ export interface SheetData {
   merges?: string[];
   selectedCell: CellPosition | null;
   selectionEnd?: CellPosition;
+  selectionMode?: 'cells' | 'row' | 'column' | 'all';
   currentCell: string;
   formulaInput: string;
   hiddenRows?: string[];
@@ -77,6 +80,7 @@ export interface WexelState {
   word: WordDocument;
   setViewMode: (mode: ViewMode) => void;
   setActiveSection: (section: RibbonSection) => void;
+  openBlankWorkbook: () => void;
   setActiveFocus: (focus: ActiveFocus) => void;
   updateSheet: (id: string, update: (sheet: SheetData) => SheetData) => void;
   addSheet: () => void;
@@ -110,12 +114,21 @@ export const useWexelStore = create<WexelState>()(
         viewMode, activeFocus: viewMode === "split" ? state.activeFocus : viewMode,
       })),
       setActiveSection: (activeSection) => set((state) => {
+        // Home is a shared ribbon, not a different document. Reopening the
+        // current module also preserves Word/split mode and the editing target.
+        if (activeSection === 'Home' || workbookForSection(activeSection) === state.activeWorkbookId) return state.activeSection === activeSection ? state : { activeSection };
         const id = workbookForSection(activeSection);
         const workbooks = { ...state.workbooks, [state.activeWorkbookId]: { sheets: state.sheets, activeSheetId: state.activeSheetId } };
         const first = newSheet(id + "-sheet-1", "Sheet 1");
         const workbook = workbooks[id] ?? { sheets: [first], activeSheetId: first.id };
         return { activeSection, activeWorkbookId: id, workbooks: { ...workbooks, [id]: workbook }, ...workbook,
           ...(activeSection === "Metrados" ? { activeFocus: "excel" as const, viewMode: state.viewMode === "word" ? "excel" as const : state.viewMode } : {}) };
+      }),
+      openBlankWorkbook: () => set(state => {
+        const workbooks = { ...state.workbooks, [state.activeWorkbookId]: { sheets: state.sheets, activeSheetId: state.activeSheetId } };
+        const first = newSheet('sheet-1', 'Sheet 1');
+        const workbook = workbooks.blank ?? { sheets: [first], activeSheetId: first.id };
+        return { activeSection: 'Home', activeWorkbookId: 'blank', activeFocus: 'excel', viewMode: 'excel', ...workbook, workbooks: { ...workbooks, blank: workbook } };
       }),
       setActiveFocus: (activeFocus) => set(state => state.activeFocus === activeFocus ? state : { activeFocus }),
       updateSheet: (id, update) => set((state) => {

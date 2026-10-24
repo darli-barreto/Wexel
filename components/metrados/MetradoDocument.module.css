@@ -1,0 +1,16 @@
+.report { font-family: Helvetica, Arial, sans-serif; color: #293541; }
+.page { position: relative; box-sizing: border-box; background: white; margin-bottom: 24px; box-shadow: 0 2px 8px #0002; outline: 1px solid #d0d0d0; }
+.header { display: flex; flex-direction: column; gap: 8px; padding-bottom: 10px; box-sizing: border-box; }
+.header h1 { margin: 0; font-size: 14px; font-weight: bold; line-height: 18px; text-align: center; overflow-wrap: anywhere; }
+.header h2 { margin: 0; font-size: 12px; font-weight: bold; line-height: 16px; text-align: center; }
+.metadata { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 8px; font-size: 10px; line-height: 14px; overflow-wrap: anywhere; }
+.table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 7pt; line-height: 12px; }
+.table th, .table td { border: 1px solid #b9bec3; padding: 2px 4px; white-space: pre-wrap; overflow-wrap: anywhere; vertical-align: middle; }
+.table tr { break-inside: avoid; }
+.footer { position: absolute; left: 40px; right: 40px; bottom: 20px; display: flex; justify-content: space-between; gap: 20px; font-size: 9px; line-height: 12px; color: #60676d; }
+.empty { height: 36px; text-align: center; }
+@media print {
+  .report { width: auto !important; margin: 0 !important; }
+  .page { page: metrado-report; width: 297mm !important; min-height: 210mm !important; height: 210mm; margin: 0; border: 0; outline: 0; box-shadow: none; break-after: page; print-color-adjust: exact; }
+  .page:last-child { break-after: auto; }
+}

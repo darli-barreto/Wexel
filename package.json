@@ -23,6 +23,7 @@
     "pako": "1.0.11",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "sonner": "2.0.8",
     "zustand": "^5.0.15"
   },
   "devDependencies": {

@@ -6,6 +6,7 @@ import { useWordEditorStore } from "@/store/useWordEditorStore";
 import { processFormula } from "./excel";
 import { clearCellFormatting } from "./cellFormatting";
 import { activeAddress, editCell } from "./useRibbon";
+import { copyCellRange, pasteCellRange } from './gridClipboard';
 export type AdvancedTool = 'paste'|'cut'|'copy'|'paint'|'effects'|'multilevel'|'sort'|'marks'|'spacing'|'borders'|'styles';
 let copiedFormat: {marks: readonly Mark[]; attrs: Record<string, unknown>} | CellData | null = null;
 let copiedFrom: 'word'|'excel' = 'word';
@@ -16,7 +17,7 @@ export async function advancedAction(tool: AdvancedTool, value = ''): Promise<st
  const sheet=state.sheets.find(s=>s.id===state.activeSheetId)!;
  const cell=sheet.cells[activeAddress(sheet)] ?? {rawValue:'',displayValue:'',dependencies:[]};
  if(tool==='copy'||tool==='cut') {
-  if(excel) { await navigator.clipboard.writeText(cell.rawValue); if(tool==='cut')writeCellText(''); }
+  if(excel) { await navigator.clipboard.writeText(tool==='copy'?copyCellRange(sheet).text:cell.rawValue); if(tool==='cut')writeCellText(''); }
   else if(editor) {
    const {from,to}=editor.state.selection;if(from===to)return 'Selecciona el texto que deseas copiar.';
    const selection=editor.state.selection.content();const div=document.createElement('div');div.append(DOMSerializer.fromSchema(editor.schema).serializeFragment(selection.content));
@@ -25,7 +26,7 @@ export async function advancedAction(tool: AdvancedTool, value = ''): Promise<st
   }return '';
  }
  if(tool==='paste') {
-  if(excel){const text=await navigator.clipboard.readText();writeCellText(text);}
+  if(excel){const text=await navigator.clipboard.readText();pasteCellRange(text,'',value==='plain');}
   else if(editor){
    const items=await navigator.clipboard.read();let html='',plain='';for(const item of items){if(item.types.includes('text/html'))html=await (await item.getType('text/html')).text();if(item.types.includes('text/plain'))plain=await (await item.getType('text/plain')).text();}
    if(html && value!=='plain')editor.chain().focus().insertContent(html).run();

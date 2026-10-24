@@ -2,7 +2,7 @@
 
 import PageBand from "./PageBand";
 import { WordTypography } from "./utils/wordTypography";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { EditorContent, useEditor, type Editor } from "@tiptap/react";
 import TextAlign from "@tiptap/extension-text-align";
 import { TextStyleKit } from "@tiptap/extension-text-style";
@@ -15,6 +15,8 @@ import StarterKit from "@tiptap/starter-kit";
 import { useWexelStore } from "@/store/useWexelStore";
 import { WordPagination, PAGE_WIDTH, PAGE_HEIGHT, PAGE_MARGIN, PAGE_GAP } from "./utils/wordPagination";
 import styles from "./WordCanvas.module.css";
+import { useMetradoPreviewStore, refreshMetradoPreview } from '@/store/useMetradoPreviewStore';
+import MetradoDocumentPages from './metrados/MetradoDocumentPages';
 
 interface CanvawordProps { isSplit?: boolean }
 
@@ -24,6 +26,21 @@ function saveDocument(editor: Editor) {
 }
 
 export default function Canvaword({ isSplit = false }: CanvawordProps) {
+  const canvas = useRef<HTMLDivElement>(null);
+  const preview = useMetradoPreviewStore(state => state.active);
+  const report = useMetradoPreviewStore(state => state.report);
+  const previewError = useMetradoPreviewStore(state => state.error);
+  useEffect(() => { if (preview) canvas.current?.scrollTo({ top: 0, left: 0 }); }, [preview, report]);
+  useEffect(() => {
+    if (!preview) return;
+    let pending: ReturnType<typeof setTimeout>;
+    const stop = useWexelStore.subscribe((next, previous) => {
+      if (next.contentRevision === previous.contentRevision) return;
+      clearTimeout(pending);
+      pending = setTimeout(refreshMetradoPreview, 100);
+    });
+    return () => { stop(); clearTimeout(pending); };
+  }, [preview]);
   const showMarks = useWordEditorStore(state => state.showMarks);
   const content = useWexelStore((state) => state.word.content);
   const totalPages = useWexelStore((state) => state.word.totalPages);
@@ -55,7 +72,8 @@ export default function Canvaword({ isSplit = false }: CanvawordProps) {
   }, [editor, content]);
 
   return (
-    <div className="flex-1 border-y h-full border-tertiary px-10 py-10 overflow-auto hide-scrollbar">
+    <div ref={canvas} data-word-canvas className="flex-1 border-y h-full border-tertiary px-10 py-10 overflow-auto hide-scrollbar">
+      {preview ? (report ? <MetradoDocumentPages report={report} isSplit={isSplit} /> : <p role={previewError ? 'alert' : 'status'} className="text-sm text-center text-[#555]">{previewError || 'Preparando vista previa de Metrado, Acero y Resumen…'}</p>) :
       <div className={styles.document}
         style={{ width: PAGE_WIDTH, height: totalPages * PAGE_HEIGHT + (totalPages - 1) * PAGE_GAP,
           marginInline: isSplit ? 0 : "auto" }}>
@@ -70,7 +88,7 @@ export default function Canvaword({ isSplit = false }: CanvawordProps) {
         <div style={{ position: "relative", paddingTop: PAGE_MARGIN, marginInline: PAGE_MARGIN }}>
           <EditorContent editor={editor} />
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

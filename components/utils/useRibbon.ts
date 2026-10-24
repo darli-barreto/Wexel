@@ -5,6 +5,7 @@ import { useWexelStore, type CellData, type SheetData } from "@/store/useWexelSt
 import { useWordEditorStore } from "@/store/useWordEditorStore";
 import { useShallow } from "zustand/react/shallow";
 import { clearCellFormatting } from "./cellFormatting";
+import { commitEdit } from './excelEditing';
 
 export type RibbonAction = "bold" | "italic" | "underline" | "strike" | "subscript" | "superscript"
   | "left" | "center" | "right" | "justify" | "top" | "middle" | "bottom"
@@ -42,8 +43,7 @@ function wordFormat(editor: Editor | null) {
 
 export function editCell(update: (cell: CellData) => CellData) {
   // Commit a raw cell edit before formatting it; formatting never changes its numeric value.
-  const input = document.activeElement;
-  if (input instanceof HTMLElement && input.dataset.excelInput === "true") input.blur();
+  commitEdit();
   const store = useWexelStore.getState();
   store.updateSheet(store.activeSheetId, (sheet) => {
     const address = activeAddress(sheet);

@@ -3,10 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import { useMetradoStore, type MeasurementKind, type MetradoHeader } from "@/store/useMetradoStore";
 import CalculatorDialog from "./CalculatorDialog";
 import NormaDialogs from "./NormaDialogs";
+import PortableDrainageDialog from "./PortableDrainageDialog";
+import MeasurementGuideDialog from "./MeasurementGuideDialog";
+
 import { Button, Check, Field, Group, Num, Select } from "./FormControls";
 import s from "./Metrados.module.css";
+import { clearMetradoSheets } from './syncWorkbook';
 
-const titles = { normaTemplate: "Plantilla normativa de metrados", normaReview: "Criterios y revisión del metrado", header: "Diseño de Encabezado", item: "Nueva partida o título", measurement: "Detalle de metrado", steel: "Hoja de Metrado de Acero", stirrup: "Cálculo de cantidad de estribos", slab: "Metrado de Losas Macizas", column: "Metrado de Columnas", wood: "Metrado de Madera", style: "Estilo de Hoja", clear: "Limpiar Hoja", numbering: "Ingrese el primer Ítem", levels: "Extraer Nivel", summary: "Generando Resumen", steelSheet: "Hoja de Acero", units: "Unidades y totales de Metrado" };
+const titles = { measurementGuide: "Cómo medir esta partida", portableDrainage: "Revisar desagüe provisional", normaTemplate: "Plantilla normativa de metrados", normaReview: "Criterios y revisión del metrado", header: "Diseño de Encabezado", item: "Nueva partida o título", measurement: "Detalle de metrado", steel: "Hoja de Metrado de Acero", stirrup: "Cálculo de cantidad de estribos", slab: "Metrado de Losas Macizas", column: "Metrado de Columnas", wood: "Metrado de Madera", style: "Estilo de Hoja", clear: "Limpiar Hoja", numbering: "Ingrese el primer Ítem", levels: "Extraer Nivel", summary: "Generando Resumen", steelSheet: "Hoja de Acero", units: "Unidades y totales de Metrado" };
 export default function MetradoDialogs() {
   const dialog = useMetradoStore((state) => state.dialog);
   const panel = useRef<HTMLDivElement>(null);
@@ -31,7 +35,7 @@ export default function MetradoDialogs() {
   const calculator = ["measurement", "steel", "stirrup", "slab", "column", "wood"].includes(dialog);
   return <div className={s.backdrop}><div ref={panel} className={s.dialog} role="dialog" aria-modal="true" aria-labelledby="metrado-dialog-title" style={!calculator ? { width: "min(660px,96vw)" } : undefined}>
     <div className={s.titlebar}><h2 id="metrado-dialog-title">{titles[dialog]}</h2><button aria-label="Cerrar formulario" onClick={() => useMetradoStore.getState().setDialog(null)}>×</button></div>
-    {dialog === "normaTemplate" || dialog === "normaReview" ? <NormaDialogs template={dialog === "normaTemplate"} /> : calculator ? <CalculatorDialog key={dialog} kind={dialog as "measurement" | "steel" | "stirrup" | "slab" | "column" | "wood"} /> : <ManagementForm key={dialog} dialog={dialog} />}
+    {dialog === "measurementGuide" ? <MeasurementGuideDialog /> : dialog === "portableDrainage" ? <PortableDrainageDialog /> : dialog === "normaTemplate" || dialog === "normaReview" ? <NormaDialogs template={dialog === "normaTemplate"} /> : calculator ? <CalculatorDialog key={dialog} kind={dialog as "measurement" | "steel" | "stirrup" | "slab" | "column" | "wood"} /> : <ManagementForm key={dialog} dialog={dialog} />}
   </div></div>;
 }
 function ManagementForm({ dialog }: { dialog: keyof typeof titles }) {
@@ -110,8 +114,7 @@ function ManagementForm({ dialog }: { dialog: keyof typeof titles }) {
     if (dialog === "clear") {
       if (!clearMetrado && !clearSummary) return setMessage("Selecciona al menos una hoja.");
       if (!confirmed) { setConfirmed(true); return; }
-      if (clearMetrado) useMetradoStore.setState({ items: [], collapsedItemIds: [], selectedItemId: null });
-      if (clearSummary) useMetradoStore.setState({ summaryVisible: false });
+      clearMetradoSheets(clearMetrado, clearSummary);
     }
     close();
   };
@@ -121,7 +124,7 @@ function ManagementForm({ dialog }: { dialog: keyof typeof titles }) {
       {dialog === "item" && <Group title="Datos de título o partida"><div className={s.side}><Select label="Tipo" value={kind} onChange={setKind} options={[{ value: "chapter", label: "Título / capítulo" }, { value: "item", label: "Partida de metrado" }]} /><Select label="Dentro del capítulo" value={parent} onChange={setParent} options={[{ value: "", label: "Nivel principal" }, ...store.items.filter((item) => item.kind === "chapter").map((item) => ({ value: item.id, label: item.code + " " + item.description }))]} /><Field label="Descripción" value={description} onChange={setDescription} />{kind === "item" && <Select label="Unidad" value={unit} onChange={setUnit} options={store.unitCatalog.map((v) => ({ value: v.code, label: v.code }))} />}</div></Group>}
       {dialog === "numbering" && <Group title="Datos del primer ítem"><Num label="Primer segmento" value={first} onChange={setFirst} /><div className={s.grid2}><Field label="Añadir prefijo" value={prefix} onChange={setPrefix} /><Field label="Añadir sufijo" value={suffix} onChange={setSuffix} /></div><p className={s.result}>Muestra: {prefix}{String(first).padStart(2, "0")}.01.01{suffix}</p><p className={s.help}>Actualiza los códigos conservando el árbol de títulos y partidas.</p></Group>}
       {dialog === "levels" && <><Group title="Los ítems poseen"><Field label="Prefijo" value={prefix} onChange={setPrefix} /><Field label="Sufijo" value={suffix} onChange={setSuffix} /></Group><Group title="Del título"><Check label="Eliminar espacios iniciales" checked={trim} onChange={setTrim} /></Group></>}
-      {dialog === "summary" && <Group title="Generar resumen"><p className={s.help}>El resumen incluye títulos y partidas, respetando unidades y jerarquía. No suma cantidades de unidades distintas entre capítulos.</p><Check label="Añadir factor" checked={useFactor} onChange={setUseFactor} />{useFactor && <Num label="Factor del resumen" value={factor} onChange={setFactor} />}</Group>}
+      {dialog === "summary" && <Group title="Generar resumen"><p className={s.help}>El resumen incluye títulos y partidas, respetando unidades y jerarquía. No suma cantidades de unidades distintas entre capítulos. El factor general afecta al resumen; el esponjamiento se configura por detalle en «Cómo medir esta partida».</p><Check label="Añadir factor" checked={useFactor} onChange={setUseFactor} />{useFactor && <Num label="Factor del resumen" value={factor} onChange={setFactor} />}</Group>}
       {dialog === "style" && <Group title="Seleccione un estilo">{([["color", "Solo títulos · colores de nivel Q7"], ["blue", "Títulos y partidas · azul"], ["monochrome", "Títulos y partidas · sin color"]] as const).map(([value, label]) => <label key={value} className={s.check}><input type="radio" name="metradoStyle" checked={style === value} onChange={() => setStyle(value)} />{label}</label>)}<Check label="Añadir cuadro y demarcar" checked={frame} onChange={setFrame} /><Check label="Quitar fondo" checked={!fill} onChange={(checked) => setFill(!checked)} /></Group>}
       {dialog === "steelSheet" && <Group title="Formato"><Check label="Aplicar formato" checked={steelFormat} onChange={setSteelFormat} /><Check label="Generar cuadro" checked={frame} onChange={setFrame} /><Check label="Generar totales" checked={steelTotals} onChange={setSteelTotals} /><p className={s.help}>Las longitudes por diámetro y los totales se recalculan con los datos de cada partida.</p></Group>}
       {dialog === "units" && <><Group title="Corregir unidad de la partida"><p>{store.items.find((v) => v.id === store.selectedItemId)?.description || "Selecciona una partida en la hoja"}</p><Select label="Unidad nueva" value={unit} onChange={setUnit} options={store.unitCatalog.map((v) => ({ value: v.code, label: v.code }))} /><p className={s.help}>La unidad determina si el detalle calcula longitud, área, volumen, peso o unidades.</p></Group><Group title="Añadir nueva unidad"><div className={s.grid2}><Field label="Unidad nueva (minúsculas)" value={newUnit} onChange={setNewUnit} /><Select label="Tipo de unidad" value={dimension} onChange={(v) => setDimension(v as MeasurementKind)} options={[{ value: "length", label: "Longitud" }, { value: "area", label: "Área" }, { value: "volume", label: "Volumen" }, { value: "weight", label: "Peso" }, { value: "units", label: "Unidades" }]} /></div><Button onClick={() => { const code = newUnit.trim().toLowerCase(); if (!code || store.unitCatalog.some((v) => v.code === code)) return setMessage("Escribe una unidad nueva que no exista."); useMetradoStore.setState({ unitCatalog: [...store.unitCatalog, { code, kind: dimension }] }); setUnit(code); setNewUnit(""); }}>Agregar unidad</Button></Group></>}

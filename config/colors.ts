@@ -17,6 +17,7 @@ export const COLORS = {
     text: "#374151",
   },
   metrado: {
+    input: "#f0f2f4", // Celdas de entrada de datos; los resultados conservan su fondo normal.
     // TEXTO por nivel: una sola familia de grafitos para documentos técnicos.
     levels: [
       "#18212b", // 1 · Grafito profundo.
@@ -49,6 +50,7 @@ export const COLORS = {
 } as const;
 export const PALETTE_SIGNATURE = JSON.stringify(COLORS);
 export const COLOR_VARIABLES = {
+  "--wexel-input": COLORS.metrado.input,
   "--wexel-primary": COLORS.app.primary,
   "--wexel-secondary": COLORS.app.secondary,
   "--wexel-border": COLORS.app.border,

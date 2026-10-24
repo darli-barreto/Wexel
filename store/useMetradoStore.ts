@@ -3,6 +3,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { deferredStorage } from "./deferredStorage";
+import { renumberAfterDelete } from '../components/metrados/renumberAfterDelete';
 import type { WorkbookData } from "./useWexelStore";
 
 export type MetradoView = "metrado" | "resumen" | "acero";
@@ -22,6 +23,18 @@ export interface MetradoHeader {
 }
 
 export interface MeasurementLine {
+  formworkSource?: { itemId: string; lineId: string; face: 'sides' | 'ends'; manualFields?: string[] };
+  surplus?: { source: 'excavation' | 'ownFill'; parentId: string | null; manual?: boolean };
+  columnSection?: { area: number; buriedHeight: number; areaExpression: string; heightExpression: string; support?: string; element?: 'column' | 'stripFooting' };
+  quantitySourceId?: string;
+  fillGroup?: { id: string; type: 'footing' | 'gradeBeam' | 'stripFooting'; role: 'label' | 'excavation' | 'deduction' };
+  crossSections?: { method: 'endAreas' | 'meanArea'; initialArea: number; finalArea: number; meanArea: number; expressions: { initialArea: string; finalArea: string; meanArea: string }; support: string };
+  /** Presentation row: editable description only, excluded from quantities. */
+  presentation?: 'separator';
+  /** Geometric reference only; excluded from payable partida totals. */
+  referenceOnly?: boolean;
+  swelling?: { factor: number; support: string; basis: 'inSitu' };
+  variantOrigin?: { itemId: string; index: number; measurement: Omit<MeasurementLine, 'variantOrigin'> };
   /** A template row remains unquantified until its required inputs are supplied. */
   pending?: boolean;
   id: string;
@@ -64,6 +77,15 @@ export interface SteelLine {
 }
 
 export interface EstimateItem {
+  formworkTemplateVersion?: 1;
+  surplusTemplateVersion?: 1;
+  cleanupAreaTemplateVersion?: number;
+  provisionalDrainageDecision?: 'keep';
+  detailVariant?: { sourceItemId: string; choiceId: string; originalUnit: string; family?: string; reference?: EstimateItem['norma'] };
+  adaptation?: {
+    reason: string; scope: string; criterion: "details" | "global" | "time";
+    original: { description: string; unit: string; support?: string; measurements: MeasurementLine[]; steelLines: SteelLine[] };
+  };
   detailTemplateVersion?: number;
   support?: string;
   norma?: { id: string; code: string; level: number; pages: number[]; allowedUnits: string[]; inheritedFrom?: string };
@@ -88,7 +110,7 @@ export interface MetradoState {
   collapsedItemIds: string[];
   view: MetradoView;
   tableStyle: MetradoTableStyle;
-  dialog: "header" | "item" | "measurement" | "steel" | "stirrup" | "slab" | "wood" | "column" | "style" | "clear" | "numbering" | "levels" | "summary" | "steelSheet" | "units" | "normaTemplate" | "normaReview" | null;
+  dialog: "measurementGuide" | "portableDrainage" | "header" | "item" | "measurement" | "steel" | "stirrup" | "slab" | "wood" | "column" | "style" | "clear" | "numbering" | "levels" | "summary" | "steelSheet" | "units" | "normaTemplate" | "normaReview" | null;
   targetItemId: string | null;
   selectedItemId: string | null;
   summaryFactor: number;
@@ -188,18 +210,29 @@ function nextCode(items: EstimateItem[], parentId: string | null, numbering = { 
 export const canonicalUnit = (unit: string) => unit.toLowerCase().replace("²", "2").replace("³", "3").trim();
 export function calculateItemTotal(item: EstimateItem): number {
   if (canonicalUnit(item.unit) === "kg" && item.steelLines.some((line) => line.calculationError)) return NaN;
-  return item.measurements.filter((line) => canonicalUnit(line.unit) === canonicalUnit(item.unit)).reduce((sum, line) => sum + calculateMeasurement(line), 0)
+  return item.measurements.filter((line) => !line.referenceOnly && canonicalUnit(line.unit) === canonicalUnit(item.unit)).reduce((sum, line) => sum + calculateMeasurement(line), 0)
     + (canonicalUnit(item.unit) === "kg" ? item.steelLines.reduce((sum, line) => sum + line.weightKg, 0) : 0);
 }
 
 export function calculateMeasurement(line: Omit<MeasurementLine, "id">): number {
+  if (line.presentation === 'separator') return 0;
   if (line.pending) return 0;
   if (line.calculationError) return NaN;
   if (line.quantityOverride !== undefined) return line.quantityOverride;
-  const multiplier = line.similarElements * line.repetitions * line.sign;
+  if (line.kind === 'volume' && line.surplus) {
+    const factor = line.swelling?.factor ?? 1;
+    return !Number.isFinite(line.length) || line.length < 0 || !Number.isFinite(factor) || factor < 1 ? NaN : line.length * line.similarElements * line.repetitions * line.sign * factor;
+  }
+  if (line.kind === 'volume' && line.columnSection) {
+    const { area, buriedHeight } = line.columnSection;
+    if (!Number.isFinite(area) || !Number.isFinite(buriedHeight) || area <= 0 || buriedHeight <= 0) return NaN;
+    return area * buriedHeight * line.similarElements * line.repetitions * line.sign;
+  }
+  if (line.kind === 'volume' && line.crossSections && (line.length <= 0 || !Number.isFinite(line.length) || (line.crossSections.method === 'endAreas' ? [line.crossSections.initialArea, line.crossSections.finalArea] : [line.crossSections.meanArea]).some(area => !Number.isFinite(area) || area < 0))) return NaN;
+  const multiplier = line.similarElements * line.repetitions * line.sign * (line.kind === 'volume' ? line.swelling?.factor ?? 1 : 1);
   if (line.kind === "length") return line.length * multiplier;
   if (line.kind === "area") return line.length * line.width * multiplier;
-  if (line.kind === "volume") return line.length * line.width * line.height * multiplier;
+  if (line.kind === "volume") return line.length * (line.crossSections ? line.crossSections.method === 'endAreas' ? (line.crossSections.initialArea + line.crossSections.finalArea) / 2 : line.crossSections.meanArea : line.width * line.height) * multiplier;
   if (line.kind === "weight") return (line.manualQuantity ?? 0) * multiplier;
   return (line.manualQuantity ?? 1) * multiplier;
 }
@@ -309,18 +342,22 @@ export const useMetradoStore = create<MetradoState>()(
         return state.steelSheetItems?.some((item) => item.id === id)
           ? { steelSheetItems: state.steelSheetItems.map(item => item.id === id ? { ...item, ...normalized } : item) }
           : { items: state.items.map(item => item.id === id ? { ...item, ...normalized,
-            ...(patch.unit !== undefined ? { measurements: item.measurements.map(line => line.pending !== undefined && line.unit === item.unit ? { ...line, unit: patch.unit!, kind: state.unitCatalog.find(entry => entry.code === canonicalUnit(patch.unit!))?.kind ?? line.kind } : line) } : {})
+            ...(patch.unit !== undefined ? { measurements: item.measurements.map(line => {
+              if (line.pending === undefined || line.unit !== item.unit) return line;
+              const kind = state.unitCatalog.find(entry => entry.code === canonicalUnit(patch.unit!))?.kind ?? line.kind;
+              return { ...line, unit: patch.unit!, kind, surplus: kind === 'volume' ? line.surplus : undefined, columnSection: kind === 'volume' ? line.columnSection : undefined, crossSections: kind === 'volume' ? line.crossSections : undefined, swelling: kind === 'volume' ? line.swelling : undefined };
+            }) } : {})
           } : item) };
       }),
       removeItem: (id) => set((state) => {
-        if(state.steelSheetItems?.some(item=>item.id===id))return{steelSheetItems:state.steelSheetItems.filter(item=>item.id!==id),selectedItemId:null};
+        if(state.steelSheetItems?.some(item=>item.id===id))return{steelSheetItems:renumberAfterDelete(state.steelSheetItems,state.steelSheetItems.filter(item=>item.id!==id),new Set([id]),state.numbering),selectedItemId:null};
         const deleted = new Set<string>([id]);
         let changed = true;
         while (changed) {
           changed = false;
           for (const item of state.items) if (item.parentId && deleted.has(item.parentId) && !deleted.has(item.id)) { deleted.add(item.id); changed = true; }
         }
-        return { items: state.items.filter((item) => !deleted.has(item.id)), selectedItemId: deleted.has(state.selectedItemId ?? "") ? null : state.selectedItemId };
+        return { items: renumberAfterDelete(state.items, state.items.filter((item) => !deleted.has(item.id)), deleted, state.numbering), selectedItemId: deleted.has(state.selectedItemId ?? "") ? null : state.selectedItemId };
       }),
       addMeasurement: (itemId, line) => set((state) => ({ items: state.items.map((item) => item.id === itemId ? { ...item, measurements: [...item.measurements, { ...line, id: newId() }] } : item) })),
       updateMeasurement: (itemId, lineId, patch) => set((state) => ({ items: state.items.map((item) => item.id === itemId ? { ...item, measurements: item.measurements.map((line) => line.id === lineId ? { ...line, ...patch } : line) } : item) })),

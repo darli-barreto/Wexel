@@ -14,8 +14,10 @@ import {
 } from "./utils/excelEditing";
 import { cellBorderStyle, cellTextStyle, formatCellValue } from "./utils/cellFormatting";
 import type { StartResize } from "./utils/useExcelResize";
+import DetailPicker from './metrados/DetailPicker';
 interface Props {
   height: number;
+  stickyTop?: number;
   row: string;
   rowIdx: number;
   columns: string[];
@@ -26,6 +28,7 @@ interface Props {
 }
 function TableRowExcel({
   height,
+  stickyTop,
   row,
   rowIdx,
   columns,
@@ -39,11 +42,14 @@ function TableRowExcel({
     draft?.sheetId === sheet.id ? draft.value : "",
   );
   const merges=mergedCells(sheet.merges);
+  const first = sheet.selectedCell, last = sheet.selectionEnd ?? first;
+  const selectedRow = Boolean(first && last && rowIdx >= Math.min(first.row, last.row) && rowIdx <= Math.max(first.row, last.row));
   return (
     <tr style={{ height }}>
-      <td style={{borderColor:COLORS.excel.grid,backgroundColor:COLORS.excel.heading,color:COLORS.excel.headingText}} className="border border-[#d6d6d6] bg-[#fafafa] px-1.5 text-center text-[#7f7f7d] text-sm font-bold sticky left-0 z-10">
+      <td data-selection-axis="row" data-selection-index={rowIdx} aria-label={`Seleccionar fila ${row}`} title={`Seleccionar fila ${row}`} style={{cursor:'e-resize',borderColor:COLORS.excel.grid,backgroundColor:selectedRow ? COLORS.excel.range : COLORS.excel.heading,color:COLORS.excel.headingText,top:stickyTop,zIndex:stickyTop === undefined ? 10 : 19}} className="border border-[#d6d6d6] bg-[#fafafa] px-1.5 text-center text-[#7f7f7d] text-sm font-bold sticky left-0 z-10">
         {row}
         <div
+          data-excel-resize="row"
           aria-label={"Cambiar alto de fila " + row}
           title={"Cambiar alto de fila " + row}
           className="absolute bottom-0 left-0 right-0 h-1.5 cursor-row-resize z-20 select-none"
@@ -59,20 +65,22 @@ function TableRowExcel({
         return <GridCell key={address} address={address} rowIdx={rowIdx} colIdx={colIdx}
           cell={sheet.cells[address] ?? emptyCell} merge={merge} active={active} inRange={inRange}
           draft={draft?.address === address ? draft : null} reference={referenceAt(references,rowIdx,colIdx)}
-          rowCount={rowCount} columns={columns} select={select} />;
+          rowCount={rowCount} columns={columns} select={select} stickyTop={stickyTop} sheetId={sheet.id} />;
       })}
     </tr>
   );
 }
 
 const emptyCell: CellData = { rawValue: "", displayValue: "", dependencies: [] };
-const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, active, inRange, draft, reference, rowCount, columns, select }: {
+const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, active, inRange, draft, reference, rowCount, columns, select, stickyTop, sheetId }: {
+  sheetId: string;
   address: string; rowIdx: number; colIdx: number; cell: CellData;
   merge: MergeCell | undefined;
   active: boolean; inRange: boolean;
   draft: ReturnType<typeof useExcelEditingStore.getState>["draft"];
   reference: ReturnType<typeof referenceAt>;
   rowCount: number; columns: string[]; select: Props["select"];
+  stickyTop?: number;
 }) {
   const position = { row: rowIdx, col: colIdx };
   const editing =
@@ -102,6 +110,7 @@ const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, 
       data-row={rowIdx}
       data-col={colIdx}
       aria-selected={inRange}
+      title={cell.hint}
       data-reference-color={reference?.color}
       className={
         "border border-[#d6d6d6] bg-white px-2 text-xs h-4 relative overflow-visible " +
@@ -119,8 +128,11 @@ const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, 
           ? reference.color + "22"
           : inRange && !active
             ? COLORS.excel.range
-            : cell.backgroundColor,
+            : cell.backgroundColor ?? (stickyTop === undefined ? undefined : COLORS.excel.cell),
         verticalAlign: cell.verticalAlign ?? "middle",
+        position: stickyTop === undefined ? "relative" : "sticky",
+        top: stickyTop,
+        zIndex: stickyTop === undefined ? undefined : 18,
       }}
       onDoubleClick={() => {
         select(position);
@@ -150,15 +162,15 @@ const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, 
           value={editing ? draft.value : formatCellValue(cell)}
           onBlur={blurEdit}
           onChange={(e) => {
-            beginEdit(address);
+            beginEdit(address, true);
             changeDraft(e.target.value);
           }}
           onKeyDown={(e) => {
             if (e.nativeEvent.isComposing) return;
-            if (!editing && !e.ctrlKey && !e.metaKey && !e.altKey && (e.key.length === 1 || e.key === "Backspace" || e.key === "Delete")) {
+            if (!editing && !e.ctrlKey && !e.metaKey && !e.altKey && e.key === "Delete") {
               e.preventDefault();
               beginEdit(address);
-              changeDraft(e.key.length === 1 ? e.key : "");
+              changeDraft("");
               return;
             }
             if (e.key === "F2") {
@@ -232,6 +244,7 @@ const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, 
           }}
           className="w-full h-full bg-transparent border-none outline-none font-mono whitespace-nowrap overflow-visible"
           autoFocus
+          focusAtEnd
         />
       ) : (
         <div
@@ -241,6 +254,7 @@ const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, 
           {formatCellValue(cell)}
         </div>
       )}
+      {active && colIdx === 3 && sheetId === 'metrados-metrado' && <DetailPicker key={address} address={address} />}
     </td>
   );
 
@@ -249,9 +263,9 @@ const GridCell = memo(function GridCell({ address, rowIdx, colIdx, cell, merge, 
 function selectionOnRow(sheet: SheetData, row: number) {
   const a = sheet.selectedCell, b = sheet.selectionEnd ?? a;
   if (!a || !b || row < Math.min(a.row,b.row) || row > Math.max(a.row,b.row)) return "";
-  return [a.row === row ? a.col : -1, Math.min(a.col,b.col), Math.max(a.col,b.col)].join(":");
+  return [sheet.selectionMode ?? 'cells', a.row === row ? a.col : -1, Math.min(a.col,b.col), Math.max(a.col,b.col)].join(":");
 }
 export default memo(TableRowExcel, (a, b) => {
-  if (a.sheet.id !== b.sheet.id || a.sheet.merges !== b.sheet.merges || a.height !== b.height || a.select !== b.select || a.startResize !== b.startResize || a.rowCount !== b.rowCount || selectionOnRow(a.sheet,a.rowIdx) !== selectionOnRow(b.sheet,b.rowIdx)) return false;
+  if (a.sheet.id !== b.sheet.id || a.sheet.merges !== b.sheet.merges || a.height !== b.height || a.stickyTop !== b.stickyTop || a.select !== b.select || a.startResize !== b.startResize || a.rowCount !== b.rowCount || selectionOnRow(a.sheet,a.rowIdx) !== selectionOnRow(b.sheet,b.rowIdx)) return false;
   return a.sheet.cells === b.sheet.cells || a.columns.every((col) => a.sheet.cells[col+a.row] === b.sheet.cells[col+b.row]);
 });

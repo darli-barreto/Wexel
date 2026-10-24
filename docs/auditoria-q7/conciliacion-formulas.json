@@ -1,0 +1,3640 @@
+{
+  "source": {
+    "file": "Prueba-Base-Plantilla_de_Metrados_Q7_ENERO_2022.xlsm",
+    "sha256": "d04b8a7960401bcb6cad5405a766ef26155f18cb45a29c46b54466280fa41891"
+  },
+  "method": "Actual Wexel formula evaluation vs saved Excel caches; no VBA execution.",
+  "sheets": [
+    {
+      "name": "Param",
+      "total": 0,
+      "passed": 0,
+      "failed": [],
+      "checks": []
+    },
+    {
+      "name": "Metrado",
+      "total": 381,
+      "passed": 381,
+      "failed": [],
+      "checks": [
+        {
+          "cell": "W1",
+          "formula": "=SUM(V1:V1)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "P20",
+          "formula": "=SUM(L20:L25)",
+          "expected": 44.5,
+          "actual": "44.5",
+          "pass": true
+        },
+        {
+          "cell": "L21",
+          "formula": "=PRODUCT(F21:K21)",
+          "expected": 14.75,
+          "actual": "14.75",
+          "pass": true
+        },
+        {
+          "cell": "L22",
+          "formula": "=PRODUCT(F22:K22)",
+          "expected": 14.75,
+          "actual": "14.75",
+          "pass": true
+        },
+        {
+          "cell": "L23",
+          "formula": "=PRODUCT(F23:K23)",
+          "expected": 12,
+          "actual": "12",
+          "pass": true
+        },
+        {
+          "cell": "L24",
+          "formula": "=PRODUCT(F24:K24)",
+          "expected": 3,
+          "actual": "3",
+          "pass": true
+        },
+        {
+          "cell": "P26",
+          "formula": "=SUM(O26:O28)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O27",
+          "formula": "=PRODUCT(F27,J27)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P29",
+          "formula": "=SUM(K29:K32)",
+          "expected": 104.1,
+          "actual": "104.1",
+          "pass": true
+        },
+        {
+          "cell": "K30",
+          "formula": "=PRODUCT(F30,SUM(G30:I30),J30)",
+          "expected": 65.5,
+          "actual": "65.5",
+          "pass": true
+        },
+        {
+          "cell": "K31",
+          "formula": "=PRODUCT(F31,SUM(G31:I31),J31)",
+          "expected": 38.6,
+          "actual": "38.6",
+          "pass": true
+        },
+        {
+          "cell": "P33",
+          "formula": "=SUM(O33:O35)",
+          "expected": 22,
+          "actual": "22",
+          "pass": true
+        },
+        {
+          "cell": "O34",
+          "formula": "=PRODUCT(F34,J34)",
+          "expected": 22,
+          "actual": "22",
+          "pass": true
+        },
+        {
+          "cell": "P37",
+          "formula": "=SUM(L37:L39)",
+          "expected": 635.9350000000001,
+          "actual": "635.9350000000001",
+          "pass": true
+        },
+        {
+          "cell": "L38",
+          "formula": "=PRODUCT(F38:K38)",
+          "expected": 635.9350000000001,
+          "actual": "635.9350000000001",
+          "pass": true
+        },
+        {
+          "cell": "P40",
+          "formula": "=SUM(M40:M42)",
+          "expected": 95.39025000000001,
+          "actual": "95.39025000000001",
+          "pass": true
+        },
+        {
+          "cell": "M41",
+          "formula": "=PRODUCT(F41:L41)",
+          "expected": 95.39025000000001,
+          "actual": "95.39025000000001",
+          "pass": true
+        },
+        {
+          "cell": "P43",
+          "formula": "=SUM(O43:O45)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O44",
+          "formula": "=PRODUCT(F44,J44)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P46",
+          "formula": "=SUM(O46:O48)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O47",
+          "formula": "=PRODUCT(F47,J47)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P49",
+          "formula": "=SUM(L49:L51)",
+          "expected": 149.43,
+          "actual": "149.43",
+          "pass": true
+        },
+        {
+          "cell": "L50",
+          "formula": "=PRODUCT(F50:K50)",
+          "expected": 149.43,
+          "actual": "149.43",
+          "pass": true
+        },
+        {
+          "cell": "P52",
+          "formula": "=SUM(L52:L55)",
+          "expected": 497.37,
+          "actual": "497.37",
+          "pass": true
+        },
+        {
+          "cell": "L53",
+          "formula": "=PRODUCT(F53:K53)",
+          "expected": 224.54,
+          "actual": "224.54",
+          "pass": true
+        },
+        {
+          "cell": "L54",
+          "formula": "=PRODUCT(F54:K54)",
+          "expected": 272.83,
+          "actual": "272.83",
+          "pass": true
+        },
+        {
+          "cell": "P57",
+          "formula": "=SUM(O57:O59)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O58",
+          "formula": "=PRODUCT(F58,J58)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P60",
+          "formula": "=SUM(O60:O62)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O61",
+          "formula": "=PRODUCT(F61,J61)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P63",
+          "formula": "=SUM(O63:O65)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O64",
+          "formula": "=PRODUCT(F64,J64)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P66",
+          "formula": "=SUM(O66:O68)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O67",
+          "formula": "=PRODUCT(F67,J67)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P69",
+          "formula": "=SUM(O69:O71)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O70",
+          "formula": "=PRODUCT(F70,J70)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P72",
+          "formula": "=SUM(O72:O74)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "O73",
+          "formula": "=PRODUCT(F73,J73)",
+          "expected": 1,
+          "actual": "1",
+          "pass": true
+        },
+        {
+          "cell": "P77",
+          "formula": "=SUM(M77:M91)",
+          "expected": 132.82187499999998,
+          "actual": "132.82187499999998",
+          "pass": true
+        },
+        {
+          "cell": "M79",
+          "formula": "=PRODUCT(F79:L79)",
+          "expected": 80,
+          "actual": "80",
+          "pass": true
+        },
+        {
+          "cell": "M80",
+          "formula": "=PRODUCT(F80:L80)",
+          "expected": 40,
+          "actual": "40",
+          "pass": true
+        },
+        {
+          "cell": "M83",
+          "formula": "=PRODUCT(F83:L83)",
+          "expected": 2.7115,
+          "actual": "2.7115",
+          "pass": true
+        },
+        {
+          "cell": "M84",
+          "formula": "=PRODUCT(F84:L84)",
+          "expected": 2.2076249999999997,
+          "actual": "2.2076249999999997",
+          "pass": true
+        },
+        {
+          "cell": "M85",
+          "formula": "=PRODUCT(F85:L85)",
+          "expected": 4.263,
+          "actual": "4.263",
+          "pass": true
+        },
+        {
+          "cell": "M86",
+          "formula": "=PRODUCT(F86:L86)",
+          "expected": 2.291,
+          "actual": "2.291",
+          "pass": true
+        },
+        {
+          "cell": "M89",
+          "formula": "=PRODUCT(F89:L89)",
+          "expected": 0.66625,
+          "actual": "0.66625",
+          "pass": true
+        },
+        {
+          "cell": "M90",
+          "formula": "=PRODUCT(F90:L90)",
+          "expected": 0.6825000000000001,
+          "actual": "0.6825000000000001",
+          "pass": true
+        },
+        {
+          "cell": "P92",
+          "formula": "=SUM(M92:M124)",
+          "expected": 9.286974999999996,
+          "actual": "9.286974999999996",
+          "pass": true
+        },
+        {
+          "cell": "M95",
+          "formula": "=PRODUCT(F95:L95)",
+          "expected": 5.8,
+          "actual": "5.8",
+          "pass": true
+        },
+        {
+          "cell": "M96",
+          "formula": "=PRODUCT(F96:L96)",
+          "expected": -2.8,
+          "actual": "-2.8",
+          "pass": true
+        },
+        {
+          "cell": "M97",
+          "formula": "=PRODUCT(F97:L97)",
+          "expected": -0.258,
+          "actual": "-0.258",
+          "pass": true
+        },
+        {
+          "cell": "M98",
+          "formula": "=PRODUCT(F98:L98)",
+          "expected": -0.252,
+          "actual": "-0.252",
+          "pass": true
+        },
+        {
+          "cell": "M99",
+          "formula": "=PRODUCT(F99:L99)",
+          "expected": -0.216,
+          "actual": "-0.216",
+          "pass": true
+        },
+        {
+          "cell": "M102",
+          "formula": "=PRODUCT(F102:L102)",
+          "expected": 10,
+          "actual": "10",
+          "pass": true
+        },
+        {
+          "cell": "M103",
+          "formula": "=PRODUCT(F103:L103)",
+          "expected": -3.9374999999999996,
+          "actual": "-3.9374999999999996",
+          "pass": true
+        },
+        {
+          "cell": "M104",
+          "formula": "=PRODUCT(F104:L104)",
+          "expected": -0.3,
+          "actual": "-0.3",
+          "pass": true
+        },
+        {
+          "cell": "M105",
+          "formula": "=PRODUCT(F105:L105)",
+          "expected": -0.24,
+          "actual": "-0.24",
+          "pass": true
+        },
+        {
+          "cell": "M106",
+          "formula": "=PRODUCT(F106:L106)",
+          "expected": -0.426,
+          "actual": "-0.426",
+          "pass": true
+        },
+        {
+          "cell": "M107",
+          "formula": "=PRODUCT(F107:L107)",
+          "expected": -0.261,
+          "actual": "-0.261",
+          "pass": true
+        },
+        {
+          "cell": "M110",
+          "formula": "=PRODUCT(F110:L110)",
+          "expected": 2.7115,
+          "actual": "2.7115",
+          "pass": true
+        },
+        {
+          "cell": "M111",
+          "formula": "=PRODUCT(F111:L111)",
+          "expected": -0.18125,
+          "actual": "-0.18125",
+          "pass": true
+        },
+        {
+          "cell": "M112",
+          "formula": "=PRODUCT(F112:L112)",
+          "expected": -0.438,
+          "actual": "-0.438",
+          "pass": true
+        },
+        {
+          "cell": "M116",
+          "formula": "=PRODUCT(F116:L116)",
+          "expected": 0.66625,
+          "actual": "0.66625",
+          "pass": true
+        },
+        {
+          "cell": "M117",
+          "formula": "=PRODUCT(F117:L117)",
+          "expected": -0.6149999999999999,
+          "actual": "-0.6149999999999999",
+          "pass": true
+        },
+        {
+          "cell": "M118",
+          "formula": "=PRODUCT(F118:L118)",
+          "expected": -0.015374999999999998,
+          "actual": "-0.015374999999999998",
+          "pass": true
+        },
+        {
+          "cell": "M121",
+          "formula": "=PRODUCT(F121:L121)",
+          "expected": 0.9165,
+          "actual": "0.9165",
+          "pass": true
+        },
+        {
+          "cell": "M122",
+          "formula": "=PRODUCT(F122:L122)",
+          "expected": -0.846,
+          "actual": "-0.846",
+          "pass": true
+        },
+        {
+          "cell": "M123",
+          "formula": "=PRODUCT(F123:L123)",
+          "expected": -0.021150000000000002,
+          "actual": "-0.021150000000000002",
+          "pass": true
+        },
+        {
+          "cell": "P125",
+          "formula": "=SUM(M125:M128)",
+          "expected": 154.41862499999996,
+          "actual": "154.41862499999996",
+          "pass": true
+        },
+        {
+          "cell": "G126",
+          "formula": "=+P77",
+          "expected": 132.82187499999998,
+          "actual": "132.82187499999998",
+          "pass": true
+        },
+        {
+          "cell": "M126",
+          "formula": "=PRODUCT(F126:L126)",
+          "expected": 166.02734374999997,
+          "actual": "166.02734374999997",
+          "pass": true
+        },
+        {
+          "cell": "G127",
+          "formula": "=+P92",
+          "expected": 9.286974999999996,
+          "actual": "9.286974999999996",
+          "pass": true
+        },
+        {
+          "cell": "M127",
+          "formula": "=PRODUCT(F127:L127)",
+          "expected": -11.608718749999996,
+          "actual": "-11.608718749999996",
+          "pass": true
+        },
+        {
+          "cell": "P130",
+          "formula": "=SUM(M130:M133)",
+          "expected": 3.9324000000000003,
+          "actual": "3.9324000000000003",
+          "pass": true
+        },
+        {
+          "cell": "M131",
+          "formula": "=PRODUCT(F131:L131)",
+          "expected": 2.8944000000000005,
+          "actual": "2.8944000000000005",
+          "pass": true
+        },
+        {
+          "cell": "M132",
+          "formula": "=PRODUCT(F132:L132)",
+          "expected": 1.038,
+          "actual": "1.038",
+          "pass": true
+        },
+        {
+          "cell": "P134",
+          "formula": "=SUM(L134:L138)",
+          "expected": 81.12,
+          "actual": "81.12",
+          "pass": true
+        },
+        {
+          "cell": "L136",
+          "formula": "=PRODUCT(F136:K136)",
+          "expected": 54.080000000000005,
+          "actual": "54.080000000000005",
+          "pass": true
+        },
+        {
+          "cell": "L137",
+          "formula": "=PRODUCT(F137:K137)",
+          "expected": 27.040000000000003,
+          "actual": "27.040000000000003",
+          "pass": true
+        },
+        {
+          "cell": "P140",
+          "formula": "=SUM(M140:M142)",
+          "expected": 0.6164000000000001,
+          "actual": "0.6164000000000001",
+          "pass": true
+        },
+        {
+          "cell": "M141",
+          "formula": "=PRODUCT(F141:L141)",
+          "expected": 0.6164000000000001,
+          "actual": "0.6164000000000001",
+          "pass": true
+        },
+        {
+          "cell": "P143",
+          "formula": "=SUM(L143:L147)",
+          "expected": 7.235,
+          "actual": "7.235",
+          "pass": true
+        },
+        {
+          "cell": "L144",
+          "formula": "=PRODUCT(F144:K144)",
+          "expected": 5.36,
+          "actual": "5.36",
+          "pass": true
+        },
+        {
+          "cell": "L146",
+          "formula": "=PRODUCT(F146:K146)",
+          "expected": 1.875,
+          "actual": "1.875",
+          "pass": true
+        },
+        {
+          "cell": "P148",
+          "formula": "=SUM(L148:L151)",
+          "expected": 22.72,
+          "actual": "22.72",
+          "pass": true
+        },
+        {
+          "cell": "L149",
+          "formula": "=PRODUCT(F149:K149)",
+          "expected": 11.4,
+          "actual": "11.4",
+          "pass": true
+        },
+        {
+          "cell": "L150",
+          "formula": "=PRODUCT(F150:K150)",
+          "expected": 11.32,
+          "actual": "11.32",
+          "pass": true
+        },
+        {
+          "cell": "P154",
+          "formula": "=SUM(M154:M157)",
+          "expected": 45,
+          "actual": "45",
+          "pass": true
+        },
+        {
+          "cell": "M155",
+          "formula": "=PRODUCT(F155:L155)",
+          "expected": 30,
+          "actual": "30",
+          "pass": true
+        },
+        {
+          "cell": "M156",
+          "formula": "=PRODUCT(F156:L156)",
+          "expected": 15,
+          "actual": "15",
+          "pass": true
+        },
+        {
+          "cell": "P158",
+          "formula": "=SUM(N158:N166)",
+          "expected": 1316.8799999999999,
+          "actual": "1316.8799999999999",
+          "pass": true
+        },
+        {
+          "cell": "K160",
+          "formula": "=(G160+H160+I160)*F160*J160",
+          "expected": 283.2,
+          "actual": "283.2",
+          "pass": true
+        },
+        {
+          "cell": "N160",
+          "formula": "=K160*M160",
+          "expected": 438.96,
+          "actual": "438.96",
+          "pass": true
+        },
+        {
+          "cell": "K161",
+          "formula": "=(G161+H161+I161)*F161*J161",
+          "expected": 283.2,
+          "actual": "283.2",
+          "pass": true
+        },
+        {
+          "cell": "N161",
+          "formula": "=K161*M161",
+          "expected": 438.96,
+          "actual": "438.96",
+          "pass": true
+        },
+        {
+          "cell": "K164",
+          "formula": "=(G164+H164+I164)*F164*J164",
+          "expected": 141.6,
+          "actual": "141.6",
+          "pass": true
+        },
+        {
+          "cell": "N164",
+          "formula": "=K164*M164",
+          "expected": 219.48,
+          "actual": "219.48",
+          "pass": true
+        },
+        {
+          "cell": "K165",
+          "formula": "=(G165+H165+I165)*F165*J165",
+          "expected": 141.6,
+          "actual": "141.6",
+          "pass": true
+        },
+        {
+          "cell": "N165",
+          "formula": "=K165*M165",
+          "expected": 219.48,
+          "actual": "219.48",
+          "pass": true
+        },
+        {
+          "cell": "P168",
+          "formula": "=SUM(M168:M171)",
+          "expected": 0.48,
+          "actual": "0.48",
+          "pass": true
+        },
+        {
+          "cell": "M169",
+          "formula": "=PRODUCT(F169:L169)",
+          "expected": 0.48,
+          "actual": "0.48",
+          "pass": true
+        },
+        {
+          "cell": "P172",
+          "formula": "=SUM(L172:L175)",
+          "expected": 3.84,
+          "actual": "3.84",
+          "pass": true
+        },
+        {
+          "cell": "L173",
+          "formula": "=PRODUCT(F173:K173)",
+          "expected": 3.84,
+          "actual": "3.84",
+          "pass": true
+        },
+        {
+          "cell": "P176",
+          "formula": "=SUM(N176:N184)",
+          "expected": 418.08,
+          "actual": "418.08",
+          "pass": true
+        },
+        {
+          "cell": "K178",
+          "formula": "=(G178+H178+I178)*F178*J178",
+          "expected": 170.88,
+          "actual": "170.88",
+          "pass": true
+        },
+        {
+          "cell": "N178",
+          "formula": "=K178*M178",
+          "expected": 264.864,
+          "actual": "264.864",
+          "pass": true
+        },
+        {
+          "cell": "K179",
+          "formula": "=(G179+H179+I179)*F179*J179",
+          "expected": 136.8,
+          "actual": "136.8",
+          "pass": true
+        },
+        {
+          "cell": "N179",
+          "formula": "=K179*M179",
+          "expected": 76.60800000000002,
+          "actual": "76.60800000000002",
+          "pass": true
+        },
+        {
+          "cell": "K180",
+          "formula": "=(G180+H180+I180)*F180*J180",
+          "expected": 136.8,
+          "actual": "136.8",
+          "pass": true
+        },
+        {
+          "cell": "N180",
+          "formula": "=K180*M180",
+          "expected": 76.60800000000002,
+          "actual": "76.60800000000002",
+          "pass": true
+        },
+        {
+          "cell": "P186",
+          "formula": "=SUM(M186:M197)",
+          "expected": 25.66475,
+          "actual": "25.66475",
+          "pass": true
+        },
+        {
+          "cell": "M188",
+          "formula": "=PRODUCT(F188:L188)",
+          "expected": 8.544,
+          "actual": "8.544",
+          "pass": true
+        },
+        {
+          "cell": "M189",
+          "formula": "=PRODUCT(F189:L189)",
+          "expected": 10.324,
+          "actual": "10.324",
+          "pass": true
+        },
+        {
+          "cell": "M193",
+          "formula": "=PRODUCT(F193:L193)",
+          "expected": 6.528,
+          "actual": "6.528",
+          "pass": true
+        },
+        {
+          "cell": "M195",
+          "formula": "=PRODUCT(F195:L195)",
+          "expected": 0.26875,
+          "actual": "0.26875",
+          "pass": true
+        },
+        {
+          "cell": "P198",
+          "formula": "=SUM(L198:L203)",
+          "expected": 73.92,
+          "actual": "73.92",
+          "pass": true
+        },
+        {
+          "cell": "G200",
+          "formula": "=+(0.6+0.35+0.25)*2",
+          "expected": 2.4,
+          "actual": "2.4",
+          "pass": true
+        },
+        {
+          "cell": "I200",
+          "formula": "=4.45-0.6",
+          "expected": 3.85,
+          "actual": "3.85",
+          "pass": true
+        },
+        {
+          "cell": "L200",
+          "formula": "=PRODUCT(F200:K200)",
+          "expected": 73.92,
+          "actual": "73.92",
+          "pass": true
+        },
+        {
+          "cell": "P204",
+          "formula": "=SUM(N204:N210)",
+          "expected": 2140.2496,
+          "actual": "2140.2496",
+          "pass": true
+        },
+        {
+          "cell": "K206",
+          "formula": "=(G206+H206+I206)*F206*J206",
+          "expected": 840,
+          "actual": "840",
+          "pass": true
+        },
+        {
+          "cell": "N206",
+          "formula": "=K206*M206",
+          "expected": 1302,
+          "actual": "1302",
+          "pass": true
+        },
+        {
+          "cell": "K207",
+          "formula": "=(G207+H207+I207)*F207*J207",
+          "expected": 277.44,
+          "actual": "277.44",
+          "pass": true
+        },
+        {
+          "cell": "N207",
+          "formula": "=K207*M207",
+          "expected": 274.6656,
+          "actual": "274.6656",
+          "pass": true
+        },
+        {
+          "cell": "K208",
+          "formula": "=(G208+H208+I208)*F208*J208",
+          "expected": 503.2,
+          "actual": "503.2",
+          "pass": true
+        },
+        {
+          "cell": "N208",
+          "formula": "=K208*M208",
+          "expected": 281.79200000000003,
+          "actual": "281.79200000000003",
+          "pass": true
+        },
+        {
+          "cell": "K209",
+          "formula": "=(G209+H209+I209)*F209*J209",
+          "expected": 503.2,
+          "actual": "503.2",
+          "pass": true
+        },
+        {
+          "cell": "N209",
+          "formula": "=K209*M209",
+          "expected": 281.79200000000003,
+          "actual": "281.79200000000003",
+          "pass": true
+        },
+        {
+          "cell": "P212",
+          "formula": "=SUM(M212:M217)",
+          "expected": 0.108,
+          "actual": "0.108",
+          "pass": true
+        },
+        {
+          "cell": "M214",
+          "formula": "=PRODUCT(F214:L214)",
+          "expected": 0.108,
+          "actual": "0.108",
+          "pass": true
+        },
+        {
+          "cell": "P218",
+          "formula": "=SUM(L218:L222)",
+          "expected": 4.725,
+          "actual": "4.725",
+          "pass": true
+        },
+        {
+          "cell": "L220",
+          "formula": "=PRODUCT(F220:K220)",
+          "expected": 2.6999999999999997,
+          "actual": "2.6999999999999997",
+          "pass": true
+        },
+        {
+          "cell": "L221",
+          "formula": "=PRODUCT(F221:K221)",
+          "expected": 2.025,
+          "actual": "2.025",
+          "pass": true
+        },
+        {
+          "cell": "P223",
+          "formula": "=SUM(N223:N228)",
+          "expected": 28.1208,
+          "actual": "28.1208",
+          "pass": true
+        },
+        {
+          "cell": "K226",
+          "formula": "=(G226+H226+I226)*F226*J226",
+          "expected": 37.67999999999999,
+          "actual": "37.67999999999999",
+          "pass": true
+        },
+        {
+          "cell": "N226",
+          "formula": "=K226*M226",
+          "expected": 21.1008,
+          "actual": "21.1008",
+          "pass": true
+        },
+        {
+          "cell": "K227",
+          "formula": "=(G227+H227+I227)*F227*J227",
+          "expected": 28.08,
+          "actual": "28.08",
+          "pass": true
+        },
+        {
+          "cell": "N227",
+          "formula": "=K227*M227",
+          "expected": 7.02,
+          "actual": "7.02",
+          "pass": true
+        },
+        {
+          "cell": "P230",
+          "formula": "=SUM(M230:M245)",
+          "expected": 4.0447999999999995,
+          "actual": "4.0447999999999995",
+          "pass": true
+        },
+        {
+          "cell": "M233",
+          "formula": "=PRODUCT(F233:L233)",
+          "expected": 1.6019999999999999,
+          "actual": "1.6019999999999999",
+          "pass": true
+        },
+        {
+          "cell": "M234",
+          "formula": "=PRODUCT(F234:L234)",
+          "expected": 1.2465,
+          "actual": "1.2465",
+          "pass": true
+        },
+        {
+          "cell": "M237",
+          "formula": "=PRODUCT(F237:L237)",
+          "expected": 0.5900000000000001,
+          "actual": "0.5900000000000001",
+          "pass": true
+        },
+        {
+          "cell": "M240",
+          "formula": "=PRODUCT(F240:L240)",
+          "expected": 0.2796,
+          "actual": "0.2796",
+          "pass": true
+        },
+        {
+          "cell": "M244",
+          "formula": "=PRODUCT(F244:L244)",
+          "expected": 0.3267,
+          "actual": "0.3267",
+          "pass": true
+        },
+        {
+          "cell": "P246",
+          "formula": "=SUM(L246:L264)",
+          "expected": 8.265500000000001,
+          "actual": "8.265500000000001",
+          "pass": true
+        },
+        {
+          "cell": "L249",
+          "formula": "=PRODUCT(F249:K249)",
+          "expected": 2.67,
+          "actual": "2.67",
+          "pass": true
+        },
+        {
+          "cell": "L250",
+          "formula": "=PRODUCT(F250:K250)",
+          "expected": 2.9085,
+          "actual": "2.9085",
+          "pass": true
+        },
+        {
+          "cell": "L253",
+          "formula": "=PRODUCT(F253:K253)",
+          "expected": 1.2465,
+          "actual": "1.2465",
+          "pass": true
+        },
+        {
+          "cell": "L256",
+          "formula": "=PRODUCT(F256:K256)",
+          "expected": 0.5900000000000001,
+          "actual": "0.5900000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L259",
+          "formula": "=PRODUCT(F259:K259)",
+          "expected": 0.2796,
+          "actual": "0.2796",
+          "pass": true
+        },
+        {
+          "cell": "L260",
+          "formula": "=PRODUCT(F260:K260)",
+          "expected": 0.24420000000000003,
+          "actual": "0.24420000000000003",
+          "pass": true
+        },
+        {
+          "cell": "L263",
+          "formula": "=PRODUCT(F263:K263)",
+          "expected": 0.3267,
+          "actual": "0.3267",
+          "pass": true
+        },
+        {
+          "cell": "P265",
+          "formula": "=SUM(N265:N304)",
+          "expected": 1562.2091999999996,
+          "actual": "1562.2091999999996",
+          "pass": true
+        },
+        {
+          "cell": "K268",
+          "formula": "=(G268+H268+I268)*F268*J268",
+          "expected": 163.52,
+          "actual": "163.52",
+          "pass": true
+        },
+        {
+          "cell": "N268",
+          "formula": "=K268*M268",
+          "expected": 366.2848000000001,
+          "actual": "366.2848000000001",
+          "pass": true
+        },
+        {
+          "cell": "K269",
+          "formula": "=(G269+H269+I269)*F269*J269",
+          "expected": 76.56,
+          "actual": "76.56",
+          "pass": true
+        },
+        {
+          "cell": "N269",
+          "formula": "=K269*M269",
+          "expected": 118.668,
+          "actual": "118.668",
+          "pass": true
+        },
+        {
+          "cell": "K270",
+          "formula": "=(G270+H270+I270)*F270*J270",
+          "expected": 113.76,
+          "actual": "113.76",
+          "pass": true
+        },
+        {
+          "cell": "N270",
+          "formula": "=K270*M270",
+          "expected": 63.70560000000001,
+          "actual": "63.70560000000001",
+          "pass": true
+        },
+        {
+          "cell": "K271",
+          "formula": "=(G271+H271+I271)*F271*J271",
+          "expected": 113.76,
+          "actual": "113.76",
+          "pass": true
+        },
+        {
+          "cell": "N271",
+          "formula": "=K271*M271",
+          "expected": 63.70560000000001,
+          "actual": "63.70560000000001",
+          "pass": true
+        },
+        {
+          "cell": "K272",
+          "formula": "=(G272+H272+I272)*F272*J272",
+          "expected": 88.48,
+          "actual": "88.48",
+          "pass": true
+        },
+        {
+          "cell": "N272",
+          "formula": "=K272*M272",
+          "expected": 49.54880000000001,
+          "actual": "49.54880000000001",
+          "pass": true
+        },
+        {
+          "cell": "K279",
+          "formula": "=(G279+H279+I279)*F279*J279",
+          "expected": 41.120000000000005,
+          "actual": "41.120000000000005",
+          "pass": true
+        },
+        {
+          "cell": "N279",
+          "formula": "=K279*M279",
+          "expected": 92.10880000000002,
+          "actual": "92.10880000000002",
+          "pass": true
+        },
+        {
+          "cell": "K280",
+          "formula": "=(G280+H280+I280)*F280*J280",
+          "expected": 30.560000000000002,
+          "actual": "30.560000000000002",
+          "pass": true
+        },
+        {
+          "cell": "N280",
+          "formula": "=K280*M280",
+          "expected": 30.2544,
+          "actual": "30.2544",
+          "pass": true
+        },
+        {
+          "cell": "K281",
+          "formula": "=(G281+H281+I281)*F281*J281",
+          "expected": 31.36,
+          "actual": "31.36",
+          "pass": true
+        },
+        {
+          "cell": "N281",
+          "formula": "=K281*M281",
+          "expected": 70.24640000000001,
+          "actual": "70.24640000000001",
+          "pass": true
+        },
+        {
+          "cell": "K282",
+          "formula": "=(G282+H282+I282)*F282*J282",
+          "expected": 124.80000000000001,
+          "actual": "124.80000000000001",
+          "pass": true
+        },
+        {
+          "cell": "N282",
+          "formula": "=K282*M282",
+          "expected": 69.88800000000002,
+          "actual": "69.88800000000002",
+          "pass": true
+        },
+        {
+          "cell": "K289",
+          "formula": "=(G289+H289+I289)*F289*J289",
+          "expected": 147.35,
+          "actual": "147.35",
+          "pass": true
+        },
+        {
+          "cell": "N289",
+          "formula": "=K289*M289",
+          "expected": 145.8765,
+          "actual": "145.8765",
+          "pass": true
+        },
+        {
+          "cell": "K290",
+          "formula": "=(G290+H290+I290)*F290*J290",
+          "expected": 209.89000000000001,
+          "actual": "209.89000000000001",
+          "pass": true
+        },
+        {
+          "cell": "N290",
+          "formula": "=K290*M290",
+          "expected": 207.7911,
+          "actual": "207.7911",
+          "pass": true
+        },
+        {
+          "cell": "K295",
+          "formula": "=(G295+H295+I295)*F295*J295",
+          "expected": 121.91999999999999,
+          "actual": "121.91999999999999",
+          "pass": true
+        },
+        {
+          "cell": "N295",
+          "formula": "=K295*M295",
+          "expected": 188.976,
+          "actual": "188.976",
+          "pass": true
+        },
+        {
+          "cell": "K296",
+          "formula": "=(G296+H296+I296)*F296*J296",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "N296",
+          "formula": "=K296*M296",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "K297",
+          "formula": "=(G297+H297+I297)*F297*J297",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "N297",
+          "formula": "=K297*M297",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "K298",
+          "formula": "=(G298+H298+I298)*F298*J298",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "N298",
+          "formula": "=K298*M298",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "K299",
+          "formula": "=(G299+H299+I299)*F299*J299",
+          "expected": 28.32,
+          "actual": "28.32",
+          "pass": true
+        },
+        {
+          "cell": "N299",
+          "formula": "=K299*M299",
+          "expected": 15.859200000000001,
+          "actual": "15.859200000000001",
+          "pass": true
+        },
+        {
+          "cell": "K300",
+          "formula": "=(G300+H300+I300)*F300*J300",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "N300",
+          "formula": "=K300*M300",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "K301",
+          "formula": "=(G301+H301+I301)*F301*J301",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "N301",
+          "formula": "=K301*M301",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "K302",
+          "formula": "=(G302+H302+I302)*F302*J302",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "N302",
+          "formula": "=K302*M302",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "P306",
+          "formula": "=SUM(M306:M315)",
+          "expected": 5.05141,
+          "actual": "5.05141",
+          "pass": true
+        },
+        {
+          "cell": "M308",
+          "formula": "=PRODUCT(F308:L308)",
+          "expected": 2.0010375,
+          "actual": "2.0010375",
+          "pass": true
+        },
+        {
+          "cell": "M309",
+          "formula": "=PRODUCT(F309:L309)",
+          "expected": 2.0120625,
+          "actual": "2.0120625",
+          "pass": true
+        },
+        {
+          "cell": "M313",
+          "formula": "=PRODUCT(F313:L313)",
+          "expected": 1.03831,
+          "actual": "1.03831",
+          "pass": true
+        },
+        {
+          "cell": "P316",
+          "formula": "=SUM(L316:L324)",
+          "expected": 57.730399999999996,
+          "actual": "57.730399999999996",
+          "pass": true
+        },
+        {
+          "cell": "L318",
+          "formula": "=PRODUCT(F318:K318)",
+          "expected": 22.869,
+          "actual": "22.869",
+          "pass": true
+        },
+        {
+          "cell": "L319",
+          "formula": "=PRODUCT(F319:K319)",
+          "expected": 22.994999999999997,
+          "actual": "22.994999999999997",
+          "pass": true
+        },
+        {
+          "cell": "L323",
+          "formula": "=PRODUCT(F323:K323)",
+          "expected": 11.8664,
+          "actual": "11.8664",
+          "pass": true
+        },
+        {
+          "cell": "P325",
+          "formula": "=SUM(N325:N338)",
+          "expected": 1075.9171,
+          "actual": "1075.9171",
+          "pass": true
+        },
+        {
+          "cell": "K328",
+          "formula": "=(G328+H328+I328)*F328*J328",
+          "expected": 673.21,
+          "actual": "673.21",
+          "pass": true
+        },
+        {
+          "cell": "N328",
+          "formula": "=K328*M328",
+          "expected": 666.4779,
+          "actual": "666.4779",
+          "pass": true
+        },
+        {
+          "cell": "K329",
+          "formula": "=(G329+H329+I329)*F329*J329",
+          "expected": 34.73,
+          "actual": "34.73",
+          "pass": true
+        },
+        {
+          "cell": "N329",
+          "formula": "=K329*M329",
+          "expected": 19.4488,
+          "actual": "19.4488",
+          "pass": true
+        },
+        {
+          "cell": "K330",
+          "formula": "=(G330+H330+I330)*F330*J330",
+          "expected": 225.4,
+          "actual": "225.4",
+          "pass": true
+        },
+        {
+          "cell": "N330",
+          "formula": "=K330*M330",
+          "expected": 223.14600000000002,
+          "actual": "223.14600000000002",
+          "pass": true
+        },
+        {
+          "cell": "K331",
+          "formula": "=(G331+H331+I331)*F331*J331",
+          "expected": 225.4,
+          "actual": "225.4",
+          "pass": true
+        },
+        {
+          "cell": "N331",
+          "formula": "=K331*M331",
+          "expected": 126.22400000000002,
+          "actual": "126.22400000000002",
+          "pass": true
+        },
+        {
+          "cell": "K334",
+          "formula": "=(G334+H334+I334)*F334*J334",
+          "expected": 4.840000000000001,
+          "actual": "4.840000000000001",
+          "pass": true
+        },
+        {
+          "cell": "N334",
+          "formula": "=K334*M334",
+          "expected": 2.710400000000001,
+          "actual": "2.710400000000001",
+          "pass": true
+        },
+        {
+          "cell": "K337",
+          "formula": "=(G337+H337+I337)*F337*J337",
+          "expected": 151.64,
+          "actual": "151.64",
+          "pass": true
+        },
+        {
+          "cell": "N337",
+          "formula": "=K337*M337",
+          "expected": 37.91,
+          "actual": "37.91",
+          "pass": true
+        },
+        {
+          "cell": "P339",
+          "formula": "=SUM(O339:O347)",
+          "expected": 480.894232,
+          "actual": "480.894232",
+          "pass": true
+        },
+        {
+          "cell": "O341",
+          "formula": "=PRODUCT(F341:J341)",
+          "expected": 190.49877,
+          "actual": "190.49877",
+          "pass": true
+        },
+        {
+          "cell": "O342",
+          "formula": "=PRODUCT(F342:J342)",
+          "expected": 191.54834999999997,
+          "actual": "191.54834999999997",
+          "pass": true
+        },
+        {
+          "cell": "O346",
+          "formula": "=PRODUCT(F346:J346)",
+          "expected": 98.84711200000001,
+          "actual": "98.84711200000001",
+          "pass": true
+        },
+        {
+          "cell": "P349",
+          "formula": "=SUM(M349:M358)",
+          "expected": 2.8950400000000003,
+          "actual": "2.8950400000000003",
+          "pass": true
+        },
+        {
+          "cell": "M351",
+          "formula": "=PRODUCT(F351:L351)",
+          "expected": 0.80496,
+          "actual": "0.80496",
+          "pass": true
+        },
+        {
+          "cell": "M352",
+          "formula": "=PRODUCT(F352:L352)",
+          "expected": 0.06656000000000001,
+          "actual": "0.06656000000000001",
+          "pass": true
+        },
+        {
+          "cell": "M353",
+          "formula": "=PRODUCT(F353:L353)",
+          "expected": 1.1520000000000001,
+          "actual": "1.1520000000000001",
+          "pass": true
+        },
+        {
+          "cell": "M356",
+          "formula": "=PRODUCT(F356:L356)",
+          "expected": 0.80496,
+          "actual": "0.80496",
+          "pass": true
+        },
+        {
+          "cell": "M357",
+          "formula": "=PRODUCT(F357:L357)",
+          "expected": 0.06656000000000001,
+          "actual": "0.06656000000000001",
+          "pass": true
+        },
+        {
+          "cell": "P359",
+          "formula": "=SUM(L359:L369)",
+          "expected": 16.6727,
+          "actual": "16.6727",
+          "pass": true
+        },
+        {
+          "cell": "L361",
+          "formula": "=PRODUCT(F361:K361)",
+          "expected": 3.84,
+          "actual": "3.84",
+          "pass": true
+        },
+        {
+          "cell": "L362",
+          "formula": "=PRODUCT(F362:K362)",
+          "expected": 2.4480000000000004,
+          "actual": "2.4480000000000004",
+          "pass": true
+        },
+        {
+          "cell": "L363",
+          "formula": "=PRODUCT(F363:K363)",
+          "expected": 0.5031,
+          "actual": "0.5031",
+          "pass": true
+        },
+        {
+          "cell": "L364",
+          "formula": "=PRODUCT(F364:K364)",
+          "expected": 0.041600000000000005,
+          "actual": "0.041600000000000005",
+          "pass": true
+        },
+        {
+          "cell": "L365",
+          "formula": "=PRODUCT(F365:K365)",
+          "expected": 2.72,
+          "actual": "2.72",
+          "pass": true
+        },
+        {
+          "cell": "L366",
+          "formula": "=PRODUCT(F366:K366)",
+          "expected": 5.760000000000001,
+          "actual": "5.760000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L367",
+          "formula": "=PRODUCT(F367:K367)",
+          "expected": 0.6400000000000001,
+          "actual": "0.6400000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L368",
+          "formula": "=PRODUCT(F368:K368)",
+          "expected": 0.7200000000000001,
+          "actual": "0.7200000000000001",
+          "pass": true
+        },
+        {
+          "cell": "P370",
+          "formula": "=SUM(N370:N376)",
+          "expected": 131.93640000000002,
+          "actual": "131.93640000000002",
+          "pass": true
+        },
+        {
+          "cell": "K372",
+          "formula": "=(G372+H372+I372)*F372*J372",
+          "expected": 59.400000000000006,
+          "actual": "59.400000000000006",
+          "pass": true
+        },
+        {
+          "cell": "N372",
+          "formula": "=K372*M372",
+          "expected": 58.806000000000004,
+          "actual": "58.806000000000004",
+          "pass": true
+        },
+        {
+          "cell": "K373",
+          "formula": "=(G373+H373+I373)*F373*J373",
+          "expected": 58.05,
+          "actual": "58.05",
+          "pass": true
+        },
+        {
+          "cell": "N373",
+          "formula": "=K373*M373",
+          "expected": 32.508,
+          "actual": "32.508",
+          "pass": true
+        },
+        {
+          "cell": "K374",
+          "formula": "=(G374+H374+I374)*F374*J374",
+          "expected": 36.27,
+          "actual": "36.27",
+          "pass": true
+        },
+        {
+          "cell": "N374",
+          "formula": "=K374*M374",
+          "expected": 20.311200000000003,
+          "actual": "20.311200000000003",
+          "pass": true
+        },
+        {
+          "cell": "K375",
+          "formula": "=(G375+H375+I375)*F375*J375",
+          "expected": 36.27,
+          "actual": "36.27",
+          "pass": true
+        },
+        {
+          "cell": "N375",
+          "formula": "=K375*M375",
+          "expected": 20.311200000000003,
+          "actual": "20.311200000000003",
+          "pass": true
+        },
+        {
+          "cell": "P379",
+          "formula": "=SUM(L379:L386)",
+          "expected": 28.211,
+          "actual": "28.211",
+          "pass": true
+        },
+        {
+          "cell": "L381",
+          "formula": "=PRODUCT(F381:K381)",
+          "expected": 13.4,
+          "actual": "13.4",
+          "pass": true
+        },
+        {
+          "cell": "L382",
+          "formula": "=PRODUCT(F382:K382)",
+          "expected": 13.4,
+          "actual": "13.4",
+          "pass": true
+        },
+        {
+          "cell": "L383",
+          "formula": "=PRODUCT(F383:K383)",
+          "expected": 2.0749999999999997,
+          "actual": "2.0749999999999997",
+          "pass": true
+        },
+        {
+          "cell": "L384",
+          "formula": "=PRODUCT(F384:K384)",
+          "expected": -0.664,
+          "actual": "-0.664",
+          "pass": true
+        },
+        {
+          "cell": "P387",
+          "formula": "=SUM(L387:L392)",
+          "expected": 10.553,
+          "actual": "10.553",
+          "pass": true
+        },
+        {
+          "cell": "L389",
+          "formula": "=PRODUCT(F389:K389)",
+          "expected": 4.437,
+          "actual": "4.437",
+          "pass": true
+        },
+        {
+          "cell": "L390",
+          "formula": "=PRODUCT(F390:K390)",
+          "expected": 1.566,
+          "actual": "1.566",
+          "pass": true
+        },
+        {
+          "cell": "L391",
+          "formula": "=PRODUCT(F391:K391)",
+          "expected": 4.55,
+          "actual": "4.55",
+          "pass": true
+        },
+        {
+          "cell": "P393",
+          "formula": "=SUM(L393:L399)",
+          "expected": 3.13,
+          "actual": "3.13",
+          "pass": true
+        },
+        {
+          "cell": "L395",
+          "formula": "=PRODUCT(F395:K395)",
+          "expected": 0.834,
+          "actual": "0.834",
+          "pass": true
+        },
+        {
+          "cell": "L396",
+          "formula": "=PRODUCT(F396:K396)",
+          "expected": 0.656,
+          "actual": "0.656",
+          "pass": true
+        },
+        {
+          "cell": "L397",
+          "formula": "=PRODUCT(F397:K397)",
+          "expected": 1.64,
+          "actual": "1.64",
+          "pass": true
+        },
+        {
+          "cell": "P401",
+          "formula": "=SUM(L401:L410)",
+          "expected": 18.885,
+          "actual": "18.885",
+          "pass": true
+        },
+        {
+          "cell": "L404",
+          "formula": "=PRODUCT(F404:K404)",
+          "expected": 1.5750000000000002,
+          "actual": "1.5750000000000002",
+          "pass": true
+        },
+        {
+          "cell": "L405",
+          "formula": "=PRODUCT(F405:K405)",
+          "expected": 4.3950000000000005,
+          "actual": "4.3950000000000005",
+          "pass": true
+        },
+        {
+          "cell": "L406",
+          "formula": "=PRODUCT(F406:K406)",
+          "expected": 0.645,
+          "actual": "0.645",
+          "pass": true
+        },
+        {
+          "cell": "L407",
+          "formula": "=PRODUCT(F407:K407)",
+          "expected": 4.545,
+          "actual": "4.545",
+          "pass": true
+        },
+        {
+          "cell": "L408",
+          "formula": "=PRODUCT(F408:K408)",
+          "expected": 5.4,
+          "actual": "5.4",
+          "pass": true
+        },
+        {
+          "cell": "L409",
+          "formula": "=PRODUCT(F409:K409)",
+          "expected": 2.325,
+          "actual": "2.325",
+          "pass": true
+        },
+        {
+          "cell": "P411",
+          "formula": "=SUM(L411:L418)",
+          "expected": 14.125,
+          "actual": "14.125",
+          "pass": true
+        },
+        {
+          "cell": "L414",
+          "formula": "=PRODUCT(F414:K414)",
+          "expected": 2.051,
+          "actual": "2.051",
+          "pass": true
+        },
+        {
+          "cell": "L415",
+          "formula": "=PRODUCT(F415:K415)",
+          "expected": 3.939,
+          "actual": "3.939",
+          "pass": true
+        },
+        {
+          "cell": "L416",
+          "formula": "=PRODUCT(F416:K416)",
+          "expected": 6.12,
+          "actual": "6.12",
+          "pass": true
+        },
+        {
+          "cell": "L417",
+          "formula": "=PRODUCT(F417:K417)",
+          "expected": 2.015,
+          "actual": "2.015",
+          "pass": true
+        },
+        {
+          "cell": "P419",
+          "formula": "=SUM(L419:L430)",
+          "expected": 33.908,
+          "actual": "33.908",
+          "pass": true
+        },
+        {
+          "cell": "L421",
+          "formula": "=PRODUCT(F421:K421)",
+          "expected": 15.679999999999998,
+          "actual": "15.679999999999998",
+          "pass": true
+        },
+        {
+          "cell": "L422",
+          "formula": "=PRODUCT(F422:K422)",
+          "expected": 16.128,
+          "actual": "16.128",
+          "pass": true
+        },
+        {
+          "cell": "L423",
+          "formula": "=PRODUCT(F423:K423)",
+          "expected": 2.1,
+          "actual": "2.1",
+          "pass": true
+        },
+        {
+          "cell": "P431",
+          "formula": "=SUM(L431:L449)",
+          "expected": 7.985,
+          "actual": "7.985",
+          "pass": true
+        },
+        {
+          "cell": "L434",
+          "formula": "=PRODUCT(F434:K434)",
+          "expected": 2.67,
+          "actual": "2.67",
+          "pass": true
+        },
+        {
+          "cell": "L435",
+          "formula": "=PRODUCT(F435:K435)",
+          "expected": 1.683,
+          "actual": "1.683",
+          "pass": true
+        },
+        {
+          "cell": "L436",
+          "formula": "=PRODUCT(F436:K436)",
+          "expected": 0.9450000000000001,
+          "actual": "0.9450000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L438",
+          "formula": "=PRODUCT(F438:K438)",
+          "expected": 1.2465,
+          "actual": "1.2465",
+          "pass": true
+        },
+        {
+          "cell": "L441",
+          "formula": "=PRODUCT(F441:K441)",
+          "expected": 0.5900000000000001,
+          "actual": "0.5900000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L444",
+          "formula": "=PRODUCT(F444:K444)",
+          "expected": 0.2796,
+          "actual": "0.2796",
+          "pass": true
+        },
+        {
+          "cell": "L445",
+          "formula": "=PRODUCT(F445:K445)",
+          "expected": 0.24420000000000003,
+          "actual": "0.24420000000000003",
+          "pass": true
+        },
+        {
+          "cell": "L448",
+          "formula": "=PRODUCT(F448:K448)",
+          "expected": 0.3267,
+          "actual": "0.3267",
+          "pass": true
+        },
+        {
+          "cell": "P450",
+          "formula": "=SUM(L450:L458)",
+          "expected": 34.30349999999999,
+          "actual": "34.30349999999999",
+          "pass": true
+        },
+        {
+          "cell": "L452",
+          "formula": "=PRODUCT(F452:K452)",
+          "expected": 31.797499999999996,
+          "actual": "31.797499999999996",
+          "pass": true
+        },
+        {
+          "cell": "L456",
+          "formula": "=PRODUCT(F456:K456)",
+          "expected": 1.326,
+          "actual": "1.326",
+          "pass": true
+        },
+        {
+          "cell": "L457",
+          "formula": "=PRODUCT(F457:K457)",
+          "expected": 1.18,
+          "actual": "1.18",
+          "pass": true
+        },
+        {
+          "cell": "P459",
+          "formula": "=SUM(K459:K470)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "L482",
+          "formula": "=PRODUCT(F482:K482)",
+          "expected": 5.239000000000001,
+          "actual": "5.239000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L483",
+          "formula": "=PRODUCT(F483:K483)",
+          "expected": 1.45,
+          "actual": "1.45",
+          "pass": true
+        },
+        {
+          "cell": "L493",
+          "formula": "=PRODUCT(F493:K493)",
+          "expected": 3.84,
+          "actual": "3.84",
+          "pass": true
+        },
+        {
+          "cell": "L494",
+          "formula": "=PRODUCT(F494:K494)",
+          "expected": 2.4480000000000004,
+          "actual": "2.4480000000000004",
+          "pass": true
+        },
+        {
+          "cell": "L495",
+          "formula": "=PRODUCT(F495:K495)",
+          "expected": 0.5031,
+          "actual": "0.5031",
+          "pass": true
+        },
+        {
+          "cell": "L496",
+          "formula": "=PRODUCT(F496:K496)",
+          "expected": 0.041600000000000005,
+          "actual": "0.041600000000000005",
+          "pass": true
+        },
+        {
+          "cell": "L497",
+          "formula": "=PRODUCT(F497:K497)",
+          "expected": 2.72,
+          "actual": "2.72",
+          "pass": true
+        },
+        {
+          "cell": "L498",
+          "formula": "=PRODUCT(F498:K498)",
+          "expected": 5.760000000000001,
+          "actual": "5.760000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L499",
+          "formula": "=PRODUCT(F499:K499)",
+          "expected": 0.6400000000000001,
+          "actual": "0.6400000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L500",
+          "formula": "=PRODUCT(F500:K500)",
+          "expected": 0.7200000000000001,
+          "actual": "0.7200000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L501",
+          "formula": "=PRODUCT(F501:K501)",
+          "expected": 3.6,
+          "actual": "3.6",
+          "pass": true
+        },
+        {
+          "cell": "L502",
+          "formula": "=PRODUCT(F502:K502)",
+          "expected": 5.760000000000001,
+          "actual": "5.760000000000001",
+          "pass": true
+        },
+        {
+          "cell": "G506",
+          "formula": "=+(0.6+0.35+0.25)*2",
+          "expected": 2.4,
+          "actual": "2.4",
+          "pass": true
+        },
+        {
+          "cell": "I506",
+          "formula": "=4.45-0.6",
+          "expected": 3.85,
+          "actual": "3.85",
+          "pass": true
+        },
+        {
+          "cell": "L506",
+          "formula": "=PRODUCT(F506:K506)",
+          "expected": 73.92,
+          "actual": "73.92",
+          "pass": true
+        },
+        {
+          "cell": "L512",
+          "formula": "=PRODUCT(F512:K512)",
+          "expected": 22.869,
+          "actual": "22.869",
+          "pass": true
+        },
+        {
+          "cell": "L513",
+          "formula": "=PRODUCT(F513:K513)",
+          "expected": 22.994999999999997,
+          "actual": "22.994999999999997",
+          "pass": true
+        },
+        {
+          "cell": "L517",
+          "formula": "=PRODUCT(F517:K517)",
+          "expected": 11.8664,
+          "actual": "11.8664",
+          "pass": true
+        },
+        {
+          "cell": "L522",
+          "formula": "=PRODUCT(F522:K522)",
+          "expected": 11.4,
+          "actual": "11.4",
+          "pass": true
+        },
+        {
+          "cell": "L523",
+          "formula": "=PRODUCT(F523:K523)",
+          "expected": 11.32,
+          "actual": "11.32",
+          "pass": true
+        },
+        {
+          "cell": "L529",
+          "formula": "=PRODUCT(F529:K529)",
+          "expected": 11.4,
+          "actual": "11.4",
+          "pass": true
+        },
+        {
+          "cell": "L530",
+          "formula": "=PRODUCT(F530:K530)",
+          "expected": 11.32,
+          "actual": "11.32",
+          "pass": true
+        },
+        {
+          "cell": "L534",
+          "formula": "=PRODUCT(F534:K534)",
+          "expected": 12.2,
+          "actual": "12.2",
+          "pass": true
+        },
+        {
+          "cell": "L540",
+          "formula": "=PRODUCT(F540:K540)",
+          "expected": 47.755500000000005,
+          "actual": "47.755500000000005",
+          "pass": true
+        },
+        {
+          "cell": "L543",
+          "formula": "=PRODUCT(F543:K543)",
+          "expected": 8.1,
+          "actual": "8.1",
+          "pass": true
+        },
+        {
+          "cell": "L544",
+          "formula": "=PRODUCT(F544:K544)",
+          "expected": 7.66,
+          "actual": "7.66",
+          "pass": true
+        },
+        {
+          "cell": "L551",
+          "formula": "=PRODUCT(F551:K551)",
+          "expected": 1.5750000000000002,
+          "actual": "1.5750000000000002",
+          "pass": true
+        },
+        {
+          "cell": "L552",
+          "formula": "=PRODUCT(F552:K552)",
+          "expected": 4.3950000000000005,
+          "actual": "4.3950000000000005",
+          "pass": true
+        },
+        {
+          "cell": "L553",
+          "formula": "=PRODUCT(F553:K553)",
+          "expected": 0.645,
+          "actual": "0.645",
+          "pass": true
+        },
+        {
+          "cell": "L554",
+          "formula": "=PRODUCT(F554:K554)",
+          "expected": 4.545,
+          "actual": "4.545",
+          "pass": true
+        },
+        {
+          "cell": "L555",
+          "formula": "=PRODUCT(F555:K555)",
+          "expected": 5.4,
+          "actual": "5.4",
+          "pass": true
+        },
+        {
+          "cell": "L556",
+          "formula": "=PRODUCT(F556:K556)",
+          "expected": 2.325,
+          "actual": "2.325",
+          "pass": true
+        },
+        {
+          "cell": "G561",
+          "formula": "=22.35+4.45",
+          "expected": 26.8,
+          "actual": "26.8",
+          "pass": true
+        },
+        {
+          "cell": "L569",
+          "formula": "=PRODUCT(F569:K569)",
+          "expected": 102.706,
+          "actual": "102.706",
+          "pass": true
+        },
+        {
+          "cell": "L570",
+          "formula": "=PRODUCT(F570:K570)",
+          "expected": 150.02,
+          "actual": "150.02",
+          "pass": true
+        },
+        {
+          "cell": "K573",
+          "formula": "=PRODUCT(F573,SUM(G573:I573),J573)",
+          "expected": 28.85,
+          "actual": "28.85",
+          "pass": true
+        },
+        {
+          "cell": "L616",
+          "formula": "=PRODUCT(F616:K616)",
+          "expected": 2.43,
+          "actual": "2.43",
+          "pass": true
+        },
+        {
+          "cell": "L617",
+          "formula": "=PRODUCT(F617:K617)",
+          "expected": 1.4400000000000002,
+          "actual": "1.4400000000000002",
+          "pass": true
+        },
+        {
+          "cell": "L623",
+          "formula": "=PRODUCT(F623:K623)",
+          "expected": 2.3600000000000003,
+          "actual": "2.3600000000000003",
+          "pass": true
+        },
+        {
+          "cell": "L624",
+          "formula": "=PRODUCT(F624:K624)",
+          "expected": 4.800000000000001,
+          "actual": "4.800000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L698",
+          "formula": "=PRODUCT(F698:K698)",
+          "expected": 2.051,
+          "actual": "2.051",
+          "pass": true
+        },
+        {
+          "cell": "L699",
+          "formula": "=PRODUCT(F699:K699)",
+          "expected": 3.939,
+          "actual": "3.939",
+          "pass": true
+        },
+        {
+          "cell": "L700",
+          "formula": "=PRODUCT(F700:K700)",
+          "expected": 6.12,
+          "actual": "6.12",
+          "pass": true
+        },
+        {
+          "cell": "L701",
+          "formula": "=PRODUCT(F701:K701)",
+          "expected": 2.015,
+          "actual": "2.015",
+          "pass": true
+        },
+        {
+          "cell": "L705",
+          "formula": "=PRODUCT(F705:K705)",
+          "expected": 15.679999999999998,
+          "actual": "15.679999999999998",
+          "pass": true
+        },
+        {
+          "cell": "L706",
+          "formula": "=PRODUCT(F706:K706)",
+          "expected": 16.128,
+          "actual": "16.128",
+          "pass": true
+        },
+        {
+          "cell": "L707",
+          "formula": "=PRODUCT(F707:K707)",
+          "expected": 2.1,
+          "actual": "2.1",
+          "pass": true
+        },
+        {
+          "cell": "L718",
+          "formula": "=PRODUCT(F718:K718)",
+          "expected": 2.67,
+          "actual": "2.67",
+          "pass": true
+        },
+        {
+          "cell": "L719",
+          "formula": "=PRODUCT(F719:K719)",
+          "expected": 1.683,
+          "actual": "1.683",
+          "pass": true
+        },
+        {
+          "cell": "L720",
+          "formula": "=PRODUCT(F720:K720)",
+          "expected": 0.9450000000000001,
+          "actual": "0.9450000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L722",
+          "formula": "=PRODUCT(F722:K722)",
+          "expected": 1.2465,
+          "actual": "1.2465",
+          "pass": true
+        },
+        {
+          "cell": "L725",
+          "formula": "=PRODUCT(F725:K725)",
+          "expected": 0.5900000000000001,
+          "actual": "0.5900000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L728",
+          "formula": "=PRODUCT(F728:K728)",
+          "expected": 0.2796,
+          "actual": "0.2796",
+          "pass": true
+        },
+        {
+          "cell": "L729",
+          "formula": "=PRODUCT(F729:K729)",
+          "expected": 0.24420000000000003,
+          "actual": "0.24420000000000003",
+          "pass": true
+        },
+        {
+          "cell": "L732",
+          "formula": "=PRODUCT(F732:K732)",
+          "expected": 0.3267,
+          "actual": "0.3267",
+          "pass": true
+        },
+        {
+          "cell": "L757",
+          "formula": "=PRODUCT(F757:K757)",
+          "expected": 5.239000000000001,
+          "actual": "5.239000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L758",
+          "formula": "=PRODUCT(F758:K758)",
+          "expected": 1.45,
+          "actual": "1.45",
+          "pass": true
+        },
+        {
+          "cell": "L762",
+          "formula": "=PRODUCT(F762:K762)",
+          "expected": 3.84,
+          "actual": "3.84",
+          "pass": true
+        },
+        {
+          "cell": "L763",
+          "formula": "=PRODUCT(F763:K763)",
+          "expected": 2.4480000000000004,
+          "actual": "2.4480000000000004",
+          "pass": true
+        },
+        {
+          "cell": "L764",
+          "formula": "=PRODUCT(F764:K764)",
+          "expected": 0.5031,
+          "actual": "0.5031",
+          "pass": true
+        },
+        {
+          "cell": "L765",
+          "formula": "=PRODUCT(F765:K765)",
+          "expected": 0.041600000000000005,
+          "actual": "0.041600000000000005",
+          "pass": true
+        },
+        {
+          "cell": "L766",
+          "formula": "=PRODUCT(F766:K766)",
+          "expected": 2.72,
+          "actual": "2.72",
+          "pass": true
+        },
+        {
+          "cell": "L767",
+          "formula": "=PRODUCT(F767:K767)",
+          "expected": 5.760000000000001,
+          "actual": "5.760000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L768",
+          "formula": "=PRODUCT(F768:K768)",
+          "expected": 0.6400000000000001,
+          "actual": "0.6400000000000001",
+          "pass": true
+        },
+        {
+          "cell": "L769",
+          "formula": "=PRODUCT(F769:K769)",
+          "expected": 0.7200000000000001,
+          "actual": "0.7200000000000001",
+          "pass": true
+        },
+        {
+          "cell": "G773",
+          "formula": "=+(0.6+0.35+0.25)*2",
+          "expected": 2.4,
+          "actual": "2.4",
+          "pass": true
+        },
+        {
+          "cell": "I773",
+          "formula": "=4.45-0.6",
+          "expected": 3.85,
+          "actual": "3.85",
+          "pass": true
+        },
+        {
+          "cell": "L773",
+          "formula": "=PRODUCT(F773:K773)",
+          "expected": 73.92,
+          "actual": "73.92",
+          "pass": true
+        },
+        {
+          "cell": "L779",
+          "formula": "=PRODUCT(F779:K779)",
+          "expected": 22.869,
+          "actual": "22.869",
+          "pass": true
+        },
+        {
+          "cell": "L780",
+          "formula": "=PRODUCT(F780:K780)",
+          "expected": 22.994999999999997,
+          "actual": "22.994999999999997",
+          "pass": true
+        },
+        {
+          "cell": "L784",
+          "formula": "=PRODUCT(F784:K784)",
+          "expected": 11.8664,
+          "actual": "11.8664",
+          "pass": true
+        },
+        {
+          "cell": "G836",
+          "formula": "=3.8+0.44+0.32+0.18+0.55",
+          "expected": 5.29,
+          "actual": "5.29",
+          "pass": true
+        },
+        {
+          "cell": "G837",
+          "formula": "=3.5+2.54+0.36",
+          "expected": 6.4,
+          "actual": "6.4",
+          "pass": true
+        },
+        {
+          "cell": "G870",
+          "formula": "=3.5+0.47+5.62",
+          "expected": 9.59,
+          "actual": "9.59",
+          "pass": true
+        },
+        {
+          "cell": "G871",
+          "formula": "=2.64+0.45+5.95",
+          "expected": 9.040000000000001,
+          "actual": "9.040000000000001",
+          "pass": true
+        },
+        {
+          "cell": "G877",
+          "formula": "=1.82+3.38",
+          "expected": 5.2,
+          "actual": "5.2",
+          "pass": true
+        },
+        {
+          "cell": "G878",
+          "formula": "=3.5+4.34+4.89",
+          "expected": 12.73,
+          "actual": "12.73",
+          "pass": true
+        },
+        {
+          "cell": "G929",
+          "formula": "=7.88+0.64+1.65+1.65",
+          "expected": 11.82,
+          "actual": "11.82",
+          "pass": true
+        },
+        {
+          "cell": "G930",
+          "formula": "=0.72+15.68+1.65",
+          "expected": 18.049999999999997,
+          "actual": "18.049999999999997",
+          "pass": true
+        },
+        {
+          "cell": "G932",
+          "formula": "=0.37+0.37+1.37+1.65+1.65",
+          "expected": 5.41,
+          "actual": "5.41",
+          "pass": true
+        },
+        {
+          "cell": "G938",
+          "formula": "=0.56+15.66+1.65",
+          "expected": 17.869999999999997,
+          "actual": "17.869999999999997",
+          "pass": true
+        },
+        {
+          "cell": "G940",
+          "formula": "=1.9+2.16+0.15",
+          "expected": 4.210000000000001,
+          "actual": "4.210000000000001",
+          "pass": true
+        },
+        {
+          "cell": "G942",
+          "formula": "=2.15+3.2+0.15",
+          "expected": 5.5,
+          "actual": "5.5",
+          "pass": true
+        },
+        {
+          "cell": "G946",
+          "formula": "=0.55+5.95+0.55",
+          "expected": 7.05,
+          "actual": "7.05",
+          "pass": true
+        },
+        {
+          "cell": "G947",
+          "formula": "=0.55+3.64+0.55",
+          "expected": 4.74,
+          "actual": "4.74",
+          "pass": true
+        },
+        {
+          "cell": "G952",
+          "formula": "=7.88+0.64+1.65+1.65+0.3",
+          "expected": 12.120000000000001,
+          "actual": "12.120000000000001",
+          "pass": true
+        },
+        {
+          "cell": "G957",
+          "formula": "=0.81+0.3",
+          "expected": 1.11,
+          "actual": "1.11",
+          "pass": true
+        },
+        {
+          "cell": "G963",
+          "formula": "=0.72+15.68+1.65+0.3",
+          "expected": 18.349999999999998,
+          "actual": "18.349999999999998",
+          "pass": true
+        },
+        {
+          "cell": "G964",
+          "formula": "=0.37+0.37+1.37+1.65+1.65+0.3",
+          "expected": 5.71,
+          "actual": "5.71",
+          "pass": true
+        },
+        {
+          "cell": "G970",
+          "formula": "=0.72+15.68+1.65",
+          "expected": 18.049999999999997,
+          "actual": "18.049999999999997",
+          "pass": true
+        },
+        {
+          "cell": "G976",
+          "formula": "=1.9+2.16+0.15+0.3",
+          "expected": 4.510000000000001,
+          "actual": "4.510000000000001",
+          "pass": true
+        },
+        {
+          "cell": "G977",
+          "formula": "=3.5+0.3",
+          "expected": 3.8,
+          "actual": "3.8",
+          "pass": true
+        },
+        {
+          "cell": "G978",
+          "formula": "=2.15+3.2+0.15+0.3",
+          "expected": 5.8,
+          "actual": "5.8",
+          "pass": true
+        },
+        {
+          "cell": "G986",
+          "formula": "=1.1+0.3",
+          "expected": 1.4000000000000001,
+          "actual": "1.4000000000000001",
+          "pass": true
+        },
+        {
+          "cell": "G987",
+          "formula": "=0.55+5.95+0.55+0.3",
+          "expected": 7.35,
+          "actual": "7.35",
+          "pass": true
+        },
+        {
+          "cell": "G988",
+          "formula": "=0.55+3.64+0.55+0.3",
+          "expected": 5.04,
+          "actual": "5.04",
+          "pass": true
+        },
+        {
+          "cell": "N1022",
+          "formula": "=+SUM(N1016:N1019)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "N1024",
+          "formula": "=+N1022/N1023",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "Acero",
+      "total": 109,
+      "passed": 102,
+      "failed": [
+        {
+          "cell": "D6",
+          "formula": "=IF(Metrado!D6=\"\",\"\",Metrado!D6)",
+          "expected": "CREACION DEL SERVICIO EDUCATIVO DE NIVEL SECUNDARIA OCCORO VIEJO, CP. OCCORO VIEJO, DISTRITO DE NUEVO OCCORO - HUANCAVELICA - HUANCAVELICA",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D8",
+          "formula": "=IF(Metrado!D8=\"\",\"\",Metrado!D8)",
+          "expected": "MINISTERIO DE EDUCACION",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "J8",
+          "formula": "=IF(Metrado!M8=\"\",\"\",Metrado!M8)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D9",
+          "formula": "=IF(Metrado!D9=\"\",\"\",Metrado!D9)",
+          "expected": "Abril/2016",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "J9",
+          "formula": "=IF(Metrado!M9=\"\",\"\",Metrado!M9)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D10",
+          "formula": "=IF(Metrado!D10=\"\",\"\",Metrado!D10)",
+          "expected": "MODULO",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D11",
+          "formula": "=IF(Metrado!D11=\"\",\"\",Metrado!D11)",
+          "expected": "MODULO ADMINISTRATIVO",
+          "actual": "#ERROR!",
+          "pass": false
+        }
+      ],
+      "checks": [
+        {
+          "cell": "D6",
+          "formula": "=IF(Metrado!D6=\"\",\"\",Metrado!D6)",
+          "expected": "CREACION DEL SERVICIO EDUCATIVO DE NIVEL SECUNDARIA OCCORO VIEJO, CP. OCCORO VIEJO, DISTRITO DE NUEVO OCCORO - HUANCAVELICA - HUANCAVELICA",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D8",
+          "formula": "=IF(Metrado!D8=\"\",\"\",Metrado!D8)",
+          "expected": "MINISTERIO DE EDUCACION",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "J8",
+          "formula": "=IF(Metrado!M8=\"\",\"\",Metrado!M8)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D9",
+          "formula": "=IF(Metrado!D9=\"\",\"\",Metrado!D9)",
+          "expected": "Abril/2016",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "J9",
+          "formula": "=IF(Metrado!M9=\"\",\"\",Metrado!M9)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D10",
+          "formula": "=IF(Metrado!D10=\"\",\"\",Metrado!D10)",
+          "expected": "MODULO",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D11",
+          "formula": "=IF(Metrado!D11=\"\",\"\",Metrado!D11)",
+          "expected": "MODULO ADMINISTRATIVO",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "W17",
+          "formula": "=SUM(V18:V25)",
+          "expected": 1316.8799999999999,
+          "actual": "1316.8799999999999",
+          "pass": true
+        },
+        {
+          "cell": "N19",
+          "formula": "=PRODUCT(F19,SUM(G19:I19),J19)",
+          "expected": 283.2,
+          "actual": "283.2",
+          "pass": true
+        },
+        {
+          "cell": "V19",
+          "formula": "=N19*U19",
+          "expected": 438.96,
+          "actual": "438.96",
+          "pass": true
+        },
+        {
+          "cell": "N20",
+          "formula": "=PRODUCT(F20,SUM(G20:I20),J20)",
+          "expected": 283.2,
+          "actual": "283.2",
+          "pass": true
+        },
+        {
+          "cell": "V20",
+          "formula": "=N20*U20",
+          "expected": 438.96,
+          "actual": "438.96",
+          "pass": true
+        },
+        {
+          "cell": "N23",
+          "formula": "=PRODUCT(F23,SUM(G23:I23),J23)",
+          "expected": 141.6,
+          "actual": "141.6",
+          "pass": true
+        },
+        {
+          "cell": "V23",
+          "formula": "=N23*U23",
+          "expected": 219.48,
+          "actual": "219.48",
+          "pass": true
+        },
+        {
+          "cell": "N24",
+          "formula": "=PRODUCT(F24,SUM(G24:I24),J24)",
+          "expected": 141.6,
+          "actual": "141.6",
+          "pass": true
+        },
+        {
+          "cell": "V24",
+          "formula": "=N24*U24",
+          "expected": 219.48,
+          "actual": "219.48",
+          "pass": true
+        },
+        {
+          "cell": "W26",
+          "formula": "=SUM(V27:V34)",
+          "expected": 418.08,
+          "actual": "418.08",
+          "pass": true
+        },
+        {
+          "cell": "N28",
+          "formula": "=PRODUCT(F28,SUM(G28:I28),J28)",
+          "expected": 170.88,
+          "actual": "170.88",
+          "pass": true
+        },
+        {
+          "cell": "V28",
+          "formula": "=N28*U28",
+          "expected": 264.864,
+          "actual": "264.864",
+          "pass": true
+        },
+        {
+          "cell": "L29",
+          "formula": "=PRODUCT(F29,SUM(G29:I29),J29)",
+          "expected": 136.8,
+          "actual": "136.8",
+          "pass": true
+        },
+        {
+          "cell": "V29",
+          "formula": "=L29*U29",
+          "expected": 76.60800000000002,
+          "actual": "76.60800000000002",
+          "pass": true
+        },
+        {
+          "cell": "L30",
+          "formula": "=PRODUCT(F30,SUM(G30:I30),J30)",
+          "expected": 136.8,
+          "actual": "136.8",
+          "pass": true
+        },
+        {
+          "cell": "V30",
+          "formula": "=L30*U30",
+          "expected": 76.60800000000002,
+          "actual": "76.60800000000002",
+          "pass": true
+        },
+        {
+          "cell": "W35",
+          "formula": "=SUM(V36:V41)",
+          "expected": 2140.2496,
+          "actual": "2140.2496",
+          "pass": true
+        },
+        {
+          "cell": "N37",
+          "formula": "=PRODUCT(F37,SUM(G37:I37),J37)",
+          "expected": 840,
+          "actual": "840",
+          "pass": true
+        },
+        {
+          "cell": "V37",
+          "formula": "=N37*U37",
+          "expected": 1302,
+          "actual": "1302",
+          "pass": true
+        },
+        {
+          "cell": "M38",
+          "formula": "=PRODUCT(F38,SUM(G38:I38),J38)",
+          "expected": 277.44,
+          "actual": "277.44",
+          "pass": true
+        },
+        {
+          "cell": "V38",
+          "formula": "=M38*U38",
+          "expected": 274.6656,
+          "actual": "274.6656",
+          "pass": true
+        },
+        {
+          "cell": "L39",
+          "formula": "=PRODUCT(F39,SUM(G39:I39),J39)",
+          "expected": 503.2,
+          "actual": "503.2",
+          "pass": true
+        },
+        {
+          "cell": "V39",
+          "formula": "=L39*U39",
+          "expected": 281.79200000000003,
+          "actual": "281.79200000000003",
+          "pass": true
+        },
+        {
+          "cell": "L40",
+          "formula": "=PRODUCT(F40,SUM(G40:I40),J40)",
+          "expected": 503.2,
+          "actual": "503.2",
+          "pass": true
+        },
+        {
+          "cell": "V40",
+          "formula": "=L40*U40",
+          "expected": 281.79200000000003,
+          "actual": "281.79200000000003",
+          "pass": true
+        },
+        {
+          "cell": "W42",
+          "formula": "=SUM(V43:V47)",
+          "expected": 28.1208,
+          "actual": "28.1208",
+          "pass": true
+        },
+        {
+          "cell": "L45",
+          "formula": "=PRODUCT(F45,SUM(G45:I45),J45)",
+          "expected": 37.67999999999999,
+          "actual": "37.67999999999999",
+          "pass": true
+        },
+        {
+          "cell": "V45",
+          "formula": "=L45*U45",
+          "expected": 21.1008,
+          "actual": "21.1008",
+          "pass": true
+        },
+        {
+          "cell": "K46",
+          "formula": "=PRODUCT(F46,SUM(G46:I46),J46)",
+          "expected": 28.08,
+          "actual": "28.08",
+          "pass": true
+        },
+        {
+          "cell": "V46",
+          "formula": "=K46*U46",
+          "expected": 7.02,
+          "actual": "7.02",
+          "pass": true
+        },
+        {
+          "cell": "W48",
+          "formula": "=SUM(V49:V87)",
+          "expected": 1562.2091999999996,
+          "actual": "1562.2091999999996",
+          "pass": true
+        },
+        {
+          "cell": "O51",
+          "formula": "=PRODUCT(F51,SUM(G51:I51),J51)",
+          "expected": 163.52,
+          "actual": "163.52",
+          "pass": true
+        },
+        {
+          "cell": "V51",
+          "formula": "=O51*U51",
+          "expected": 366.2848000000001,
+          "actual": "366.2848000000001",
+          "pass": true
+        },
+        {
+          "cell": "N52",
+          "formula": "=PRODUCT(F52,SUM(G52:I52),J52)",
+          "expected": 76.56,
+          "actual": "76.56",
+          "pass": true
+        },
+        {
+          "cell": "V52",
+          "formula": "=N52*U52",
+          "expected": 118.668,
+          "actual": "118.668",
+          "pass": true
+        },
+        {
+          "cell": "L53",
+          "formula": "=PRODUCT(F53,SUM(G53:I53),J53)",
+          "expected": 113.76,
+          "actual": "113.76",
+          "pass": true
+        },
+        {
+          "cell": "V53",
+          "formula": "=L53*U53",
+          "expected": 63.70560000000001,
+          "actual": "63.70560000000001",
+          "pass": true
+        },
+        {
+          "cell": "L54",
+          "formula": "=PRODUCT(F54,SUM(G54:I54),J54)",
+          "expected": 113.76,
+          "actual": "113.76",
+          "pass": true
+        },
+        {
+          "cell": "V54",
+          "formula": "=L54*U54",
+          "expected": 63.70560000000001,
+          "actual": "63.70560000000001",
+          "pass": true
+        },
+        {
+          "cell": "L55",
+          "formula": "=PRODUCT(F55,SUM(G55:I55),J55)",
+          "expected": 88.48,
+          "actual": "88.48",
+          "pass": true
+        },
+        {
+          "cell": "V55",
+          "formula": "=L55*U55",
+          "expected": 49.54880000000001,
+          "actual": "49.54880000000001",
+          "pass": true
+        },
+        {
+          "cell": "O62",
+          "formula": "=PRODUCT(F62,SUM(G62:I62),J62)",
+          "expected": 41.120000000000005,
+          "actual": "41.120000000000005",
+          "pass": true
+        },
+        {
+          "cell": "V62",
+          "formula": "=O62*U62",
+          "expected": 92.10880000000002,
+          "actual": "92.10880000000002",
+          "pass": true
+        },
+        {
+          "cell": "M63",
+          "formula": "=PRODUCT(F63,SUM(G63:I63),J63)",
+          "expected": 30.560000000000002,
+          "actual": "30.560000000000002",
+          "pass": true
+        },
+        {
+          "cell": "V63",
+          "formula": "=M63*U63",
+          "expected": 30.2544,
+          "actual": "30.2544",
+          "pass": true
+        },
+        {
+          "cell": "O64",
+          "formula": "=PRODUCT(F64,SUM(G64:I64),J64)",
+          "expected": 31.36,
+          "actual": "31.36",
+          "pass": true
+        },
+        {
+          "cell": "V64",
+          "formula": "=O64*U64",
+          "expected": 70.24640000000001,
+          "actual": "70.24640000000001",
+          "pass": true
+        },
+        {
+          "cell": "L65",
+          "formula": "=PRODUCT(F65,SUM(G65:I65),J65)",
+          "expected": 124.80000000000001,
+          "actual": "124.80000000000001",
+          "pass": true
+        },
+        {
+          "cell": "V65",
+          "formula": "=L65*U65",
+          "expected": 69.88800000000002,
+          "actual": "69.88800000000002",
+          "pass": true
+        },
+        {
+          "cell": "M72",
+          "formula": "=PRODUCT(F72,SUM(G72:I72),J72)",
+          "expected": 147.35,
+          "actual": "147.35",
+          "pass": true
+        },
+        {
+          "cell": "V72",
+          "formula": "=M72*U72",
+          "expected": 145.8765,
+          "actual": "145.8765",
+          "pass": true
+        },
+        {
+          "cell": "M73",
+          "formula": "=PRODUCT(F73,SUM(G73:I73),J73)",
+          "expected": 209.89000000000001,
+          "actual": "209.89000000000001",
+          "pass": true
+        },
+        {
+          "cell": "V73",
+          "formula": "=M73*U73",
+          "expected": 207.7911,
+          "actual": "207.7911",
+          "pass": true
+        },
+        {
+          "cell": "N78",
+          "formula": "=PRODUCT(F78,SUM(G78:I78),J78)",
+          "expected": 121.91999999999999,
+          "actual": "121.91999999999999",
+          "pass": true
+        },
+        {
+          "cell": "V78",
+          "formula": "=N78*U78",
+          "expected": 188.976,
+          "actual": "188.976",
+          "pass": true
+        },
+        {
+          "cell": "L79",
+          "formula": "=PRODUCT(F79,SUM(G79:I79),J79)",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "V79",
+          "formula": "=L79*U79",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "L80",
+          "formula": "=PRODUCT(F80,SUM(G80:I80),J80)",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "V80",
+          "formula": "=L80*U80",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "L81",
+          "formula": "=PRODUCT(F81,SUM(G81:I81),J81)",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "V81",
+          "formula": "=L81*U81",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "L82",
+          "formula": "=PRODUCT(F82,SUM(G82:I82),J82)",
+          "expected": 28.32,
+          "actual": "28.32",
+          "pass": true
+        },
+        {
+          "cell": "V82",
+          "formula": "=L82*U82",
+          "expected": 15.859200000000001,
+          "actual": "15.859200000000001",
+          "pass": true
+        },
+        {
+          "cell": "L83",
+          "formula": "=PRODUCT(F83,SUM(G83:I83),J83)",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "V83",
+          "formula": "=L83*U83",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "L84",
+          "formula": "=PRODUCT(F84,SUM(G84:I84),J84)",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "V84",
+          "formula": "=L84*U84",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "L85",
+          "formula": "=PRODUCT(F85,SUM(G85:I85),J85)",
+          "expected": 23.599999999999998,
+          "actual": "23.599999999999998",
+          "pass": true
+        },
+        {
+          "cell": "V85",
+          "formula": "=L85*U85",
+          "expected": 13.216,
+          "actual": "13.216",
+          "pass": true
+        },
+        {
+          "cell": "W88",
+          "formula": "=SUM(V89:V101)",
+          "expected": 1075.9171,
+          "actual": "1075.9171",
+          "pass": true
+        },
+        {
+          "cell": "M91",
+          "formula": "=PRODUCT(F91,SUM(G91:I91),J91)",
+          "expected": 673.21,
+          "actual": "673.21",
+          "pass": true
+        },
+        {
+          "cell": "V91",
+          "formula": "=M91*U91",
+          "expected": 666.4779,
+          "actual": "666.4779",
+          "pass": true
+        },
+        {
+          "cell": "L92",
+          "formula": "=PRODUCT(F92,SUM(G92:I92),J92)",
+          "expected": 34.73,
+          "actual": "34.73",
+          "pass": true
+        },
+        {
+          "cell": "V92",
+          "formula": "=L92*U92",
+          "expected": 19.4488,
+          "actual": "19.4488",
+          "pass": true
+        },
+        {
+          "cell": "M93",
+          "formula": "=PRODUCT(F93,SUM(G93:I93),J93)",
+          "expected": 225.4,
+          "actual": "225.4",
+          "pass": true
+        },
+        {
+          "cell": "V93",
+          "formula": "=M93*U93",
+          "expected": 223.14600000000002,
+          "actual": "223.14600000000002",
+          "pass": true
+        },
+        {
+          "cell": "L94",
+          "formula": "=PRODUCT(F94,SUM(G94:I94),J94)",
+          "expected": 225.4,
+          "actual": "225.4",
+          "pass": true
+        },
+        {
+          "cell": "V94",
+          "formula": "=L94*U94",
+          "expected": 126.22400000000002,
+          "actual": "126.22400000000002",
+          "pass": true
+        },
+        {
+          "cell": "L97",
+          "formula": "=PRODUCT(F97,SUM(G97:I97),J97)",
+          "expected": 4.840000000000001,
+          "actual": "4.840000000000001",
+          "pass": true
+        },
+        {
+          "cell": "V97",
+          "formula": "=L97*U97",
+          "expected": 2.710400000000001,
+          "actual": "2.710400000000001",
+          "pass": true
+        },
+        {
+          "cell": "K100",
+          "formula": "=PRODUCT(F100,SUM(G100:I100),J100)",
+          "expected": 151.64,
+          "actual": "151.64",
+          "pass": true
+        },
+        {
+          "cell": "V100",
+          "formula": "=K100*U100",
+          "expected": 37.91,
+          "actual": "37.91",
+          "pass": true
+        },
+        {
+          "cell": "W102",
+          "formula": "=SUM(V103:V108)",
+          "expected": 131.93640000000002,
+          "actual": "131.93640000000002",
+          "pass": true
+        },
+        {
+          "cell": "M104",
+          "formula": "=PRODUCT(F104,SUM(G104:I104),J104)",
+          "expected": 59.400000000000006,
+          "actual": "59.400000000000006",
+          "pass": true
+        },
+        {
+          "cell": "V104",
+          "formula": "=M104*U104",
+          "expected": 58.806000000000004,
+          "actual": "58.806000000000004",
+          "pass": true
+        },
+        {
+          "cell": "L105",
+          "formula": "=PRODUCT(F105,SUM(G105:I105),J105)",
+          "expected": 58.05,
+          "actual": "58.05",
+          "pass": true
+        },
+        {
+          "cell": "V105",
+          "formula": "=L105*U105",
+          "expected": 32.508,
+          "actual": "32.508",
+          "pass": true
+        },
+        {
+          "cell": "L106",
+          "formula": "=PRODUCT(F106,SUM(G106:I106),J106)",
+          "expected": 36.27,
+          "actual": "36.27",
+          "pass": true
+        },
+        {
+          "cell": "V106",
+          "formula": "=L106*U106",
+          "expected": 20.311200000000003,
+          "actual": "20.311200000000003",
+          "pass": true
+        },
+        {
+          "cell": "L107",
+          "formula": "=PRODUCT(F107,SUM(G107:I107),J107)",
+          "expected": 36.27,
+          "actual": "36.27",
+          "pass": true
+        },
+        {
+          "cell": "V107",
+          "formula": "=L107*U107",
+          "expected": 20.311200000000003,
+          "actual": "20.311200000000003",
+          "pass": true
+        },
+        {
+          "cell": "K109",
+          "formula": "=SUM(K17:K108)",
+          "expected": 179.71999999999997,
+          "actual": "179.71999999999997",
+          "pass": true
+        },
+        {
+          "cell": "L109",
+          "formula": "=SUM(L17:L108)",
+          "expected": 2323.9599999999996,
+          "actual": "2323.9599999999996",
+          "pass": true
+        },
+        {
+          "cell": "M109",
+          "formula": "=SUM(M17:M108)",
+          "expected": 1623.2500000000002,
+          "actual": "1623.2500000000002",
+          "pass": true
+        },
+        {
+          "cell": "N109",
+          "formula": "=SUM(N17:N108)",
+          "expected": 2058.96,
+          "actual": "2058.96",
+          "pass": true
+        },
+        {
+          "cell": "O109",
+          "formula": "=SUM(O17:O108)",
+          "expected": 236,
+          "actual": "236",
+          "pass": true
+        },
+        {
+          "cell": "P109",
+          "formula": "=SUM(P17:P108)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "Q109",
+          "formula": "=SUM(Q17:Q108)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "R109",
+          "formula": "=SUM(R17:R108)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "S109",
+          "formula": "=SUM(S17:S108)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "T109",
+          "formula": "=SUM(T17:T108)",
+          "expected": 0,
+          "actual": "0",
+          "pass": true
+        },
+        {
+          "cell": "V109",
+          "formula": "=SUM(V17:V108)",
+          "expected": 6673.393100000001,
+          "actual": "6673.393100000001",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "RESUMEN",
+      "total": 8,
+      "passed": 0,
+      "failed": [
+        {
+          "cell": "C3",
+          "formula": "=IF(Metrado!C3=\"\",\"\",\"RESUMEN DE \"&Metrado!C3)",
+          "expected": "RESUMEN DE METRADOS",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D6",
+          "formula": "=IF(Metrado!D6=\"\",\"\",Metrado!D6)",
+          "expected": "CREACION DEL SERVICIO EDUCATIVO DE NIVEL SECUNDARIA OCCORO VIEJO, CP. OCCORO VIEJO, DISTRITO DE NUEVO OCCORO - HUANCAVELICA - HUANCAVELICA",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D8",
+          "formula": "=IF(Metrado!D8=\"\",\"\",Metrado!D8)",
+          "expected": "MINISTERIO DE EDUCACION",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D9",
+          "formula": "=IF(Metrado!D9=\"\",\"\",Metrado!D9)",
+          "expected": "Abril/2016",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "G9",
+          "formula": "=IF(Metrado!M8=\"\",\"\",Metrado!M8)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D10",
+          "formula": "=IF(Metrado!D10=\"\",\"\",Metrado!D10)",
+          "expected": "MODULO",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D11",
+          "formula": "=IF(Metrado!D11=\"\",\"\",Metrado!D11)",
+          "expected": "MODULO ADMINISTRATIVO",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "G11",
+          "formula": "=IF(Metrado!M9=\"\",\"\",Metrado!M9)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        }
+      ],
+      "checks": [
+        {
+          "cell": "C3",
+          "formula": "=IF(Metrado!C3=\"\",\"\",\"RESUMEN DE \"&Metrado!C3)",
+          "expected": "RESUMEN DE METRADOS",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D6",
+          "formula": "=IF(Metrado!D6=\"\",\"\",Metrado!D6)",
+          "expected": "CREACION DEL SERVICIO EDUCATIVO DE NIVEL SECUNDARIA OCCORO VIEJO, CP. OCCORO VIEJO, DISTRITO DE NUEVO OCCORO - HUANCAVELICA - HUANCAVELICA",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D8",
+          "formula": "=IF(Metrado!D8=\"\",\"\",Metrado!D8)",
+          "expected": "MINISTERIO DE EDUCACION",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D9",
+          "formula": "=IF(Metrado!D9=\"\",\"\",Metrado!D9)",
+          "expected": "Abril/2016",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "G9",
+          "formula": "=IF(Metrado!M8=\"\",\"\",Metrado!M8)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D10",
+          "formula": "=IF(Metrado!D10=\"\",\"\",Metrado!D10)",
+          "expected": "MODULO",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "D11",
+          "formula": "=IF(Metrado!D11=\"\",\"\",Metrado!D11)",
+          "expected": "MODULO ADMINISTRATIVO",
+          "actual": "#ERROR!",
+          "pass": false
+        },
+        {
+          "cell": "G11",
+          "formula": "=IF(Metrado!M9=\"\",\"\",Metrado!M9)",
+          "expected": "TEDI",
+          "actual": "#ERROR!",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "name": "Menu",
+      "total": 0,
+      "passed": 0,
+      "failed": [],
+      "checks": []
+    }
+  ]
+}

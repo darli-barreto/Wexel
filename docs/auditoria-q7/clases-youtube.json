@@ -1,0 +1,482 @@
+{
+  "playlist": "https://www.youtube.com/playlist?list=PLgLQ5Nt1OkUrxsvXCQl214qPuKR9queZ3",
+  "title": "METRADOS DE EDIFICACIONES-TEDI",
+  "method": "Public playlist and player metadata, no playback bypass or audio transcription.",
+  "videos": [
+    {
+      "id": "hwxzp8Ooyhk",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 01",
+      "duration": "1:57:09",
+      "url": "https://www.youtube.com/watch?v=hwxzp8Ooyhk",
+      "playability": "OK",
+      "reason": null,
+      "description": "La plantilla de metrado y el material se descarga del siguiente enlace: https://mega.nz/folder/HsMmWLxA#LVZzn5LZ7QmN7KHxQUWZmg\n\nSon 21 clases. La contraseña de la plantilla Q7 es: quispe007",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "qYqXs8Q4Ox8",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 02",
+      "duration": "1:56:42",
+      "url": "https://www.youtube.com/watch?v=qYqXs8Q4Ox8",
+      "playability": "OK",
+      "reason": null,
+      "description": "La plantilla de metrado y el material se descarga del siguiente enlace: https://mega.nz/folder/HsMmWLxA#LVZzn5LZ7QmN7KHxQUWZmg\n\nSon 21 clases. La contraseña de la plantilla Q7 es: quispe007",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "3WZ6unSH-_k",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 03",
+      "duration": "1:55:25",
+      "url": "https://www.youtube.com/watch?v=3WZ6unSH-_k",
+      "playability": "OK",
+      "reason": null,
+      "description": "La plantilla de metrado y el material se descarga del siguiente enlace: https://mega.nz/folder/HsMmWLxA#LVZzn5LZ7QmN7KHxQUWZmg\n\nSon 21 clases. La contraseña de la plantilla Q7 es: quispe007",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "ar",
+          "kind": "asr"
+        },
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        },
+        {
+          "language": "pt-BR",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "TSKRG1CXiYo",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 04",
+      "duration": "1:59:11",
+      "url": "https://www.youtube.com/watch?v=TSKRG1CXiYo",
+      "playability": "OK",
+      "reason": null,
+      "description": "Son 21 clases. La contraseña de la plantilla Q7 es: quispe007",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "J98rTg6Tiac",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 05",
+      "duration": "1:57:06",
+      "url": "https://www.youtube.com/watch?v=J98rTg6Tiac",
+      "playability": "OK",
+      "reason": null,
+      "description": "Los planos de metrados , ya se encuentran en el siguiente link: https://mega.nz/folder/HsMmWLxA#LVZzn5LZ7QmN7KHxQUWZmg",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "ar",
+          "kind": "asr"
+        },
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        },
+        {
+          "language": "pt-BR",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "ComrYdYsZ_I",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 06",
+      "duration": "1:58:23",
+      "url": "https://www.youtube.com/watch?v=ComrYdYsZ_I",
+      "playability": "OK",
+      "reason": null,
+      "description": "Son 21 clases. La contraseña de la plantilla Q7 es: quispe007",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "To3oNTqRXiE",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 07",
+      "duration": "1:52:02",
+      "url": "https://www.youtube.com/watch?v=To3oNTqRXiE",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        },
+        {
+          "language": "pt-BR",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "kom7B7bts8s",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 08",
+      "duration": "1:56:15",
+      "url": "https://www.youtube.com/watch?v=kom7B7bts8s",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "pt-BR",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "U8ZPAJDKx1w",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 09",
+      "duration": "1:56:17",
+      "url": "https://www.youtube.com/watch?v=U8ZPAJDKx1w",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "mPTT4hQNb0M",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 10",
+      "duration": "2:05:15",
+      "url": "https://www.youtube.com/watch?v=mPTT4hQNb0M",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "X4ktPXolWCo",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 11",
+      "duration": "1:58:56",
+      "url": "https://www.youtube.com/watch?v=X4ktPXolWCo",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "ar",
+          "kind": "asr"
+        },
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "Z9VCz08GKEg",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 12",
+      "duration": "1:59:09",
+      "url": "https://www.youtube.com/watch?v=Z9VCz08GKEg",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "qbdi8LbS4G0",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 13",
+      "duration": "2:06:10",
+      "url": "https://www.youtube.com/watch?v=qbdi8LbS4G0",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "K2AfbJs-xA4",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 14",
+      "duration": "1:59:41",
+      "url": "https://www.youtube.com/watch?v=K2AfbJs-xA4",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "ar",
+          "kind": "asr"
+        },
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        },
+        {
+          "language": "pt-BR",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "potainNzDm0",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 15",
+      "duration": "2:01:13",
+      "url": "https://www.youtube.com/watch?v=potainNzDm0",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "oiv5YZOM3k4",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 16",
+      "duration": "2:01:11",
+      "url": "https://www.youtube.com/watch?v=oiv5YZOM3k4",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "A-APkjo41Es",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 17",
+      "duration": "1:57:53",
+      "url": "https://www.youtube.com/watch?v=A-APkjo41Es",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "ejPw86y4xFg",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 18",
+      "duration": "1:59:12",
+      "url": "https://www.youtube.com/watch?v=ejPw86y4xFg",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "ar",
+          "kind": "asr"
+        },
+        {
+          "language": "es",
+          "kind": "asr"
+        },
+        {
+          "language": "en-US",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "o28Fus50WDU",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 19",
+      "duration": "1:54:33",
+      "url": "https://www.youtube.com/watch?v=o28Fus50WDU",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "4oXsk_u1k4Q",
+      "title": "METRADOS EN EDIFICACIONES- CLASE 20",
+      "duration": "1:32:47",
+      "url": "https://www.youtube.com/watch?v=4oXsk_u1k4Q",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    },
+    {
+      "id": "d6BimSln1FE",
+      "title": "CURSO DE METRADOS EN EDIFICACIONES- CLASE 21 -APRENDIENDO A USAR PLANTILLA FINANCIERA Q7",
+      "duration": "1:17:16",
+      "url": "https://www.youtube.com/watch?v=d6BimSln1FE",
+      "playability": "OK",
+      "reason": null,
+      "description": "",
+      "captionStatus": "available",
+      "tracks": [
+        {
+          "language": "ar",
+          "kind": "asr"
+        },
+        {
+          "language": "es",
+          "kind": "asr"
+        }
+      ],
+      "transcript": {
+        "status": "caption endpoint returned an empty response"
+      }
+    }
+  ]
+}

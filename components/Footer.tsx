@@ -2,6 +2,7 @@ import React from "react";
 import { useWexelStore } from "@/store/useWexelStore";
 import Zoom from "./Zoom";
 import Image from "next/image";
+import { useMetradoPreviewStore } from '@/store/useMetradoPreviewStore';
 
 interface FooterProps {
   onWordFullscreen: () => void;
@@ -21,6 +22,7 @@ function Footer({
   showDownloadButton,
 }: FooterProps) {
   const word = useWexelStore((state) => state.word);
+  const report = useMetradoPreviewStore(state => state.report);
   return (
     <div className="flex justify-between h-6 bg-[#dddddd] px-6 items-center">
       {/* Información a la izquierda */}
@@ -29,8 +31,8 @@ function Footer({
         <span className="text-blue-600">W</span>
         <span className="text-[#217346]">exel</span>
       </span>
-        <p>Page 1 of {word.totalPages}</p>
-        <p>{word.wordCount} words</p>
+        <p>{report ? `${report.pages.length} páginas` : `Page 1 of ${word.totalPages}`}</p>
+        <p>{report?.wordCount ?? word.wordCount} words</p>
         <p>English (United States)</p>
         <p>Accesibility: Good to go</p>
       </div>

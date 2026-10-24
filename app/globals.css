@@ -43,3 +43,15 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+@page metrado-report { size: A4 landscape; margin: 0; }
+@media print {
+  body:has([data-metrado-report]) { background: white; }
+  body:has([data-metrado-report]) [data-app-root] { display: block; height: auto; position: static; }
+  body:has([data-metrado-report]) [data-app-main] { display: block; overflow: visible; }
+  body:has([data-metrado-report]) [data-word-pane] { display: block !important; width: auto; }
+  body:has([data-metrado-report]) [data-word-canvas] { padding: 0; overflow: visible; height: auto; border: 0; }
+  body:has([data-metrado-report]) [data-app-chrome],
+  body:has([data-metrado-report]) [data-excel-pane],
+  body:has([data-metrado-report]) [role="dialog"] { display: none !important; }
+}

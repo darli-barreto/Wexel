@@ -32,4 +32,6 @@
 .queue { display:flex; flex-direction:column; gap:3px; max-height:125px; overflow:auto; border:1px solid #bbb; background:white; padding:5px; }
 .queue button { text-align:left; padding:5px; border-bottom:1px solid #eee; cursor:pointer; }
 .help { font-size:11px; color:#666; line-height:1.5; }
+.factorInputs{display:flex;flex-direction:column;gap:9px;margin:8px 0}
+.factorInputs input,.factorInputs select,.factorInputs textarea{background:var(--wexel-input,#e8e8e8)}
 @media(max-width:700px) { .split,.grid3,.grid4 { grid-template-columns:1fr 1fr; } .split { grid-template-columns:1fr; } .backdrop { padding:8px; } .status { display:none; } }
