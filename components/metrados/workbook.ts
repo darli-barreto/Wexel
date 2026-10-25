@@ -7,6 +7,8 @@ import { appliedSwelling } from './measurementGuidance';
 import { formulaReferences } from '../utils/formulaReferences';
 import { surplusSources } from './surplusBalance';
 import { formworkLinkedFields } from './sobrecimientoFormwork';
+import {compactHeader,completeHeader} from './compactHeader';
+import {fieldColumn} from './explicitInputs';
 
 export const METRADO_WORKBOOK = "Metrados";
 export const METRADO_SHEETS: Record<MetradoView, string> = { metrado: "metrados-metrado", acero: "metrados-acero", resumen: "metrados-resumen" };
@@ -15,7 +17,7 @@ const key = (kind: string, itemId = "", lineId = "", field = "") => JSON.stringi
 const rawNumber = (value: number) => Number.isFinite(value) ? String(value) : "#ERROR!";
 const pendingItem = (item: EstimateItem) => (item.norma || item.detailVariant) && !item.measurements.some(line => !line.pending) && !item.steelLines.length;
 export const measurementFormula = (kind: string, row: number, factor = 1, sectionMethod?: 'endAreas' | 'meanArea', columnSection = false, surplus = false) => (columnSection || surplus) && kind === 'volume' ? `=F${row}*G${row}*H${row}*J${row}` : sectionMethod && kind === 'volume'
-  ? `=F${row}*G${row}*${sectionMethod === 'endAreas' ? `(H${row}+I${row})/2` : `H${row}`}*J${row}` + (factor !== 1 ? '*' + factor : '')
+  ? `=F${row}*G${row}*${sectionMethod === 'endAreas' ? `K${row}` : `H${row}`}*J${row}` + (factor !== 1 ? '*' + factor : '')
   : "=F" + row + "*G" + row + (kind === "area" || kind === "volume" ? "*H" + row : "") + (kind === "volume" ? "*I" + row : "") + "*J" + row + (kind === 'volume' && factor !== 1 ? '*' + factor : '');
 const steelFormula = (view: MetradoView, row: number) => view === "metrado" ? "=K" + row + "*M" + row : "=F" + row + "*(G" + row + "+H" + row + "+I" + row + "+J" + row + ")*K" + row + "*L" + row;
 export function recalculateSheet(sheet: SheetData): SheetData {
@@ -33,8 +35,10 @@ export function recalculateSheet(sheet: SheetData): SheetData {
 function makeSheet(view: MetradoView) {
   const sheet: SheetData = { id: METRADO_SHEETS[view], name: view === "metrado" ? "Metrado" : view === "acero" ? "Acero" : "RESUMEN", cells: {}, colWidths: {}, rowHeights: {}, selectedCell: null, currentCell: "A1", formulaInput: "", hiddenRows: [], template: { id: "metrados", rows: {}, generated: {} } };
   const put = (address: string, rawValue: string | number, cellKey: string) => {
-    const raw = typeof rawValue === "number" ? rawNumber(rawValue) : rawValue;
-    sheet.cells[address] = { rawValue: raw, displayValue: raw, dependencies: [] };
+    const full = typeof rawValue === "number" ? rawNumber(rawValue) : rawValue;
+    const special=JSON.parse(cellKey)[0]==='sectionHeader'&&!address.startsWith('D');
+    const raw=special?compactHeader(full):full;
+    sheet.cells[address] = { rawValue: raw, displayValue: raw, dependencies: [],...(special?{headerFullLabel:completeHeader(full)}: {}) };
     sheet.template!.generated[address] = { key: cellKey, rawValue: raw };
   };
   const label = (row: number, values: Record<string, string>) => { for (const [col, value] of Object.entries(values)) put(col + row, value, key("label", col + row)); };
@@ -83,6 +87,19 @@ export function projectMetrado(state: Pick<MetradoState, "items" | "steelSheetIt
       const totals: string[] = [];
       const referenceAreas: string[] = [];
       if (view === "metrado") for (const line of item.measurements) {
+        for(let offset=0;offset<(line.formulaInputs?.length??0);offset+=10){
+          const inputs=line.formulaInputs!.slice(offset,offset+10),h=row++,v=row++;
+          sheet.template!.rows[key('sectionHeader',item.id,line.id,'inputs'+offset)]=h;
+          sheet.template!.rows[key('formulaInput',item.id,line.id,'inputs'+offset)]=v;
+          if(hidden||state.collapsedItemIds.includes(item.id))sheet.hiddenRows!.push(String(h),String(v));
+          put('D'+h,'Datos · '+line.description,key('sectionHeader',item.id,line.id,'description'+offset));
+          inputs.forEach((input,index)=>{
+            const col=String.fromCharCode(71+index),address=col+h;
+            put(address,compactHeader(input.label),key('sectionHeader',item.id,line.id,'inputLabel:'+input.id));
+            sheet.cells[address].headerFullLabel=input.label;
+            put(col+v,input.value,key('formulaInput',item.id,line.id,input.id));
+          });
+        }
         if (line.formworkSource) {
           const h = row++;
           sheet.template!.rows[key('sectionHeader', item.id, line.id)] = h;
@@ -95,9 +112,10 @@ export function projectMetrado(state: Pick<MetradoState, "items" | "steelSheetIt
           const h = row++;
           sheet.template!.rows[key('sectionHeader', item.id, line.id)] = h;
           if (hidden || state.collapsedItemIds.includes(item.id)) sheet.hiddenRows!.push(String(h));
-          const labels = line.surplus ? { D: 'EXCEDENTES · (EXCAVACIÓN − RELLENO PROPIO) × FACTOR', G: 'Vol. base (m³)', H: 'Factor', I: '' } : line.columnSection ? { D: line.columnSection.element === 'stripFooting' ? 'CIMIENTO CORRIDO · V = ÁREA ACUMULADA × ALTURA' : 'COLUMNA · V = ÁREA DE SECCIÓN × h ENTERRADA', G: line.columnSection.element === 'stripFooting' ? 'Altura (m)' : 'h ent. (m)', H: line.columnSection.element === 'stripFooting' ? 'A cim. (m²)' : 'A col. (m²)', I: '' } : prismDeduction ? { D: 'VOLUMEN OCUPADO · V = LARGO × ANCHO × ALTO', G: 'Largo (m)', H: 'Ancho (m)', I: 'Alto (m)' } : { D: line.crossSections!.method === 'endAreas' ? 'SECCIONES · V = (Ai + Af) / 2 × L' : 'SECCIONES · V = ÁREA MEDIA × L', G: 'L (m)', H: line.crossSections!.method === 'endAreas' ? 'Ai (m²)' : 'Am (m²)', I: line.crossSections!.method === 'endAreas' ? 'Af (m²)' : '' };
+          const labels = line.surplus ? { D: 'EXCEDENTES · (EXCAVACIÓN − RELLENO PROPIO) × FACTOR', G: 'Vol. base (m³)', H: 'Factor', I: '' } : line.columnSection ? { D: line.columnSection.element === 'planArea' ? 'VOLUMEN · ÁREA EN PLANTA × ALTURA / PROFUNDIDAD' : line.columnSection.element === 'stripFooting' ? 'CIMIENTO CORRIDO · V = ÁREA ACUMULADA × ALTURA' : 'COLUMNA · V = ÁREA DE SECCIÓN × h ENTERRADA', G: line.columnSection.element === 'stripFooting' || line.columnSection.element === 'planArea' ? 'Altura (m)' : 'h ent. (m)', H: line.columnSection.element === 'planArea' ? 'Área (m²)' : line.columnSection.element === 'stripFooting' ? 'A cim. (m²)' : 'A col. (m²)', I: '' } : prismDeduction ? { D: 'VOLUMEN OCUPADO · V = LARGO × ANCHO × ALTO', G: 'Largo (m)', H: 'Ancho (m)', I: 'Alto (m)' } : { D: line.crossSections!.method === 'endAreas' ? 'SECCIONES · V = (Ai + Af) / 2 × L' : 'SECCIONES · V = ÁREA MEDIA × L', G: 'L (m)', H: line.crossSections!.method === 'endAreas' ? 'Ai (m²)' : 'Am (m²)', I: line.crossSections!.method === 'endAreas' ? 'Af (m²)' : '' };
           for (const [col, text] of Object.entries(labels)) put(col + h, text, key('sectionHeader', item.id, line.id, col));
         }
+        if(line.crossSections?.method==='endAreas')put('K'+(row-1),'Am (m²)',key('sectionHeader',item.id,line.id,'K'));
         const r = row++;
         sheet.template!.rows[key("measurement", item.id, line.id)] = r;
         if (hidden || state.collapsedItemIds.includes(item.id)) sheet.hiddenRows!.push(String(r));
@@ -121,6 +139,7 @@ export function projectMetrado(state: Pick<MetradoState, "items" | "steelSheetIt
             const c = line.crossSections;
             field('H', c.method === 'endAreas' ? 'initialArea' : 'meanArea', c.expressions[c.method === 'endAreas' ? 'initialArea' : 'meanArea']);
             if (c.method === 'endAreas') field('I', 'finalArea', c.expressions.finalArea);
+            if (c.method === 'endAreas') field('K','meanAreaCalculated',`=(H${r}+I${r})/2`);
           } else {
             field("H", "width", line.expressions?.width ?? line.width);
             field("I", "height", line.expressions?.height ?? line.height);
@@ -128,7 +147,7 @@ export function projectMetrado(state: Pick<MetradoState, "items" | "steelSheetIt
         }
         field("J", "repetitions", line.expressions?.repetitions ?? line.repetitions * line.sign);
         const resultCol = { length: "K", area: "L", volume: "M", weight: "N", units: "O" }[line.kind];
-        field(resultCol, "result", line.pending ? "" : ((line.columnSection || line.crossSections) && line.calculationError?.startsWith('Secciones:') || line.surplus && line.calculationError?.startsWith('Excedentes:')) ? '#ERROR!' : line.resultRaw ?? measurementFormula(line.kind, r, appliedSwelling(line), line.crossSections?.method, Boolean(line.columnSection), Boolean(line.surplus)));
+        field(resultCol, "result", line.pending ? "" : ((line.columnSection || line.crossSections) && line.calculationError?.startsWith('Secciones:') && !Object.keys(line.formulaTemplates??{}).length || line.surplus && line.calculationError?.startsWith('Excedentes:')) ? '#ERROR!' : line.resultRaw ?? measurementFormula(line.kind, r, appliedSwelling(line), line.crossSections?.method, Boolean(line.columnSection), Boolean(line.surplus)));
         if (!line.referenceOnly && !line.pending && canonicalUnit(line.unit) === canonicalUnit(item.unit)) totals.push(resultCol + r);
         if (line.referenceOnly && !line.pending && line.kind === 'area' && canonicalUnit(line.unit) === 'm2') referenceAreas.push(resultCol + r);
       }
@@ -150,6 +169,29 @@ export function projectMetrado(state: Pick<MetradoState, "items" | "steelSheetIt
       else if (item.cleanupAreaTemplateVersion) put('P' + itemRow, referenceAreas.length ? '=SUM(' + referenceAreas.join(';') + ')' : '', key('item', item.id, '', 'referenceAreaTotal'));
     }
     // Resolve stable source IDs after every row has been assigned, including sources below the target.
+    if(view==='metrado')for(const {item} of visible)for(const line of item.measurements){
+      const r=sheet.template!.rows[key('measurement',item.id,line.id)];if(!r)continue;
+      const inputAddress=(id:string)=>Object.entries(sheet.template!.generated).find(([,binding])=>binding.key===key('formulaInput',item.id,line.id,id))?.[0];
+      for(const [field,template] of Object.entries(line.formulaTemplates??{})){
+        const col=fieldColumn(line,field);if(!col)continue;
+        put(col+r,template.replaceAll('@row',String(r)).replace(/@\{([^}]+)\}/g,(_,id)=>inputAddress(id)??'#REF!'),key('measurement',item.id,line.id,field));
+        sheet.cells[col+r].semanticFormula=true;
+      }
+      for(const [field,link] of Object.entries(line.inputLinks??{})){
+        const source=state.items.find(i=>i.id===link.itemId)?.measurements.find(l=>l.id===link.lineId),sourceRow=sheet.template!.rows[key('measurement',link.itemId,link.lineId)];
+        const col=fieldColumn(line,field),sourceCol=source&&fieldColumn(source,link.field);
+        if(col){put(col+r,sourceCol&&sourceRow?'='+sourceCol+sourceRow:'=#REF!',key('measurement',item.id,line.id,field));sheet.cells[col+r].semanticFormula=true;}
+      }
+      const factor=inputAddress('swelling');
+      if(factor&&!line.surplus&&!line.formulaTemplates?.result&&!line.resultRaw)put('M'+r,measurementFormula(line.kind,r,1,line.crossSections?.method,Boolean(line.columnSection))+'*'+factor,key('measurement',item.id,line.id,'result'));
+      if(factor&&!line.surplus&&!line.resultRaw)sheet.cells['M'+r].semanticFormula=true;
+      const faces=inputAddress('faces'),source=line.formworkSource;
+      if(faces&&source&&(!source.manualFields?.includes('repetitions')||/^=J\d+\*G\d+$/.test(line.expressions?.repetitions??''))){
+        const sourceRow=sheet.template!.rows[key('measurement',source.itemId,source.lineId)];
+        put('J'+r,sourceRow?'=J'+sourceRow+'*'+faces:'=#REF!',key('measurement',item.id,line.id,'repetitions'));
+        sheet.cells['J'+r].semanticFormula=true;
+      }
+    }
     if (view === 'metrado') for (const { item } of visible) for (const line of item.measurements) {
       if (!line.formworkSource) continue;
       const r = sheet.template!.rows[key('measurement', item.id, line.id)];
@@ -162,6 +204,7 @@ export function projectMetrado(state: Pick<MetradoState, "items" | "steelSheetIt
         sheet.cells['D' + r].hint = line.formworkSource.face === 'sides' ? 'Vinculado al concreto: 2 × largo × altura. N.º veces permite ajustar las caras encofradas. Editar una medida la desvincula del concreto.' : 'Ancho × altura del concreto. N.º veces = tapas por elemento (0, 1 o 2 según contacto efectivo). La cantidad de elementos y repeticiones viene del concreto.';
       }
     }
+    sheet.template!.explicitInputsVersion=1;
     return recalculateSheet(formatMetradoSheet(sheet, state));
   });
 }
@@ -196,7 +239,7 @@ export function reconcileMetradoSheet(previous: SheetData | undefined, desired: 
   for (const [address, entry] of Object.entries(desired.template!.generated)) {
     const old = byKey.get(entry.key), oldCell = old ? previous.cells[old.address] : undefined;
     const summaryOverride = old && oldCell && JSON.parse(entry.key)[0] === "summary" && oldCell.rawValue !== old.raw;
-    let rawValue = old && oldCell && (summaryOverride || translate(old.raw) === entry.rawValue || old.raw === entry.rawValue) ? translate(oldCell.rawValue) : entry.rawValue;
+    let rawValue = !desired.cells[address].semanticFormula&&old && oldCell && (summaryOverride || translate(old.raw) === entry.rawValue || old.raw === entry.rawValue) ? translate(oldCell.rawValue) : entry.rawValue;
     const [kind, , , field] = JSON.parse(entry.key) as string[];
     if (kind === "item" && (field === "code" || field === "description")) rawValue = rawValue.toUpperCase();
     const projected = desired.cells[address];
@@ -259,6 +302,13 @@ export function readMetradoSheet(sheet: SheetData, state: MetradoState): { items
       if (line.presentation === 'separator') return { ...line, description: text('measurement', item.id, line.id, 'description', line.description) };
       if (!get("measurement", item.id, line.id, "description")) return line;
       const read = (name: string, fallback: number) => value("measurement", item.id, line.id, name, fallback);
+      const formulaInputs=line.formulaInputs?.map(input=>({...input,value:text('formulaInput',item.id,line.id,input.id,input.value)}));
+      const formulaTemplates={...line.formulaTemplates},inputLinks={...line.inputLinks};
+      const formulaTemplateOverrides=[...line.formulaTemplateOverrides??[]];
+      if(sheet.template?.explicitInputsVersion)for(const field of new Set([...Object.keys(formulaTemplates),...Object.keys(inputLinks)])){
+        const col=fieldColumn(line,field),r=sheet.template.rows[key('measurement',item.id,line.id)];
+        if(col&&sheet.cells[col+r]?.rawValue!==sheet.template.generated[col+r]?.rawValue){if(formulaTemplates[field]&&!formulaTemplateOverrides.includes(field))formulaTemplateOverrides.push(field);delete formulaTemplates[field];delete inputLinks[field];}
+      }
       const itemUnit = text("item", item.id, "", "unit", item.unit);
       const detailUnit = text("measurement", item.id, line.id, "unit", line.unit);
       const unit = line.pending !== undefined && detailUnit === item.unit && itemUnit !== item.unit ? itemUnit : detailUnit;
@@ -297,22 +347,25 @@ export function readMetradoSheet(sheet: SheetData, state: MetradoState): { items
         const raw = get('measurement',item.id,line.id,'length')?.cell.rawValue;
         if (raw?.trim() && raw !== expected) surplus = { ...surplus, manual: true };
       }
-      const swelling = kind !== 'volume' ? undefined : surplus ? { factor: read('swellingFactor',line.swelling?.factor ?? 1), basis: 'inSitu' as const, support: line.swelling?.support ?? 'Factor asignado por el usuario al balance de excedentes.' } : line.swelling;
+      const factorInput=get('formulaInput',item.id,line.id,'swelling')?.cell;
+      const swelling = kind !== 'volume' ? undefined : surplus ? { factor: read('swellingFactor',line.swelling?.factor ?? 1), basis: 'inSitu' as const, support: line.swelling?.support ?? 'Factor asignado por el usuario al balance de excedentes.' } : line.swelling&&factorInput ? {...line.swelling,factor:Number(factorInput.displayValue.replace(',','.'))} : line.swelling;
       const surplusInvalid = surplus && (!Number.isFinite(swelling?.factor) || (swelling?.factor ?? 0) < 1 || read('length',line.length) < 0);
       const result = get("measurement", item.id, line.id, "result");
+      const resultCol=fieldColumn(line,'result');
+      const expectedResult=sheet.template?.explicitInputsVersion&&result&&(formulaTemplates.result||factorInput&&!line.surplus)?sheet.template.generated[resultCol+result.row]?.rawValue:undefined;
       const required = ["similarElements", "repetitions", ...(surplus ? ['length', 'swellingFactor'] : columnSection ? ['columnArea', 'buriedHeight'] : crossSections ? crossSections.method === 'endAreas' ? ['length', 'initialArea', 'finalArea'] : ['length', 'meanArea'] : kind === "units" || kind === "weight" ? ["manualQuantity"] : kind === "length" ? ["length"] : kind === "area" ? ["length", "width"] : ["length", "width", "height"])];
       const factor = appliedSwelling({ kind, swelling });
       const validationResult = result?.cell.rawValue === '#ERROR!' && ((columnSection || crossSections) && line.calculationError?.startsWith('Secciones:') || surplus && line.calculationError?.startsWith('Excedentes:'));
-      const manualResult = !validationResult && result?.cell.rawValue.trim() && result.cell.rawValue !== measurementFormula(kind, result.row, factor, crossSections?.method, Boolean(columnSection), Boolean(line.surplus));
+      const manualResult = !validationResult && result?.cell.rawValue.trim() && result.cell.rawValue !== (expectedResult??measurementFormula(kind, result.row, factor, crossSections?.method, Boolean(columnSection), Boolean(line.surplus)));
       const concrete = formworkSource ? state.items.find(item => item.id === formworkSource.itemId)?.measurements.find(detail => detail.id === formworkSource.lineId) : undefined;
       const missingConcrete = formworkSource && (!concrete || concrete.pending || concrete.presentation || concrete.columnSection || concrete.crossSections || concrete.kind !== 'volume' || !['length', 'width', 'height'].every(field => {
         const cell = get('measurement', formworkSource.itemId, formworkSource.lineId, field)?.cell;
         return cell && cell.rawValue.trim() && Number(cell.displayValue.replace(',', '.')) > 0;
       }));
       const pending = line.pending === undefined ? undefined : !unit.trim() || (!manualResult && (Boolean(missingConcrete) || required.some(name => !get("measurement", item.id, line.id, name)?.cell.rawValue.trim())));
-      const overridden = !validationResult && kind === line.kind && result && Boolean(result.cell.rawValue) && result.cell.rawValue !== measurementFormula(kind, result.row, factor, crossSections?.method, Boolean(columnSection), Boolean(line.surplus));
+      const overridden = !validationResult && kind === line.kind && result && Boolean(result.cell.rawValue) && result.cell.rawValue !== (expectedResult??measurementFormula(kind, result.row, factor, crossSections?.method, Boolean(columnSection), Boolean(line.surplus)));
       const sectionInvalid = columnSection ? [columnSection.area, columnSection.buriedHeight].some(value => !Number.isFinite(value) || value <= 0) : crossSections && (!Number.isFinite(read('length', line.length)) || read('length', line.length) <= 0 || (crossSections.method === 'endAreas' ? [crossSections.initialArea, crossSections.finalArea] : [crossSections.meanArea]).some(area => !Number.isFinite(area) || area < 0));
-      return { ...line, unit, kind, formworkSource, quantitySourceId, surplus, columnSection, crossSections, swelling, description: text("measurement", item.id, line.id, "description", line.description), similarElements: read("similarElements", line.similarElements), length: read("length", line.length), width: read("width", line.width), height: read("height", line.height), manualQuantity: read("manualQuantity", line.manualQuantity ?? 1), repetitions: Math.abs(repetitions), sign: (repetitions < 0 ? -1 : 1) as 1 | -1, expressions,
+      return { ...line, unit, kind, formulaInputs, formulaTemplates, formulaTemplateOverrides, inputLinks, formworkSource, quantitySourceId, surplus, columnSection, crossSections, swelling, description: text("measurement", item.id, line.id, "description", line.description), similarElements: read("similarElements", line.similarElements), length: read("length", line.length), width: read("width", line.width), height: read("height", line.height), manualQuantity: read("manualQuantity", line.manualQuantity ?? 1), repetitions: Math.abs(repetitions), sign: (repetitions < 0 ? -1 : 1) as 1 | -1, expressions,
         ...(pending !== undefined ? { pending } : {}),
         resultRaw: overridden ? result.cell.rawValue : undefined, quantityOverride: overridden ? read("result", line.quantityOverride ?? 0) : undefined, calculationError: surplusInvalid && !pending ? 'Excedentes: usa volumen no negativo y factor igual o mayor que 1.' : sectionInvalid && !pending ? columnSection ? 'Secciones: usa área y altura enterrada positivas.' : 'Secciones: usa distancia positiva y áreas no negativas.' : !validationResult && result?.cell.displayValue.startsWith("#") ? result.cell.displayValue : undefined };
     }),

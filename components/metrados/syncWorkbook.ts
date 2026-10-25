@@ -9,6 +9,7 @@ import { recalculateSheet } from './workbook';
 import { STEEL_HEADER_OFFSET } from './steelWorkbook';
 import { renumberAfterDelete } from './renumberAfterDelete';
 import { emptyCrossSections } from './crossSections';
+import {exposeProjectInputs} from './explicitInputs';
 
 let suspended = 0;
 export function metradoWorkbookTransaction(action: () => void) {
@@ -59,8 +60,10 @@ export function startMetradoWorkbookSync() {
   }
   // Upgrade once, after reading saved cells, preserving measurements and intentional deletions.
   const current = useMetradoStore.getState();
-  const items = repairNormaDeletionGaps(withNormaDetails(current.items), current.numbering);
-  const backupItems = current.demoBackup ? repairNormaDeletionGaps(withNormaDetails(current.demoBackup.model.items), current.demoBackup.model.numbering) : undefined;
+  const excel=useWexelStore.getState(),book=excel.activeWorkbookId===METRADO_WORKBOOK?{sheets:excel.sheets,activeSheetId:excel.activeSheetId}:excel.workbooks[METRADO_WORKBOOK];
+  if(book?.sheets.some(sheet=>sheet.id==='metrados-modelo'))excel.replaceWorkbook(METRADO_WORKBOOK,{sheets:book.sheets.filter(sheet=>sheet.id!=='metrados-modelo'),activeSheetId:book.activeSheetId==='metrados-modelo'?METRADO_SHEETS.metrado:book.activeSheetId});
+  const items = exposeProjectInputs(repairNormaDeletionGaps(withNormaDetails(current.items), current.numbering));
+  const backupItems = current.demoBackup ? exposeProjectInputs(repairNormaDeletionGaps(withNormaDetails(current.demoBackup.model.items), current.demoBackup.model.numbering)) : undefined;
   if (items !== current.items || (current.demoBackup && backupItems !== current.demoBackup.model.items)) {
     useMetradoStore.setState({ items, ...(current.demoBackup ? { demoBackup: { ...current.demoBackup, model: { ...current.demoBackup.model, items: backupItems! } } } : {}) });
   }

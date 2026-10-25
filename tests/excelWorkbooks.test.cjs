@@ -155,7 +155,10 @@ test('cut section inputs calculate natural volume with explicit m2 labels, propa
     edit('I'+row(),'13.972');
     const format=load('components/utils/cellFormatting.ts').formatCellValue;
     assert.equal(format(sheet().cells['M'+row()]),'54.93');
-    assert.equal(sheet().cells['M'+row()].rawValue,`=F${row()}*G${row()}*(H${row()}+I${row()})/2*J${row()}`);
+    assert.equal(sheet().cells['K'+(row()-1)].rawValue,'Am (m²)');
+    assert.equal(sheet().cells['K'+row()].rawValue,`=(H${row()}+I${row()})/2`);
+    assert.equal(Number(sheet().cells['K'+row()].displayValue),10.986);
+    assert.equal(sheet().cells['M'+row()].rawValue,`=F${row()}*G${row()}*K${row()}*J${row()}`);
     const itemRow=sheet().template.rows[JSON.stringify(['item',cut.id,'',''])];
     assert.equal(format(sheet().cells['P'+itemRow]),'54.93');
     const sr=sheet('resumen').template.rows[JSON.stringify(['item',cut.id,'',''])];assert.equal(format(sheet('resumen').cells['H'+sr]),'54.93');

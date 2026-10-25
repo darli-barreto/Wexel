@@ -24,8 +24,12 @@ export interface MetradoHeader {
 
 export interface MeasurementLine {
   formworkSource?: { itemId: string; lineId: string; face: 'sides' | 'ends'; manualFields?: string[] };
-  surplus?: { source: 'excavation' | 'ownFill'; parentId: string | null; manual?: boolean };
-  columnSection?: { area: number; buriedHeight: number; areaExpression: string; heightExpression: string; support?: string; element?: 'column' | 'stripFooting' };
+  surplus?: { source: 'excavation' | 'ownFill'; parentId: string | null; manual?: boolean; sourceItemIds?: string[] };
+  columnSection?: { area: number; buriedHeight: number; areaExpression: string; heightExpression: string; support?: string; element?: 'column' | 'stripFooting' | 'planArea' };
+  formulaInputs?: Array<{id:string;label:string;value:string}>;
+  formulaTemplates?: Record<string,string>;
+  formulaTemplateOverrides?: string[];
+  inputLinks?: Record<string,{itemId:string;lineId:string;field:string}>;
   quantitySourceId?: string;
   fillGroup?: { id: string; type: 'footing' | 'gradeBeam' | 'stripFooting'; role: 'label' | 'excavation' | 'deduction' };
   crossSections?: { method: 'endAreas' | 'meanArea'; initialArea: number; finalArea: number; meanArea: number; expressions: { initialArea: string; finalArea: string; meanArea: string }; support: string };

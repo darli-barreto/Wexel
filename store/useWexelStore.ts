@@ -12,6 +12,8 @@ export const MIN_ROW_HEIGHT = 18;
 export const DEFAULT_COLUMN_WIDTH = 100;
 export interface CellPosition { row: number; col: number }
 export interface CellData {
+  headerFullLabel?: string;
+  semanticFormula?: boolean;
   input?: boolean;
   hint?: string;
   rawValue: string;
@@ -52,6 +54,7 @@ export interface SheetData {
   formulaInput: string;
   hiddenRows?: string[];
   template?: {
+    explicitInputsVersion?: number;
     id: string;
     formatVersion?: number;
     paletteSignature?: string;

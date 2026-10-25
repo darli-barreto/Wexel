@@ -2,6 +2,7 @@ import { canonicalUnit, type EstimateItem, type MeasurementLine } from '../../st
 
 export function surplusSources(items: EstimateItem[], line: MeasurementLine): EstimateItem[] {
   if (!line.surplus) return [];
+  if(line.surplus.sourceItemIds)return items.filter(item=>line.surplus!.sourceItemIds!.includes(item.id)&&item.kind==='item'&&canonicalUnit(item.unit)==='m3'&&item.id!==items.find(i=>i.measurements.some(l=>l.id===line.id))?.id);
   const parents = new Map(items.map(item => [item.id,item.parentId]));
   const isInScope = (item: EstimateItem) => {
     const visited = new Set<string>();
